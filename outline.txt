@@ -1,25 +1,35 @@
 # Using R as a Community Workbench for The Carpentries Lesson Infrastructure
 
-Analogy (1 minute)
-------
 
-< not sure what to put here, but I know I want to humanize this project to the 
-audience. I used to make electronic music and I'm thinking the analogy of 
-a modular synthesizer vs a controller  might be a good analogy.
+-------[Ringo voice] What's the point? [/Ringo voice] --------------------------
 
-A modular synthesizer is often a behemoth of wires and knobs, often without a
-keyboard. From the looks of it, it's difficult to know where to start.
+Talk to your community, cover up the exposed plumbing, and show the plumbers
+where the access panels are.
 
-https://commons.wikimedia.org/wiki/File:Asuckerforrandom03_-_Serge_modular_%26_Buchla_synthesizer.jpg
+--------------------------------------------------------------------------------
 
-A controller is an interface to a synthesizer. It's a keyboard that allows you
-to connect or even daisy chain different synthesizers. 
+The Carpentries is a _growing_ community, and in order to grow, we need to create clear on-ramps to contribution. 
 
-The styles repository is a modular synthesizer and sandpaper is a controller
-synth. 
+From the committee:
+
+> The proposal to separate the content of a lesson from the format in which it
+> is presented is an idea that can help generate and maintain lessons. Many
+> educators are not web design experts but want/need to share their materials
+> online, and learning CSS, HTML can be a big barrier. Also, this approach
+> helps to focus on building the lesson instead of the container.
+
+In the end, we will show how the wide array of tools available in the R
+ecosystem makes it easy for us to rebuild our lesson infrastructure in a way
+that significantly reduces the barrier for entry for our community volunteers.
+
+--------------------------------------------------------------------------------
 
 Background (2 minutes)
 ----------
+
+In The Carpentries community, we champion people first
+ - must remove barriers to contribution
+
 
  - The Carpentries is a global community of volunteers that collaboratively develops and delivers lessons to build capacity in data and coding skills (in R and multiple other languages) to researchers worldwide.
  - For the past five years, our collaboratively-developed lesson template (https://github.com/carpentries/styles/) has been the basis for our growing collection of peer-reviewed lesson content.
@@ -28,9 +38,35 @@ Background (2 minutes)
  - problem: lesson infrastructure is a bit like op
  - solution: decouple the tools and the content
 
+User Story (2 minutes)
+----------
+
+Yoo Nix is a research software engineer who has written several python packages
+for image processing and spectroscopic analysis. She uses Arch Linux and has
+over 10 years of programming experience. She has been a maintainer on the Git
+lesson for several years and enjoys tinkering with code. Yoo finds no problem
+keeping the software stack for The Carpentries lesson template up to date and
+she is uninterested in learning R.
+
+Poly Gon is a graduate student researcher interested in understanding how
+climate change affects different communities in cities around the world. She is
+the only one in her group who knows how to use the complex spatial modelling
+packages and became a maintainer of the geospatial lesson in R because she
+wanted to help her lab understand the software better and gain experience
+working on a large collaborative project on GitHub. Poly avoids installing the
+Carpentries lesson template infrastructure on her computer and finds it easier
+to push changes and hope they work. 
+
+Cole E. Optera is an entomologist who is compotent with the shell, Git, and
+python. Cole recently became an instructor. He is interested in contributing a
+lesson to The Carpentries to teach entomologists how to use imageJ, but feels
+intimidated by The Carpentries template because it's not clear to him where he
+should add his lesson materials and finds it difficult to install Ruby and
+Jekyll on his Windows computer. 
+
+
 Barriers (1 minute)
 --------
-
 
 While the lessons themselves were designed to be easy to author, there were two significant barriers in our toolchain for contributors: software installation and style updating.
 As our lesson repertoire and community has continued to grow, this template model has not scaled well, resulting in barriers to entry and wasted volunteer time.
