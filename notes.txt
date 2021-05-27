@@ -1,0 +1,106 @@
+So, I'm just going to be spitballing here because I'm not sure HOW I want to
+tell this story. Yes, I know I want to tell a story, but how to do it is...
+well... complicated. I keep thinking about this part here:
+
+title: Using R as a Community Workbench for The Carpentries Lesson Infrastructure
+
+
+-------[Ringo voice] What's the point? [/Ringo voice] --------------------------
+
+Talk to your community, cover up the exposed plumbing, and show the plumbers
+where the access panels are.
+
+--------------------------------------------------------------------------------
+
+
+Also, the committee's comments give me some direction:
+
+The Carpentries is a _growing_ community, and in order to grow, we need to
+create clear on-ramps to contribution. 
+
+From the committee:
+
+> The proposal to separate the content of a lesson from the format in which it
+> is presented is an idea that can help generate and maintain lessons. Many
+> educators are not web design experts but want/need to share their materials
+> online, and learning CSS, HTML can be a big barrier. Also, this approach
+> helps to focus on building the lesson instead of the container.
+
+In the end, we will show how the wide array of tools available in the R
+ecosystem makes it easy for us to rebuild our lesson infrastructure in a way
+that significantly reduces the barrier for entry for our community volunteers.
+
+--------------------------------------------------------------------------------
+
+
+The question is: how do I focus this talk? During my UseR!2019 talk, I 
+structured it as problem -> funding -> discussions -> solution -> future. I 
+don't particularly think that style would go well. One of the things I would
+like to do here is to have user stories highlighted throughout the talk because 
+the scope of this is a bit esoteric (I mean, how many organizations have a large
+volunteer force of varying technological expertise that write lessons?) and I
+keep falling too deep in thinking of what details to incorporate (e.g. what 
+analogies to use for this thing). 
+
+I saw Kari's talk about inclusion at SORSE and it was _really_ good and landed 
+well. I'm not sure that I can do something like that, but I need to consider my
+audience: people attending the UseR conference. These are not people who need to
+be told what R is or what a package is, but these are not all package developers.
+
+The thing is, I _could_ easily make this talk about the implementation itself,
+but I don't think that's what the audience is there for. Yes, they are
+interested in knowing _how_ we did it, but ultimately, it's more important to 
+focus on the community aspect of this because we want to be able to map the 
+community we built on top of the new tools we are introducing. 
+
+One question I have is: where do we start? do we assume that people know what
+The Carpentries is? We are a large enough organization that our reputation 
+preceeds us, but I don't want to alienate people by assuming that they know who
+we are. I guess that means start with an introduction. Tracy didn't at RStudio,
+but that's because it was an invited talk. 
+
+So...
+
+Introduction
+
+ - mission and values (repeat this throughout the talk)
+ - hook: we are a growing community and the R publishing ecosystem is flexible
+   enough to give us all the tools we need to reduce barriers for publishing
+   lessons and further our mission
+ - reminder: there is no right or wrong, only better or worse --- GW
+ - reminder: In the Carpentries: you belong
+
+Background
+
+ - growth (need data for this)
+ - communities (trainers, instructors, learners)
+ - carpentries incubator (++ lessons)
+
+Maintainers
+
+ - user stories
+
+Problem
+
+ - Lesson template was not built to scale (tools we have today were not 
+   available three years ago)
+ - reminder: our values accept all contributions. What about the people who want
+   to contribute, but can't because they don't have the time to figure out how
+   to use the template?
+
+Solution
+
+ - First: empathy
+ - Second: plan
+ - Third: prototype
+ - Fourth: basic user testing
+   - broad user scope (novice to expert)
+   - ask users multiple times about their experience
+   - ask them what they wish you asked them
+
+Future
+
+ - Beta release of tempalte on incubator and some official repositories (should be happening around the time of the talk)
+ - Release candidate
+ - Official release, countdown to deprecation of old template
+   (this needs to be beefed up for a better landing)
