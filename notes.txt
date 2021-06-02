@@ -108,11 +108,13 @@ Solution
    - broad user scope (novice to expert)
    - ask users multiple times about their experience
    - ask them what they wish you asked them
+   - be patient (people will need time to form thoughts, but will still talk)
 
-Future
+Conclusion
 
- - Beta release of tempalte on incubator and some official repositories (should
-   be happening around the time of the talk)
- - Release candidate
- - Official release, countdown to deprecation of old template
-   (this needs to be beefed up for a better landing)
+ - We've seen what happens when we release something without user testing first.
+   By bringing some users in on the ground floor, we are able to get valuable
+   responses and strengthen trust with our community at the same time. 
+ - Release timeline
+ - We don't have all the answers, but we have years of organic feedback and are
+   always learning. 
