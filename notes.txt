@@ -70,23 +70,34 @@ Introduction
  - reminder: there is no right or wrong, only better or worse --- GW
  - reminder: In the Carpentries: you belong
 
-Background
+> Transition: the thing about being an open and welcoming and open community is
+> that growth happens and it will test the limits of your infrastructure.
 
- - growth (need data for this)
- - communities (trainers, instructors, learners)
- - carpentries incubator (++ lessons)
+Infrastructure
 
-Maintainers
+ - collaboratively developed lessons
+ - all-in-one starter pack (exposed plumbing)
+ - value all contributions
+ - maintainers were folks who loved to tinker
+   - profiles: Yoo Nix; Poly Gon
 
- - user stories
+> Transition: Tolstoy & Desire Paths. This model works for the few maintainers, 
+> but time and time again, the contributions show a story that something is not
+> working and that means we don't even see the people who are self-excluding.
 
-Problem
+Chopportunities
 
- - Lesson template was not built to scale (tools we have today were not 
+ - growth (we started with six lessons and now have 45 official lessons in two languages)
+   - carpentries incubator (>80 lessons; NOTE: work out growth rate from /orgs/{org}/repositories/) 
+ - Lesson template was not built to scale (tools we have today were not
    available three years ago)
  - reminder: our values accept all contributions. What about the people who want
    to contribute, but can't because they don't have the time to figure out how
    to use the template?
+
+> Transition: Separate Content from Tools and use tools that are supported by
+> friendly communities where folks don't have to feel "techy" to feel like they
+> belong. 
 
 Solution
 
@@ -100,7 +111,8 @@ Solution
 
 Future
 
- - Beta release of tempalte on incubator and some official repositories (should be happening around the time of the talk)
+ - Beta release of tempalte on incubator and some official repositories (should
+   be happening around the time of the talk)
  - Release candidate
  - Official release, countdown to deprecation of old template
    (this needs to be beefed up for a better landing)
