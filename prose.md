@@ -25,7 +25,7 @@ In this talk, I will introduce you to our current infrastructure, it's
 challenges, our solution, and how we used past and present experiences from our
 community to iteratively refine our design. 
 
-And before I move on, I want to remind everyone of two things:
+And before I move on, I want to remind everyone of three things:
 
 > There is no right or wrong, only better or worse 
 > 
@@ -42,10 +42,35 @@ reminder:
 
 Our values are what drive us and in The Carpentries, you belong, no matter if
 you have been working as a systems administrator for a university HPC cluster or
-if you have just learned to write your first python script, you belong in our
-community and we are working toward breaking down any barriers that prevent y
+if you have just learned to write your first python script.
+
+> We are always learning
+
+Last, but not least, we are always learning. This entire talk is an ode to
+always learning as we explore how we decided to start again with our lesson 
+infrastructure. 
 
 ## Infrastructure
+
+Our lesson infrastructure is all open source and serves the purpose to provide
+a way for people to write lessons openly in a way that provides a consistent and
+predictable style for both instructors and learners, and is transparent enough
+for people to customize to their liking. As I mentioned before, there have been
+several iterations of the lesson infrastructure, but the one we have right now
+is an all-in-one starter pack that uses kramdown-flavored markdown built on top
+of a Jekyll theme which also contains custom python scripts and a Makefile,
+which not only orchestrate the building and validation process (for those who
+don't remember Jekyll commands), but also demonstrates the very skills we teach
+in our workshops. It's a bit like industrial architectural design with exposed
+plumbing. 
+
+Because we work openly and value all contributions, we actively encourage
+community contributions from our instructors as their are checking out and as
+they teach the workshops and get feedback from the learners. If an instructor 
+spots a typo or a command that doesn't work, they are encouraged to open an
+issue or pull request to make the change. 
+
+
 
 ## Chopportunities
 
