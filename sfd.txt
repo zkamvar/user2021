@@ -1,3 +1,5 @@
+-------[ N.B. This is a stodgy first draft of the talk outline ]----------------
+
 # Using R as a Community Workbench for The Carpentries Lesson Infrastructure
 
 

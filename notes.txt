@@ -59,7 +59,8 @@ preceeds us, but I don't want to alienate people by assuming that they know who
 we are. I guess that means start with an introduction. Tracy didn't at RStudio,
 but that's because it was an invited talk. 
 
-So...
+So... here is the tentative outline that should be accomplished in ~3 minutes
+per section. 
 
 Introduction
 
@@ -101,6 +102,8 @@ Chopportunities
 
 Solution
 
+ - Framework (content + engine + style + validation)
+ - Find prior art that matches model; (e.g. {pkgdown})
  - First: empathy
  - Second: plan
  - Third: prototype
@@ -110,11 +113,13 @@ Solution
    - ask them what they wish you asked them
    - be patient (people will need time to form thoughts, but will still talk)
 
+> Transition: thank yous to folks and release timeline
+
 Conclusion
 
  - We've seen what happens when we release something without user testing first.
    By bringing some users in on the ground floor, we are able to get valuable
    responses and strengthen trust with our community at the same time. 
- - Release timeline
  - We don't have all the answers, but we have years of organic feedback and are
    always learning. 
+ - Funding thank you
