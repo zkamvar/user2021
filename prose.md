@@ -64,13 +64,20 @@ don't remember Jekyll commands), but also demonstrates the very skills we teach
 in our workshops. It's a bit like industrial architectural design with exposed
 plumbing. 
 
-Because we work openly and value all contributions, we actively encourage
-community contributions from our instructors as their are checking out and as
-they teach the workshops and get feedback from the learners. If an instructor 
-spots a typo or a command that doesn't work, they are encouraged to open an
-issue or pull request to make the change. 
+It's extremely worth mentioning that our template has four different audiences:
 
+1. The Carpentries instructor who uses it for reference material as they teach
+2. The learner in a workshop who uses the lesson as a reference later on
+3. The maintainer, who makes sure the information on the lesson is accurate and
+   up to date.
+4. The educator who wants to use these open-licensed materials for their own
+   lessons. 
 
+The skill sets across and within these communities is wide and varied. 
+
+Our maintainer community is a special community because they not only need to 
+know how to collaborate on GitHub, but they also need domain knowledge in the
+lesson they maintain to be able to accurately evaluate new contributions. 
 
 ## Chopportunities
 
