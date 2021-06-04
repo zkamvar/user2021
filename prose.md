@@ -2,7 +2,7 @@
 
 This will be the prose of the talk that I will use as the source for the
 transcript. Assuming an average 140 words per minute, this should contain no
-more than 140 words per section. 
+more than 420 words per section. 
 
 ## Introduction
 
@@ -46,40 +46,67 @@ if you have just learned to write your first python script.
 
 > We are always learning
 
-Last, but not least, we are always learning. This entire talk is an ode to
-always learning as we explore how we decided to start again with our lesson 
-infrastructure. 
+Last, but not least, I want to highlight that we are always learning. To do 
+that, I want to you to look at this image of a small path worn into the grass
+between two paved paths in a community greenspace. This is called a "cowpath" or
+a "desire path" and it's a very important concept in design. While the original
+designers of this greenspace intended for people to used the paved paths to get
+from point A to point B, a large number of people have found that too 
+inconvenient and opted for a quicker way where the hazard of uneven terrain
+outweighs the extra time it takes to walk across this expanse.
+
+Over the last few years, we have been thinking deeply not only about these paths
+in our own infrastructure, but also where people are choosing to avoid it all
+together because the process is just too difficult. 
 
 ## Infrastructure
 
 Our lesson infrastructure is all open source and serves the purpose to provide
-a way for people to write lessons openly in a way that provides a consistent and
-predictable style for both instructors and learners, and is transparent enough
-for people to customize to their liking. As I mentioned before, there have been
-several iterations of the lesson infrastructure, but the one we have right now
-is an all-in-one starter pack that uses kramdown-flavored markdown built on top
-of a Jekyll theme which also contains custom python scripts and a Makefile,
-which not only orchestrate the building and validation process (for those who
-don't remember Jekyll commands), but also demonstrates the very skills we teach
-in our workshops. It's a bit like industrial architectural design with exposed
-plumbing. 
-
-It's extremely worth mentioning that our template has four different audiences:
+a way for people to write lessons openly with a consistent and predictable
+style for both instructors and learners, and is transparent enough for people
+to customize to their liking. As with any resource, be it a talk or a lesson,
+it's important to know your audience. The audience for our lessons can be split
+into four distinct groups whose skill sets are wide and varied.
 
 1. The Carpentries instructor who uses it for reference material as they teach
+   and contributes to lessons based on feedback from teaching
 2. The learner in a workshop who uses the lesson as a reference later on
 3. The maintainer, who makes sure the information on the lesson is accurate and
    up to date.
 4. The educator who wants to use these open-licensed materials for their own
-   lessons. 
+   lessons.
 
-The skill sets across and within these communities is wide and varied. 
+Our lessons are written in markdown and translated to HTML via GitHub pages and
+the Jekyll static site generator. We encourage and accept all 
+contributions---anyone can contribute to these lessons on GitHub by opening an
+issue or creating a pull request and editing the markdown source files. 
 
-Our maintainer community is a special community because they not only need to 
-know how to collaborate on GitHub, but they also need domain knowledge in the
-lesson they maintain to be able to accurately evaluate new contributions. 
+To maintain a consistent style and encourage our princples of evidence-based 
+teaching such as learning objectives and formative assessments, our
+infrastrcutre is an all-in-one bundle that contains a Jekyll theme with
+contains custom python scripts and a Makefile to orchestrate the build process
+and validate that the style is consistent. This also demonstrates that the very
+skills we teach in our workshops (BASH, Make, Git) have immediate application.
+
+One of the drawbacks to this infrastructure design was that we had a lesson
+wrapped around a static site generator, which meant that it was easy to
+contribute to if you were familiar with how Jekyll operated, but if you were
+unfamiliar, then it became unclear where to even start if you were looking at
+the git repository. Remember the cowpaths I mentioned earlier? Over the last few
+years, we have begun finding them from all across the lesson infrastructure 
+popping up in separate places. 
+
+Some maintainers find it difficult to keep the software stack updated and spend
+more time trying to understand errors that are coming from the Makefile, others
+will see something that needs to be updated with the style and try to make
+changes in the documentation repository, and still others find the process of
+using the software so arduous that they would rather fork the repository to 
+their own github account, switch the branch for displaying changes, and use 
+GitHub to preview lessons.
 
 ## Chopportunities
+
+
 
 ## Solution
 
