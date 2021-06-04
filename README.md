@@ -11,8 +11,8 @@ The abstract can be found in [ABSTRACT.md](ABSTRACT.md)
 
 ## Authors
 
-[Zhian N. Kamvar](@zkamvar)
-[François Michonneau](@fmichonneau)
+[Zhian N. Kamvar](https://github.com/zkamvar)
+[François Michonneau](https://github.com/fmichonneau)
 
 ## Links
 
