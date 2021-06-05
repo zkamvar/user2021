@@ -92,23 +92,65 @@ One of the drawbacks to this infrastructure design was that we had a lesson
 wrapped around a static site generator, which meant that it was easy to
 contribute to if you were familiar with how Jekyll operated, but if you were
 unfamiliar, then it became unclear where to even start if you were looking at
-the git repository. Remember the cowpaths I mentioned earlier? Over the last few
-years, we have begun finding them from all across the lesson infrastructure 
-popping up in separate places. 
+the git repository because of all the exposed plumbing but no signs that clearly
+say "start here". This leads to several lessons built in _slightly_ different
+ways.
 
-Some maintainers find it difficult to keep the software stack updated and spend
-more time trying to understand errors that are coming from the Makefile, others
-will see something that needs to be updated with the style and try to make
-changes in the documentation repository, and still others find the process of
-using the software so arduous that they would rather fork the repository to 
-their own github account, switch the branch for displaying changes, and use 
-GitHub to preview lessons.
+Remember the cowpaths I mentioned earlier? Over the last few years, we have
+begun finding them from all across the lesson infrastructure popping up in
+separate places that appear through issues and pull requests. Some maintainers
+find it difficult to keep the software stack updated and end up spending more
+time trying to understand errors that are coming from the Makefile, others will
+see something that needs to be updated with the style and try to make changes
+in the documentation repository, and still others find the process of using the
+software so arduous that they would rather fork the repository to their own
+github account, switch the branch for displaying changes, and use GitHub to
+preview lessons.
+
+So, now that we have our field full of cowpaths, we need to figure out which 
+ones need to be paved over as we grow as an organisation and encounter more and
+more chopportunities. 
 
 ## Chopportunities
 
+By chopportunities, I am referring to a challenge that is also an opportunity. 
+The growth that we've experienced in the past few years is a chopportunity.
+In 2016, there were six lessons, but now we have over 45 official lessons in
+two languages. The carpentries incubator, has grown immensely over the last
+year, adding more than 30 new lessons in the last six months alone. 
 
+Our challenge is clear: the all-in-one lesson infrastructure we have will not
+scale well to the growing lessons under our umbrella, so we need to build 
+infrastructure that scales even better.
+
+Our opportunity here is to reimagine the infrastructure in a way that not only
+scales well and is easily repairable, but also allows people from different
+areas of expertise to contribute and share lessons, no matter their skill level,
+language, or ability. Because, at the end of the day, our values drive our
+mission. We have strength in diversity, we value all contributions, and we will
+strive to put people first. 
+
+Our new design needs to separate the content from the tools, and to use tools
+that are supported by friendly communities where people don't have to feel
+"techy" to feel like they belong. 
 
 ## Solution
+
+We wanted a general solution where you could take markdown or RMarkdown files,
+place them in a folder and generate a site without having complicated paths or
+generated files lying around. The first thing we did was to look at prior art;
+what has been built before. 
+
+The natural place to go was blogdown, but we quickly realized that while the
+tools were separated from the content, there were many aspects that would not
+fit our model. It was then that I realized that {pkgdown}, a documentation site
+generator, used the same model: Content is pure markdown with no extra 
+templating required, the tools to build everything lived in a separate package,
+and it could be customizable by making your own package to host your CSS, JS, 
+and HTML templates. 
+
+O
+
 
 ## Conclusion
 
