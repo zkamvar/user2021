@@ -105,7 +105,12 @@ see something that needs to be updated with the style and try to make changes
 in the documentation repository, and still others find the process of using the
 software so arduous that they would rather fork the repository to their own
 github account, switch the branch for displaying changes, and use GitHub to
-preview lessons.
+preview lessons. 
+
+One of the biggest challenges was our RMarkdown lessons, which were rebuilt with
+the latest versions of R and R packages. When breaking changes occurred, 
+maintainers would only know when they were published on the website. There was
+a big need for people to be able to preview content without deploying it first.
 
 So, now that we have our field full of cowpaths, we need to figure out which 
 ones need to be paved over as we grow as an organisation and encounter more and
@@ -144,12 +149,24 @@ what has been built before.
 The natural place to go was blogdown, but we quickly realized that while the
 tools were separated from the content, there were many aspects that would not
 fit our model. It was then that I realized that {pkgdown}, a documentation site
-generator, used the same model: Content is pure markdown with no extra 
-templating required, the tools to build everything lived in a separate package,
-and it could be customizable by making your own package to host your CSS, JS, 
-and HTML templates. 
+generator, used the same model: It meets people where they are, content is pure
+markdown with no extra templating required, the tools to build everything lived
+in a separate package, and it can be customizable by making your own package
+to host your CSS, JS, and HTML templates. 
 
-O
+We used this model to create a modular two-step solution that first renders 
+source documents to markdown and then uses pandoc with a template engine to
+render HTML. This two-step solution allows maintainers to easily see the diff of
+the changes that happened from new code or updated packages _and_ because 
+markdown is a common denominator for many static sites and document engines, the
+output can be lifted from the repository and placed in the context of any other
+engine. 
+
+Of course, this was not the most important part. The design addresses our
+challenge, but extra care needs to be taken to make sure we are taking advantage
+of our opportunity, and that's where empathy comes in.
+
+You cannot design a user interface if you don't know who your audience is. 
 
 
 ## Conclusion
