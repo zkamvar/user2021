@@ -84,7 +84,7 @@ issue or creating a pull request and editing the markdown source files.
 To maintain a consistent style and encourage our princples of evidence-based 
 teaching such as learning objectives and formative assessments, our
 infrastrcutre is an all-in-one bundle that contains a Jekyll theme with
-contains custom python scripts and a Makefile to orchestrate the build process
+custom python scripts and a Makefile to orchestrate the build process
 and validate that the style is consistent. This also demonstrates that the very
 skills we teach in our workshops (BASH, Make, Git) have immediate application.
 
@@ -92,9 +92,9 @@ One of the drawbacks to this infrastructure design was that we had a lesson
 wrapped around a static site generator, which meant that it was easy to
 contribute to if you were familiar with how Jekyll operated, but if you were
 unfamiliar, then it became unclear where to even start if you were looking at
-the git repository because of all the exposed plumbing but no signs that clearly
-say "start here". This leads to several lessons built in _slightly_ different
-ways.
+the git repository because of all the exposed plumbing with no signs that
+clearly say "start here". This aspect has lead to several lessons built in
+_slightly_ different ways.
 
 Remember the cowpaths I mentioned earlier? Over the last few years, we have
 begun finding them from all across the lesson infrastructure popping up in
@@ -107,10 +107,11 @@ software so arduous that they would rather fork the repository to their own
 github account, switch the branch for displaying changes, and use GitHub to
 preview lessons. 
 
-One of the biggest challenges was our RMarkdown lessons, which were rebuilt with
-the latest versions of R and R packages. When breaking changes occurred, 
-maintainers would only know when they were published on the website. There was
-a big need for people to be able to preview content without deploying it first.
+One of the biggest challenges were with our RMarkdown lessons. These are
+rebuilt with the latest versions of R and R packages. When breaking changes
+occurred, maintainers would only know when they were published on the website.
+There was a big need for people to be able to preview content without deploying
+it first.
 
 So, now that we have our field full of cowpaths, we need to figure out which 
 ones need to be paved over as we grow as an organisation and encounter more and
@@ -121,8 +122,8 @@ more chopportunities.
 By chopportunities, I am referring to a challenge that is also an opportunity. 
 The growth that we've experienced in the past few years is a chopportunity.
 In 2016, there were six lessons, but now we have over 45 official lessons in
-two languages. The carpentries incubator, has grown immensely over the last
-year, adding more than 30 new lessons in the last six months alone. 
+two languages. The carpentries incubator has grown immensely over the last
+year adding more than 30 new lessons in the last six months alone. 
 
 Our challenge is clear: the all-in-one lesson infrastructure we have will not
 scale well to the growing lessons under our umbrella, so we need to build 
@@ -166,7 +167,14 @@ Of course, this was not the most important part. The design addresses our
 challenge, but extra care needs to be taken to make sure we are taking advantage
 of our opportunity, and that's where empathy comes in.
 
-You cannot design a user interface if you don't know who your audience is. 
+You cannot design a user interface if you don't know who your audience is. We
+know that many people in our community are resilliant to change, but we also 
+respect that we are a community of volunteers. Most people are doing this 
+because they care about the mission and have day jobs that they need to pay 
+attention to. If we ask them to switch to a new system of doing things, we need
+to make sure that it works with their setup. 
+
+
 
 
 ## Conclusion
