@@ -142,6 +142,9 @@ that are supported by friendly communities where people don't have to feel
 
 ## Solution
 
+
+### Challenge
+
 We wanted a general solution where you could take markdown or RMarkdown files,
 place them in a folder and generate a site without having complicated paths or
 generated files lying around. The first thing we did was to look at prior art;
@@ -155,7 +158,7 @@ markdown with no extra templating required, the tools to build everything lived
 in a separate package, and it can be customizable by making your own package
 to host your CSS, JS, and HTML templates. 
 
-We used this model to create a modular two-step solution that first renders 
+From this example, we created a modular two-step solution that first renders 
 source documents to markdown and then uses pandoc with a template engine to
 render HTML. This two-step solution allows maintainers to easily see the diff of
 the changes that happened from new code or updated packages _and_ because 
@@ -163,18 +166,10 @@ markdown is a common denominator for many static sites and document engines, the
 output can be lifted from the repository and placed in the context of any other
 engine. 
 
-Of course, this was not the most important part. The design addresses our
-challenge, but extra care needs to be taken to make sure we are taking advantage
-of our opportunity, and that's where empathy comes in.
+### Opportunity
 
-You cannot design a user interface if you don't know who your audience is. We
-know that many people in our community are resilliant to change, but we also 
-respect that we are a community of volunteers. Most people are doing this 
-because they care about the mission and have day jobs that they need to pay 
-attention to. If we ask them to switch to a new system of doing things, we need
-to make sure that it works with their setup. 
-
-
+Of course, our challenge ticks all the boxes that satisfy our design choices in
+that it's modular,
 
 
 ## Conclusion
