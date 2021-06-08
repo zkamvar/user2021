@@ -10,8 +10,8 @@ minutes and have no more than three slides.
  - hook: we are a growing community and the R publishing ecosystem is flexible
    enough to give us all the tools we need to reduce barriers for publishing
    lessons and further our mission
- - reminder: we are always learning
  - reminder: there is no right or wrong, only better or worse --- GW
+ - reminder: we are always learning
  - reminder: In the Carpentries: you belong
 
 > Transition: the thing about being an open and welcoming and open community is
