@@ -38,16 +38,9 @@ own difficulties down the road, but what is important is that we build something
 that better addresses the needs of the community, which leads me to my second
 reminder:
 
-> In The Carpentries: you belong
-
-Our values are what drive us and in The Carpentries, you belong, no matter if
-you have been working as a systems administrator for a university HPC cluster or
-if you have just learned to write your first python script.
-
 > We are always learning
 
-Last, but not least, I want to highlight that we are always learning. To do 
-that, I want to you to look at this image of a small path worn into the grass
+I want to you to look at this image of a small path worn into the grass
 between two paved paths in a community greenspace. This is called a "cowpath" or
 a "desire path" and it's a very important concept in design. While the original
 designers of this greenspace intended for people to used the paved paths to get
@@ -57,7 +50,17 @@ outweighs the extra time it takes to walk across this expanse.
 
 Over the last few years, we have been thinking deeply not only about these paths
 in our own infrastructure, but also where people are choosing to avoid it all
-together because the process is just too difficult. 
+together because the process is just too difficult, which brings my to my last
+point before I move on.
+
+> In The Carpentries: you belong
+
+As the community has grown, our infrastructure has been put to the test and we
+have continuously updated our workflows to lower barriers for people. The reason
+why we doe this is because our values are what drive us and in The Carpentries,
+you belong, no matter if you have been working as a systems administrator for a
+university HPC cluster or if you have just learned to write your first python
+script. 
 
 ## Infrastructure
 
@@ -69,8 +72,8 @@ it's important to know your audience. The audience for our lessons can be split
 into four distinct groups whose skill sets are wide and varied.
 
 1. The Carpentries instructor who uses it for reference material as they teach
-   and contributes to lessons based on feedback from teaching
-2. The learner in a workshop who uses the lesson as a reference later on
+   and contributes to lessons based on feedback from teaching.
+2. The learner in a workshop who uses the lesson as a reference later on. 
 3. The maintainer, who makes sure the information on the lesson is accurate and
    up to date.
 4. The educator who wants to use these open-licensed materials for their own
@@ -79,34 +82,51 @@ into four distinct groups whose skill sets are wide and varied.
 Our lessons are written in markdown and translated to HTML via GitHub pages and
 the Jekyll static site generator. We encourage and accept all 
 contributions---anyone can contribute to these lessons on GitHub by opening an
-issue or creating a pull request and editing the markdown source files. 
+issue or creating a pull request and editing the markdown source files.
 
 To maintain a consistent style and encourage our princples of evidence-based 
 teaching such as learning objectives and formative assessments, our
 infrastrcutre is an all-in-one bundle that contains a Jekyll theme with
-custom python scripts and a Makefile to orchestrate the build process
-and validate that the style is consistent. This also demonstrates that the very
-skills we teach in our workshops (BASH, Make, Git) have immediate application.
+custom python scripts, R scripts for Rmarkdown-based lessons, and a Makefile to
+orchestrate the build process and validate that the style is consistent. This
+also demonstrates that the very skills we teach in our workshops (BASH, Make,
+Git) have immediate application.
 
-One of the drawbacks to this infrastructure design was that we had a lesson
-wrapped around a static site generator, which meant that it was easy to
-contribute to if you were familiar with how Jekyll operated, but if you were
-unfamiliar, then it became unclear where to even start if you were looking at
-the git repository because of all the exposed plumbing with no signs that
-clearly say "start here". This aspect has lead to several lessons built in
-_slightly_ different ways.
+It's important to pause here and point out that the entire paradigm for this is
+for people to be able to take markdown and get a functional website out of it.
+This is not a new concept, in fact, there are over 460 iterations of this 
+concept according to https://staticsitegenerators.net. Jekyll happens to be the
+one that was used by GitHub early on and thus it stuck. 
 
-Remember the cowpaths I mentioned earlier? Over the last few years, we have
+This infrastructure design has two significant drawbacks: 
+
+1. Installation pains. Having Jekyll, Python, and Make as dependencies means
+   that people who want to build these lessons need all three of these
+   successfully installed and up-to-date on their machines. This is especially
+   frustrating for Windows users who have none of these by default. Moreover,
+   having all the tools living inside the repository meant that updating the
+   repository required pull requests that were unrelated to the lesson itself. 
+2. Another drawback is that we have a lesson website wrapped around a static
+   site generator, which meant that it was easy to contribute to if you were
+   familiar with how Jekyll operated. Some would say Jekyll is well documented,
+   but in my experience, Jekyll is well, documented. If you were not familiar
+   with Jekyll, then it was unclear where to even start if you were looking at
+   the git repository because of all the exposed plumbing with no signs that
+   clearly say "start here". This aspect has lead to several lessons built in
+   _slightly_ different ways.
+
+This brings me back to the cowpaths. Over the last few years, we have
 begun finding them from all across the lesson infrastructure popping up in
 separate places that appear through issues and pull requests. Some maintainers
 find it difficult to keep the software stack updated and end up spending more
-time trying to understand errors that are coming from the Makefile, others will
-see something that needs to be updated with the style and try to make changes
-in the documentation repository, and still others find the process of using the
-software so arduous that they would rather fork the repository to their own
-github account, switch the branch for displaying changes, and use GitHub to
-preview lessons. 
+time trying to understand errors that are coming from make, python, or Jekyll,
+others will try to make changes in the "do not touch" areas of the repository,
+and still others find the process of using the software so arduous that they
+would rather fork the repository to their own github account, switch the branch
+for displaying changes, and use GitHub to preview lessons. 
 
+
+<!-- ZNK: I think this might need to be reduced -->
 One of the biggest challenges were with our RMarkdown lessons. These are
 rebuilt with the latest versions of R and R packages. When breaking changes
 occurred, maintainers would only know when they were published on the website.
@@ -169,8 +189,26 @@ engine.
 ### Opportunity
 
 Of course, our challenge ticks all the boxes that satisfy our design choices in
-that it's modular,
+that it's modular, but if we ended up designing something that R enthusiasts
+love, but is unusable by newcomers, Python, or Matlab folks, then we are not
+valuing all contributions. 
 
+Again, the whole point of this exercise is to get us back to a place where the
+authors can focus on the content over the tools. We want to get back to a place
+where people can place their markdown/RMarkdown/MyST notebooks in a folder and
+create a lesson directly from these sources. It shouldn't matter what language
+is used as long as it is usable. To do this, we needed to test the minimal
+viable product on actual maintainers and we needed to make sure that they were
+spread across the spectrum of using R, familiarity with the current 
+infrastructure, and even familiarity with The Carpentries.
+
+We recruited a total of 18 volunteers to run through the Alpha Test, which tested
+the participants ability to install the infrastructure, create a lesson, modify
+a lesson, and contribute to an existing lesson. After the tests, we asked for
+20 minute open-ended interviews about their experience with the new tempalte to
+see what features people kept stumbling over.
+
+> Thank alpha testers here in slide
 
 ## Conclusion
 
