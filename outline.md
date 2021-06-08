@@ -10,6 +10,7 @@ minutes and have no more than three slides.
  - hook: we are a growing community and the R publishing ecosystem is flexible
    enough to give us all the tools we need to reduce barriers for publishing
    lessons and further our mission
+ - reminder: we are always learning
  - reminder: there is no right or wrong, only better or worse --- GW
  - reminder: In the Carpentries: you belong
 
@@ -22,7 +23,7 @@ minutes and have no more than three slides.
  - all-in-one starter pack (exposed plumbing)
  - value all contributions
  - maintainers were folks who loved to tinker
-   - profiles: Yoo Nix; Poly Gon
+   - profiles: Yoo Nix; Poly Gon (this is a bit shoehorned in :/)
 
 > Transition: Tolstoy & Desire Paths. This model works for the few maintainers, 
 > but time and time again, the contributions show a story that something is not
