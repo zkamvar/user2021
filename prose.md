@@ -4,7 +4,12 @@ This will be the prose of the talk that I will use as the source for the
 transcript. Assuming an average 140 words per minute, this should contain no
 more than 420 words per section. 
 
+> word count: ~2400 words; 160 wpm
+> timing 2021-06-09: 14:48.61 :grimace:
+
 ## Introduction
+
+> timing 2021-06-09: 03:37.11
 
 The Carpentries is a global organization of volunteers who strive to teach 
 foundational data and coding skills to researchers worldwide. What makes us
@@ -75,6 +80,8 @@ about our infrastructure.
 
 ## Infrastructure
 
+> timing 2021-06-09: 04:20.38
+
 Our lesson infrastructure is all open source and serves the purpose to provide
 a way for people to write lessons openly with a consistent and predictable
 style for both instructors and learners, and is transparent enough for people
@@ -142,20 +149,13 @@ output. One common pattern we find is that people will invariably contribute to
 the generated file, which means that all of their changes will be erased when
 the lesson rebuilds. 
 
-<!-- 
-ZNK: I think this might need to be reduced 
-One of the biggest challenges were with our RMarkdown lessons. These are
-rebuilt with the latest versions of R and R packages. When breaking changes
-occurred, maintainers would only know when they were published on the website.
-There was a big need for people to be able to preview content without deploying
-it first.
--->
-
 So, now that we have our field full of cowpaths, we need to figure out which 
 ones need to be paved over as we grow as an organisation and encounter more and
 more chopportunities. 
 
 ## Chopportunities
+
+> timing 2021-06-09: 01:15.30
 
 By chopportunities, I am referring to a challenge that is also an opportunity. 
 The growth that we've experienced in the past few years is a chopportunity.
@@ -177,6 +177,8 @@ must not only include direct on-ramps for everyone, but also build in access
 panels for people who want to understand the engine driving everything.
 
 ## Solution
+
+> timing 2021-06-09: 04:47.01
 
 ### Challenge
 
@@ -251,6 +253,8 @@ see what features people kept stumbling over.
 > Thank alpha testers here in slide
 
 ## Conclusion
+
+> timing 2021-06-09: 00:48.79
 
 We have just barely finished with the alpha testing and the next phase for us is
 to address all the issues that were brought up, clean up documentation, and 
