@@ -11,7 +11,7 @@ minutes and have no more than three slides.
    enough to give us all the tools we need to reduce barriers for publishing
    lessons and further our mission
  - reminder: there is no right or wrong, only better or worse --- GW
- - reminder: we are always learning
+ - reminder: we are always learning (cowpaths)
  - reminder: In the Carpentries: you belong
 
 > Transition: the thing about being an open and welcoming and open community is
@@ -20,10 +20,9 @@ minutes and have no more than three slides.
 ## Infrastructure
 
  - collaboratively developed lessons
- - all-in-one starter pack (exposed plumbing)
+   - profiles: instructor, learner, maintainer, educator (you!)
+ - all-in-one starter pack (exposed wiring)
  - value all contributions
- - maintainers were folks who loved to tinker
-   - profiles: Yoo Nix; Poly Gon (this is a bit shoehorned in :/)
 
 > Transition: Tolstoy & Desire Paths. This model works for the few maintainers, 
 > but time and time again, the contributions show a story that something is not
