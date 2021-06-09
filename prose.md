@@ -17,20 +17,52 @@ stand out is not the fact that we use evidence-based practices in teaching, it's
 that we align all of our decisions with our core values which puts people first
 and accepts all contributions. 
 
-Our lesson infrastructure was built on the principles of our values to act 
-openly, but as the expertise of our contributors broadens and the number of
-lessons grow, we are finding ways that our infrastructure was not quite meeting
-our values that accepts all contributions and puts people first.
+Our lessons are all open-license websites built on a consistent style that
+adheres to active learning principals. We use these lessons as the source
+material for the hundreds of workshops we run each year and have three distinct
+audiences:
 
-In reimagining an update to our lesson template, we found that the R publishing
-ecosystem with pandoc is flexible enough to give us all the tools we need **to 
-reduce barriers for publishing lessons and furthers our mission**.
+1. The Carpentries instructor who uses it for reference material as they teach.
+2. The learner in a workshop who uses the lesson as a reference later on. 
+3. The educator who wants to use these open-licensed materials for their own
+   lessons.
 
-In this talk, I will introduce you to our current infrastructure, it's
-challenges, our solutions, and how we used past and present experiences from our
-community to iteratively refine our design. 
+The source for these lessons are hosted on GitHub were we have a core set of 
+maintainers to make sure that the information on the lesson is accurate and up
+to date. It is in these repositories that we accept all contributions from the
+community, whether it be simple typo fix or a better explanation of an important
+lesson concept, anyone can go to the repository and make a suggestion... at 
+least that was our intention. 
 
-And before I move on, I want to remind everyone of three things:
+I want to pause for a second here and highlight this tweet that came across my
+feed as I was preparing this talk. 
+
+<https://twitter.com/SarahNicholas/status/1401510907604353024?s=20>
+
+It shows a fork between a paved path and an unpaved footpath across a patch of
+grass, which leads to a crosswalk. There is a sign in front of the unpaved path
+that says "Please use the purpose made path provided." The tweet author points
+out that "the sign knows it has lost"
+
+This unofficial footpath is called a "cowpath" or a "desire path" and it's a
+very important concept in design because it shows the difference between what
+the designers intended vs how people actually use the space.
+
+As our community has grown, we've been noticing more and more of these desire
+paths in our lesson infrastructure through issue comments, pull requests, and
+slack threads and we realize that these issues will not be fixed by writing
+better documentation, they can only be fixed by rethinking our infrastructure
+all together in a way that is more inclusive and welcoming for all people,
+including those who just want to write lessons and those who are interested in
+the machinery behind it all.  
+
+We found that the R publishing ecosystem with pandoc is flexible enough to give
+us all the tools we need **to reduce barriers for publishing lessons and
+furthers our mission**. In this talk, I will introduce you to our current
+infrastructure, it's unique challenges, our solutions, and how we used past and
+present experiences from our community to iteratively refine our design. 
+
+And before I move on, I want to remind everyone of two things:
 
 > There is no right or wrong, only better or worse 
 > 
@@ -42,31 +74,6 @@ right now was working for us at the time and what we come up with will have its
 own difficulties down the road, but what is important is that we build something
 that better addresses the needs of the community, which leads me to my second
 reminder:
-
-> We are always learning
-
-<https://twitter.com/SarahNicholas/status/1401510907604353024?s=20>
-
-The above tweet came across my feed as I was preparing this talk and it was very
-timely. It shows a fork between a paved path and an unpaved footpath across a
-patch of grass, which leads to a crosswalk. This is called a "cowpath" or a
-"desire path" and it's a very important concept in design. While the original
-designers of this greenspace intended for people to use the paved paths to get
-from point A to point B, a large number of people have found that too
-inconvenient and opted for a quicker way where the hazard of uneven terrain
-outweighs the extra time it takes to walk across the two legs of the triangle. 
-
-Of course, the focal point of this tweet is the sign that is planted in front of
-the cowpath, which says "Please use the purpose made path provided." The author
-is correct in claiming that the sign knows it has lost because people have 
-simply steped to the side of the sign. 
-
-Over the last few years, we have been thinking deeply not only about these paths
-in our own infrastructure, but also where people are choosing to avoid it all
-together because the process is just too difficult. Instead of putting up signs
-that tell people where they should go, we are using these paths to learn how new
-members of our community want to use this infrastructure, which brings me to
-my last point.
 
 > In The Carpentries: you belong
 
@@ -82,33 +89,11 @@ about our infrastructure.
 
 > timing 2021-06-09: 04:20.38
 
-Our lesson infrastructure is all open source and serves the purpose to provide
-a way for people to write lessons openly with a consistent and predictable
-style for both instructors and learners, and is transparent enough for people
-to customize to their liking. As with any resource, be it a talk or a lesson,
-it's important to know your audience. The audience for our lessons can be split
-into four distinct groups whose skill sets are wide and varied.
-
-1. The Carpentries instructor who uses it for reference material as they teach
-   and contributes to lessons based on feedback from teaching.
-2. The learner in a workshop who uses the lesson as a reference later on. 
-3. The maintainer, who makes sure the information on the lesson is accurate and
-   up to date.
-4. The educator who wants to use these open-licensed materials for their own
-   lessons.
-
 Our lessons are written in markdown and translated to HTML via GitHub pages and
-the Jekyll static site generator. We encourage and accept all 
-contributions---anyone can contribute to these lessons on GitHub by opening an
-issue or creating a pull request and editing the markdown source files.
-
-To maintain a consistent style and encourage our princples of evidence-based 
-teaching such as learning objectives and formative assessments, our
-infrastrcutre is an all-in-one bundle that contains a Jekyll theme with
-custom python scripts, R scripts for Rmarkdown-based lessons, and a Makefile to
-orchestrate the build process and validate that the style is consistent. This
-also demonstrates that the very skills we teach in our workshops (BASH, Make,
-Git) have immediate application.
+the Jekyll static site generator. The idea behind this choice was that it was
+the most straightforward way to create a static website without needing a server
+like wordpress or drupal sites. Ideally, it also provided a way for people to
+use this as an example of how they could build their own website. 
 
 It's important to pause here and point out that the entire paradigm for this is
 for people to be able to write markdown lessons and get a functional website
@@ -116,38 +101,46 @@ out of it. This is not a new concept, in fact, there are over 460 iterations of
 this concept according to https://staticsitegenerators.net. Jekyll happens to
 be the one that was used by GitHub early on and thus it stuck. 
 
-This infrastructure design has two significant drawbacks: 
+Of course, the default themes for Jekyll are focused on blog output, so we
+created an all-in-one bundle for lessons that provided styling templates in
+HTML, CSS, and JavaScript along with validation scripts in Python and R scripts
+to build RMarkdown-based lessons. All of this was orchestrated by a Makefile.
+The purpose of these tools were two-fold: 
 
-1. Installation pains. Having Jekyll, Python, and Make as dependencies means
-   that people who want to build these lessons need all three of these
-   successfully installed and up-to-date on their machines. This is especially
-   frustrating for Windows users who have none of these by default. Moreover,
-   having all the tools living inside the repository meant that updating the
-   repository required pull requests that were unrelated to the lesson itself. 
+1. To maintain a consistent style that emphasize our principles of
+   evidence-based teaching such as learning objectives and formative assessment
+2. To demonstrate the how the skills we teach in our workshops can be applied
+   to real-life situations. 
+
+While this was conceptually good in theory, this infrastructure design has two
+significant drawbacks for contributors:
+
+1. Installation pains.
+   <https://twitter.com/gvwilson/status/1380115181708189701?s=20> Having
+   Jekyll, Python, and Make as dependencies means that people who want to build
+   these lessons need all three of these successfully installed and up-to-date on
+   their machines. This is especially frustrating for Windows users who have none
+   of these by default. Moreover, having all the tools living inside the
+   repository meant that lessons quickly become out of date as we improve our
+   infrastructure.  
 2. Another drawback is that we have a lesson website wrapped around a static
-   site generator, which meant that it was easy to contribute to if you were
-   familiar with how Jekyll operated. Some would say Jekyll is well documented,
-   but in my experience, Jekyll is well, documented. There is often a moment of
-   panic in a new contributor's eyes when you show them what the a lesson
-   repository looks like. If you were not familiar with Jekyll, then it was
-   unclear where to even start if you were looking at the git repository because
-   of all the exposed wiring with no signs that clearly say "start here". This
-   aspect has lead to several lessons built in _slightly_ different ways.
+   site generator (which in and of itself is a kind of desire path), this meant
+   that it was easy to contribute to if you were familiar with how Jekyll
+   operated. Some would say Jekyll is well documented, but in my experience,
+   Jekyll is well, documented. There is often a moment of panic in a new
+   contributor's eyes when you show them what the a lesson repository looks like.
+   If you were not familiar with Jekyll, then it was unclear where to even start
+   if you were looking at the git repository because of all the exposed wiring
+   with no signs that clearly say "start here". This aspect has lead to several
+   lessons built in _slightly_ different ways.
 
 This brings me back to the cowpaths. Over the last few years, we have
 begun finding them from all across the lesson infrastructure popping up in
-separate places that appear through issues and pull requests. Some maintainers
-find it difficult to keep the software stack updated and end up spending more
-time trying to understand errors that are coming from make, python, or Jekyll,
-others will try to make changes in the "do not touch" areas of the repository,
-and still others find the process of using the software so arduous that they
-would rather fork the repository to their own github account, switch the branch
-for displaying changes, and use GitHub to preview lessons.
-
-Moreover, our R-based lessons used RMarkdown to automatically generate the 
-output. One common pattern we find is that people will invariably contribute to
-the generated file, which means that all of their changes will be erased when
-the lesson rebuilds. 
+separate places that appear through issues and pull requests from contributors
+and maintainers alike. These have appeared as people trying to modify some of
+the "do not touch areas" (either styles or the generated markdown for RMarkdown
+lessons) or avoiding installing our software stack, forking the lesson, and
+switching the default branch to preview their changes all from GitHub. 
 
 So, now that we have our field full of cowpaths, we need to figure out which 
 ones need to be paved over as we grow as an organisation and encounter more and
@@ -159,9 +152,9 @@ more chopportunities.
 
 By chopportunities, I am referring to a challenge that is also an opportunity. 
 The growth that we've experienced in the past few years is a chopportunity.
-In 2016, there were six lessons, but now we have over 45 official lessons in
-two languages. The carpentries incubator has grown immensely over the last
-year adding more than 30 new lessons in the last six months alone. 
+We have seen not only a growth in the number of community members, but also,
+with the carpentries incubator for community contributed lessons, we have seen
+a vast growth in the number of lessons using the template.
 
 Our challenge is clear: the all-in-one lesson infrastructure does not scale
 well to the growing number of lessons under our umbrella, so we need to build
