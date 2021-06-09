@@ -18,11 +18,11 @@ lessons grow, we are finding ways that our infrastructure was not quite meeting
 our values that accepts all contributions and puts people first.
 
 In reimagining an update to our lesson template, we found that the R publishing
-ecosystem with pandoc is flexible enough to give us all the tools we need to 
-reduce barriers for publishing lessons and furthers our mission. 
+ecosystem with pandoc is flexible enough to give us all the tools we need **to 
+reduce barriers for publishing lessons and furthers our mission**.
 
 In this talk, I will introduce you to our current infrastructure, it's
-challenges, our solution, and how we used past and present experiences from our
+challenges, our solutions, and how we used past and present experiences from our
 community to iteratively refine our design. 
 
 And before I move on, I want to remind everyone of three things:
@@ -40,27 +40,38 @@ reminder:
 
 > We are always learning
 
-I want to you to look at this image of a small path worn into the grass
-between two paved paths in a community greenspace. This is called a "cowpath" or
-a "desire path" and it's a very important concept in design. While the original
-designers of this greenspace intended for people to used the paved paths to get
-from point A to point B, a large number of people have found that too 
+<https://twitter.com/SarahNicholas/status/1401510907604353024?s=20>
+
+The above tweet came across my feed as I was preparing this talk and it was very
+timely. It shows a fork between a paved path and an unpaved footpath across a
+patch of grass, which leads to a crosswalk. This is called a "cowpath" or a
+"desire path" and it's a very important concept in design. While the original
+designers of this greenspace intended for people to use the paved paths to get
+from point A to point B, a large number of people have found that too
 inconvenient and opted for a quicker way where the hazard of uneven terrain
-outweighs the extra time it takes to walk across this expanse.
+outweighs the extra time it takes to walk across the two legs of the triangle. 
+
+Of course, the focal point of this tweet is the sign that is planted in front of
+the cowpath, which says "Please use the purpose made path provided." The author
+is correct in claiming that the sign knows it has lost because people have 
+simply steped to the side of the sign. 
 
 Over the last few years, we have been thinking deeply not only about these paths
 in our own infrastructure, but also where people are choosing to avoid it all
-together because the process is just too difficult, which brings my to my last
-point before I move on.
+together because the process is just too difficult. Instead of putting up signs
+that tell people where they should go, we are using these paths to learn how new
+members of our community want to use this infrastructure, which brings me to
+my last point.
 
 > In The Carpentries: you belong
 
 As the community has grown, our infrastructure has been put to the test and we
 have continuously updated our workflows to lower barriers for people. The reason
-why we doe this is because our values are what drive us and in The Carpentries,
-you belong, no matter if you have been working as a systems administrator for a
-university HPC cluster or if you have just learned to write your first python
-script. 
+we do this is because our values are what drive us and in The Carpentries, you
+belong, no matter if you have been working as a systems administrator for a
+university HPC cluster or if you have just learned to write your first R script. 
+If you are unfamiliar with how we build our lessons, the next section is all
+about our infrastructure. 
 
 ## Infrastructure
 
@@ -93,10 +104,10 @@ also demonstrates that the very skills we teach in our workshops (BASH, Make,
 Git) have immediate application.
 
 It's important to pause here and point out that the entire paradigm for this is
-for people to be able to take markdown and get a functional website out of it.
-This is not a new concept, in fact, there are over 460 iterations of this 
-concept according to https://staticsitegenerators.net. Jekyll happens to be the
-one that was used by GitHub early on and thus it stuck. 
+for people to be able to write markdown lessons and get a functional website
+out of it. This is not a new concept, in fact, there are over 460 iterations of
+this concept according to https://staticsitegenerators.net. Jekyll happens to
+be the one that was used by GitHub early on and thus it stuck. 
 
 This infrastructure design has two significant drawbacks: 
 
@@ -109,11 +120,12 @@ This infrastructure design has two significant drawbacks:
 2. Another drawback is that we have a lesson website wrapped around a static
    site generator, which meant that it was easy to contribute to if you were
    familiar with how Jekyll operated. Some would say Jekyll is well documented,
-   but in my experience, Jekyll is well, documented. If you were not familiar
-   with Jekyll, then it was unclear where to even start if you were looking at
-   the git repository because of all the exposed plumbing with no signs that
-   clearly say "start here". This aspect has lead to several lessons built in
-   _slightly_ different ways.
+   but in my experience, Jekyll is well, documented. There is often a moment of
+   panic in a new contributor's eyes when you show them what the a lesson
+   repository looks like. If you were not familiar with Jekyll, then it was
+   unclear where to even start if you were looking at the git repository because
+   of all the exposed wiring with no signs that clearly say "start here". This
+   aspect has lead to several lessons built in _slightly_ different ways.
 
 This brings me back to the cowpaths. Over the last few years, we have
 begun finding them from all across the lesson infrastructure popping up in
@@ -123,15 +135,21 @@ time trying to understand errors that are coming from make, python, or Jekyll,
 others will try to make changes in the "do not touch" areas of the repository,
 and still others find the process of using the software so arduous that they
 would rather fork the repository to their own github account, switch the branch
-for displaying changes, and use GitHub to preview lessons. 
+for displaying changes, and use GitHub to preview lessons.
 
+Moreover, our R-based lessons used RMarkdown to automatically generate the 
+output. One common pattern we find is that people will invariably contribute to
+the generated file, which means that all of their changes will be erased when
+the lesson rebuilds. 
 
-<!-- ZNK: I think this might need to be reduced -->
+<!-- 
+ZNK: I think this might need to be reduced 
 One of the biggest challenges were with our RMarkdown lessons. These are
 rebuilt with the latest versions of R and R packages. When breaking changes
 occurred, maintainers would only know when they were published on the website.
 There was a big need for people to be able to preview content without deploying
 it first.
+-->
 
 So, now that we have our field full of cowpaths, we need to figure out which 
 ones need to be paved over as we grow as an organisation and encounter more and
@@ -145,50 +163,72 @@ In 2016, there were six lessons, but now we have over 45 official lessons in
 two languages. The carpentries incubator has grown immensely over the last
 year adding more than 30 new lessons in the last six months alone. 
 
-Our challenge is clear: the all-in-one lesson infrastructure we have will not
-scale well to the growing lessons under our umbrella, so we need to build 
-infrastructure that scales even better.
+Our challenge is clear: the all-in-one lesson infrastructure does not scale
+well to the growing number of lessons under our umbrella, so we need to build
+infrastructure that scales even better and separates the tools from the content.
 
-Our opportunity here is to reimagine the infrastructure in a way that not only
-scales well and is easily repairable, but also allows people from different
-areas of expertise to contribute and share lessons, no matter their skill level,
-language, or ability. Because, at the end of the day, our values drive our
-mission. We have strength in diversity, we value all contributions, and we will
-strive to put people first. 
-
-Our new design needs to separate the content from the tools, and to use tools
-that are supported by friendly communities where people don't have to feel
-"techy" to feel like they belong. 
+Our opportunity here is to reimagine the infrastructure in a way that truly 
+values all contributions: this includes the spectrum from everyday educators
+who do not feel "techy" to the tinkerers who like to peek under the hood. To do
+this, we need to think back to the unifying purpose of having the lesson
+infrastructure in the first place: to empower authors to write lessons in
+a markdown variant, and host them on a website. This means that our solution
+must not only include direct on-ramps for everyone, but also build in access
+panels for people who want to understand the engine driving everything.
 
 ## Solution
-
 
 ### Challenge
 
 We wanted a general solution where you could take markdown or RMarkdown files,
 place them in a folder and generate a site without having complicated paths or
-generated files lying around. The first thing we did was to look at prior art;
-what has been built before. 
+generated files lying around. The first thing we did was to look at prior art,
+or, what has been built before.
 
-The natural place to go was blogdown, but we quickly realized that while the
-tools were separated from the content, there were many aspects that would not
-fit our model. It was then that I realized that {pkgdown}, a documentation site
-generator, used the same model: It meets people where they are, content is pure
-markdown with no extra templating required, the tools to build everything lived
-in a separate package, and it can be customizable by making your own package
-to host your CSS, JS, and HTML templates. 
+It was important that we choose something that was user friendly, easy to 
+install, easily customizable, and had a welcoming community behind it. We tried
+out several static site generators, but very few were easy to install and none
+of them fit all of our criteria.
 
-From this example, we created a modular two-step solution that first renders 
-source documents to markdown and then uses pandoc with a template engine to
-render HTML. This two-step solution allows maintainers to easily see the diff of
-the changes that happened from new code or updated packages _and_ because 
-markdown is a common denominator for many static sites and document engines, the
-output can be lifted from the repository and placed in the context of any other
-engine. 
+Eventually, we settled on the fact that R is the best place to go for our needs
+because of several reasons, but mostly:
+
+1. First and foremost: R is full of friendly communities! 
+2. R comes as a binary that can be installed on all major operating systems and
+   is available online via RStudio Cloud
+3. R has a robust ecosystem for publishing thanks to {knitr} and RMarkdown
+
+Once we identified R as our solution, the natural place to go was blogdown, but
+we quickly realized that while the tools were separated from the content and the
+documentation was rich and accessible, there were many aspects that would not
+fit our model including the presence of styling within the repository. 
+
+We realized that an unlikely contender, {pkgdown}, a documentation site
+generator, used the same model that we were looking for: It meets people where
+they are, content is pure markdown with no extra templating required, the tools
+to build everything lived in a separate package, and it can be customizable by
+making your own package to host your CSS, JS, and HTML templates. 
+
+From this model, we created three packages to serve as the infrastructure tools,
+styling, and validation:
+
+ - {sandpaper} to orchestrate building and maintaining lessons
+ - {varnish} to host the CSS, JS, and HTML templates
+ - {pegboard} to serve as a validator (and converter!) for lesson content 
+
+When thinking about the lesson structure itself, we thought about what would
+make sense for a maintainer or contributor to contribute to a lesson would be
+a folder structure that is reflected in the website dropdown menus, so our
+lessons consist of folders that we use commonly: one folder for lesson
+chapters, one for extra information for learners, one for extra information for
+instructors, and one to contain learner profiles. The final folder contains the
+rendered markdown files so you can use them in another context and website so
+that you can put it on a USB stick and share it without needing to run a local
+server. 
 
 ### Opportunity
 
-Of course, our challenge ticks all the boxes that satisfy our design choices in
+Of course, our solution ticks all the boxes that satisfy our design choices in
 that it's modular, but if we ended up designing something that R enthusiasts
 love, but is unusable by newcomers, Python, or Matlab folks, then we are not
 valuing all contributions. 
@@ -212,3 +252,18 @@ see what features people kept stumbling over.
 
 ## Conclusion
 
+We have just barely finished with the alpha testing and the next phase for us is
+to address all the issues that were brought up, clean up documentation, and 
+build it for the beta release, where we will try it on a few live lessons to
+make sure this works for the community. It's a slow process, but this way we
+can avoid major unforseen issues (minor issues are a given), bring users in on
+the ground floor, get valuable feedback, and strengthen trust with our
+community.
+
+And I want to conclude by saying that we ended up choosing a solution that we
+believe aligns with our values and will work with our community. We don't have
+all the answers right now, but we go through this process because we want to
+make sure we put people first and are always learning.
+
+Thank you to our fiscal sponsor, Community Initiatives and generous grants from
+the Moore Foundation and the Chan-Zuckerberg foundation.
