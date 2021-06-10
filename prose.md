@@ -274,13 +274,13 @@ which is a big improvement over the current system.
  - Jon Haitz Legarreta Gorroño
  - Karen Word
  - Kari Jordan
- - ***REMOVED***
  - Maneesha Sane
  - Michael Culshaw-Maurer
  - Sarah Brown
  - Sarah Stevens
  - Shaun C. Gaynor
  - Toby Hodges
+ - anonymous
 
 ## Conclusion
 
