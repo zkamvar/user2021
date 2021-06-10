@@ -6,10 +6,12 @@ more than 420 words per section.
 
 > word count: ~2400 words; 160 wpm
 > timing 2021-06-09: 14:48.61 :grimace:
+> timing 2021-06-09: 15:05.77 :weary: 
 
 ## Introduction
 
 > timing 2021-06-09: 03:37.11
+> timing 2021-06-09: 04:07.34
 
 The Carpentries is a global organization of volunteers who strive to teach 
 foundational data and coding skills to researchers worldwide. What makes us
@@ -88,6 +90,7 @@ about our infrastructure.
 ## Infrastructure
 
 > timing 2021-06-09: 04:20.38
+> timing 2021-06-09: 03:52.10
 
 Our lessons are written in markdown and translated to HTML via GitHub pages and
 the Jekyll static site generator. The idea behind this choice was that it was
@@ -149,6 +152,7 @@ more chopportunities.
 ## Chopportunities
 
 > timing 2021-06-09: 01:15.30
+> timing 2021-06-09: 01:18.37
 
 By chopportunities, I am referring to a challenge that is also an opportunity. 
 The growth that we've experienced in the past few years is a chopportunity.
@@ -173,6 +177,7 @@ understand the engine driving everything.
 ## Solution
 
 > timing 2021-06-09: 04:47.01
+> timing 2021-06-09: ~4.5-5 minutes
 
 As I mentioned in the beginning of my talk, we are using R for our solution and
 here's how we got there. 
@@ -283,6 +288,7 @@ which is a big improvement over the current system.
 ## Conclusion
 
 > timing 2021-06-09: 00:48.79
+> timing 2021-06-09: ~ 1 minute
 
 We have just barely finished with the alpha testing and the next phase for us is
 to address all the questions and concerns that were brought up (for example: how
