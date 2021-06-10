@@ -6,7 +6,7 @@ more than 420 words per section.
 
 > word count: ~2400 words; 160 wpm    
 > timing 2021-06-09: 14:48.61 :grimace:    
-> timing 2021-06-09: 15:05.77 :weary: 
+> timing 2021-06-09: 15:05.77 :weary:    
 
 ## Introduction
 
@@ -56,7 +56,7 @@ slack threads and we realize that these issues will not be fixed by writing
 better documentation, they can only be fixed by rethinking our infrastructure
 all together in a way that is more inclusive and welcoming for all people,
 including those who just want to write lessons and those who are interested in
-the machinery behind it all.  
+the machinery behind it all.
 
 We found that the R publishing ecosystem with pandoc is flexible enough to give
 us all the tools we need **to reduce barriers for publishing lessons and
@@ -66,8 +66,8 @@ present experiences from our community to iteratively refine our design.
 
 And before I move on, I want to remind everyone of two things:
 
-> There is no right or wrong, only better or worse 
-> 
+> There is no right or wrong, only better or worse
+>
 > --- GW
 
 This quote by Greg Wilson was written after several iterations of the lesson
@@ -102,18 +102,18 @@ It's important to pause here and point out that the entire paradigm for this is
 for people to be able to write markdown lessons and get a functional website
 out of it. This is not a new concept, in fact, there are over 460 iterations of
 this concept according to https://staticsitegenerators.net. Jekyll happens to
-be the one that was used by GitHub early on and thus it stuck. 
+be the one that was used by GitHub early on and thus it stuck.
 
 Of course, the default themes for Jekyll are focused on blog output, so we
 created an all-in-one bundle for lessons that provided styling templates in
 HTML, CSS, and JavaScript along with validation scripts in Python and R scripts
 to build RMarkdown-based lessons. All of this was orchestrated by a Makefile.
-The purpose of these tools were two-fold: 
+The purpose of these tools were two-fold:
 
 1. To maintain a consistent style that emphasize our principles of
    evidence-based teaching such as learning objectives and formative assessment
 2. To demonstrate the how the skills we teach in our workshops can be applied
-   to real-life situations. 
+   to real-life situations.
 
 While this was conceptually good in theory, this infrastructure design has two
 significant drawbacks for contributors:
@@ -125,7 +125,7 @@ significant drawbacks for contributors:
    their machines. This is especially frustrating for Windows users who have none
    of these by default. Moreover, having all the tools living inside the
    repository meant that lessons quickly become out of date as we improve our
-   infrastructure.  
+   infrastructure.
 2. Another drawback is that we have a lesson website wrapped around a static
    site generator (which in and of itself is a kind of desire path), this meant
    that it was easy to contribute to if you were familiar with how Jekyll
@@ -139,22 +139,16 @@ significant drawbacks for contributors:
 
 This brings me back to the cowpaths. Over the last few years, we have
 begun finding them from all across the lesson infrastructure popping up in
-separate places that appear through issues and pull requests from contributors
-and maintainers alike. These have appeared as people trying to modify some of
-the "do not touch areas" (either styles or the generated markdown for RMarkdown
-lessons) or avoiding installing our software stack, forking the lesson, and
-switching the default branch to preview their changes all from GitHub. 
-
-So, now that we have our field full of cowpaths, we need to figure out which 
-ones need to be paved over as we grow as an organisation and encounter more and
-more chopportunities. 
+separate places that appear through issues, pull requests and general
+frustration from contributors and maintainers alike. The thing about cowpaths,
+though, is that they are not only challenges, but also opportunities, which we
+like to call "chopportunities."
 
 ## Chopportunities
 
 > timing 2021-06-09: 01:15.30
 > timing 2021-06-09: 01:18.37
 
-By chopportunities, I am referring to a challenge that is also an opportunity. 
 The growth that we've experienced in the past few years is a chopportunity.
 We have seen not only a growth in the number of community members, but also,
 with the carpentries incubator for community contributed lessons, we have seen
@@ -164,15 +158,10 @@ Our challenge is clear: the all-in-one lesson infrastructure does not scale
 well to the growing number of lessons under our umbrella, so we need to build
 infrastructure that scales even better and separates the tools from the content.
 
-Our opportunity here is to reimagine the infrastructure in a way that truly 
+Our opportunity here is to reimagine the infrastructure in a way that truly
 values all contributions: this includes the spectrum from everyday educators
-who do not feel "techy" to the tinkerers who like to peek under the hood. To do
-this, we need to think back to the unifying purpose of having the lesson
-infrastructure in the first place: to empower authors to write lessons in
-a markdown variant, and host them on a website that looks and feels like a
-Carpentries lesson. This means that our solution must not only include direct
-on-ramps for everyone, but also build in access panels for people who want to
-understand the engine driving everything.
+who do not feel "techy" to the tinkerers who need to understand what's going on
+behind the scenes.
 
 ## Solution
 
@@ -180,16 +169,16 @@ understand the engine driving everything.
 > timing 2021-06-09: ~4.5-5 minutes
 
 As I mentioned in the beginning of my talk, we are using R for our solution and
-here's how we got there. 
+here's how we got there.
 
 ### Challenge
 
 We wanted a general solution where you could take markdown or RMarkdown files,
-place them in a folder and generate a site without having complicated paths or
-generated files lying around. The first thing we did was to look at prior art,
-or, what has been built before.
+place them in a folder and generate a Carpentries-style lesson without having
+complicated paths or generated files lying around. The first thing we did was
+to look at prior art, or, what has been built before.
 
-It was important that we choose something that was user friendly, easy to 
+It was important that we choose something that was user friendly, easy to
 install, easily customizable, and had a welcoming community behind it. We tried
 out several static site generators, but the largest barrier for many of these
 was that they were not easy to install and maintain. 
@@ -250,7 +239,7 @@ is used as long as it is usable. To do this, we needed to test the minimal
 viable product on actual maintainers and we needed to make sure that they were
 spread across the spectrum of 
 
- - using R, 
+ - using R,
  - familiarity with the current infrastructure
  - familiarity with The Carpentries.
 
