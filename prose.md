@@ -4,8 +4,8 @@ This will be the prose of the talk that I will use as the source for the
 transcript. Assuming an average 140 words per minute, this should contain no
 more than 420 words per section. 
 
-> word count: ~2400 words; 160 wpm
-> timing 2021-06-09: 14:48.61 :grimace:
+> word count: ~2400 words; 160 wpm    
+> timing 2021-06-09: 14:48.61 :grimace:    
 > timing 2021-06-09: 15:05.77 :weary: 
 
 ## Introduction
