@@ -165,13 +165,17 @@ values all contributions: this includes the spectrum from everyday educators
 who do not feel "techy" to the tinkerers who like to peek under the hood. To do
 this, we need to think back to the unifying purpose of having the lesson
 infrastructure in the first place: to empower authors to write lessons in
-a markdown variant, and host them on a website. This means that our solution
-must not only include direct on-ramps for everyone, but also build in access
-panels for people who want to understand the engine driving everything.
+a markdown variant, and host them on a website that looks and feels like a
+Carpentries lesson. This means that our solution must not only include direct
+on-ramps for everyone, but also build in access panels for people who want to
+understand the engine driving everything.
 
 ## Solution
 
 > timing 2021-06-09: 04:47.01
+
+As I mentioned in the beginning of my talk, we are using R for our solution and
+here's how we got there. 
 
 ### Challenge
 
@@ -182,26 +186,31 @@ or, what has been built before.
 
 It was important that we choose something that was user friendly, easy to 
 install, easily customizable, and had a welcoming community behind it. We tried
-out several static site generators, but very few were easy to install and none
-of them fit all of our criteria.
+out several static site generators, but the largest barrier for many of these
+was that they were not easy to install and maintain. 
 
 Eventually, we settled on the fact that R is the best place to go for our needs
 because of several reasons, but mostly:
 
-1. First and foremost: R is full of friendly communities! 
+1. First and foremost: R is chock-full of friendly communities!
+  - RLadies
+  - ROpenSci
+  - RForwards
+  - MiR
 2. R comes as a binary that can be installed on all major operating systems and
    is available online via RStudio Cloud
 3. R has a robust ecosystem for publishing thanks to {knitr} and RMarkdown
 
-Once we identified R as our solution, the natural place to go was blogdown, but
-we quickly realized that while the tools were separated from the content and the
-documentation was rich and accessible, there were many aspects that would not
-fit our model including the presence of styling within the repository. 
+Once we identified R as our solution, the natural place to go was one of the
+RMarkdown variants like blogdown or hugodown, but we found that while the tools
+were indeed separated from the content and the documentation was rich and
+accessible, there were many aspects that would not fit our model including the
+presence of styling within the repository. 
 
 We realized that an unlikely contender, {pkgdown}, a documentation site
 generator, used the same model that we were looking for: It meets people where
 they are, content is pure markdown with no extra templating required, the tools
-to build everything lived in a separate package, and it can be customizable by
+to build everything lived in a separate package, and it can be customized by
 making your own package to host your CSS, JS, and HTML templates. 
 
 From this model, we created three packages to serve as the infrastructure tools,
@@ -212,14 +221,14 @@ styling, and validation:
  - {pegboard} to serve as a validator (and converter!) for lesson content 
 
 When thinking about the lesson structure itself, we thought about what would
-make sense for a maintainer or contributor to contribute to a lesson would be
-a folder structure that is reflected in the website dropdown menus, so our
-lessons consist of folders that we use commonly: one folder for lesson
-chapters, one for extra information for learners, one for extra information for
-instructors, and one to contain learner profiles. The final folder contains the
-rendered markdown files so you can use them in another context and website so
-that you can put it on a USB stick and share it without needing to run a local
-server. 
+make sense for a maintainer or contributor when they saw the source files of
+a website. We created a a folder structure that is reflected in the website
+dropdown menus, so our lessons consist of folders that we use commonly: one
+folder for lesson chapters, one for extra information for learners, one for
+extra information for instructors, and one to contain learner profiles. The
+final folder is one of the access panels that contains the rendered markdown
+files---so you can use them in another context---and static website so that you
+can put it on a USB stick and share it without needing to run a local server. 
 
 ### Opportunity
 
@@ -234,28 +243,55 @@ where people can place their markdown/RMarkdown/MyST notebooks in a folder and
 create a lesson directly from these sources. It shouldn't matter what language
 is used as long as it is usable. To do this, we needed to test the minimal
 viable product on actual maintainers and we needed to make sure that they were
-spread across the spectrum of using R, familiarity with the current 
-infrastructure, and even familiarity with The Carpentries.
+spread across the spectrum of 
 
-We recruited a total of 18 volunteers to run through the Alpha Test, which tested
-the participants ability to install the infrastructure, create a lesson, modify
-a lesson, and contribute to an existing lesson. After the tests, we asked for
-20 minute open-ended interviews about their experience with the new tempalte to
-see what features people kept stumbling over.
+ - using R, 
+ - familiarity with the current infrastructure
+ - familiarity with The Carpentries.
 
-> Thank alpha testers here in slide
+We recruited a total of 19 volunteers to run through the Alpha Test, which
+tested the participants ability to install the infrastructure, create a lesson,
+modify a lesson, and contribute to an existing lesson. After the tests, we
+asked for 20 minute open-ended interviews about their experience with the new
+tempalte to see what features people kept stumbling over. I want to take a 
+moment to thank the folks who have helped with the Alpha testing, some of whom
+were part of The Carpentries core team. I don't have the time to go into detail
+about the results, but a big takeaway from this was that everyone was able to
+install the infrastructure and any problems that occured were from Git/GitHub,
+which is a big improvement over the current system. 
+
+ - Angelique Trusler
+ - Christina Koch
+ - David Pérez-Suárez
+ - Drake Asberry
+ - Eric Jankowski
+ - Erin Becker
+ - Ezra Herman
+ - Fan Du
+ - François Michonneau
+ - Jon Haitz Legarreta Gorroño
+ - Karen Word
+ - Kari Jordan
+ - ***REMOVED***
+ - Maneesha Sane
+ - Michael Culshaw-Maurer
+ - Sarah Brown
+ - Sarah Stevens
+ - Shaun C. Gaynor
+ - Toby Hodges
 
 ## Conclusion
 
 > timing 2021-06-09: 00:48.79
 
 We have just barely finished with the alpha testing and the next phase for us is
-to address all the issues that were brought up, clean up documentation, and 
-build it for the beta release, where we will try it on a few live lessons to
-make sure this works for the community. It's a slow process, but this way we
-can avoid major unforseen issues (minor issues are a given), bring users in on
-the ground floor, get valuable feedback, and strengthen trust with our
-community.
+to address all the questions and concerns that were brought up (for example: how
+do I use this without clobbering the current R installation on my system?),
+clean up documentation, and build it for the beta release, where we will try it
+on a few live lessons to make sure this works for the community. It's a slow
+process, but this way we can avoid major unforseen issues (minor issues are a
+given), bring users in on the ground floor, get valuable feedback, and
+strengthen trust with our community.
 
 And I want to conclude by saying that we ended up choosing a solution that we
 believe aligns with our values and will work with our community. We don't have
