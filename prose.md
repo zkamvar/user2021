@@ -158,19 +158,18 @@ like to call at The Carpentries "chopportunities."
 > timing 2021-06-09: 01:18.37
 > timing 2021-06-10: 00:47.12
 
-The growth that we've experienced in the past few years is a chopportunity.
+The growth that we have experienced in the past few years is a chopportunity.
 We have seen not only a growth in the number of community members, but also,
-with the carpentries incubator for community contributed lessons, we have seen
-a vast growth in the number of lessons using the template.
+in the number community contributed lessons since we started
+The Carpentries Incubator.
 
 Our challenge is clear: the all-in-one lesson infrastructure does not scale
-well to the growing number of lessons under our umbrella, so we need to build
-infrastructure that scales even better and separates the tools from the content.
+well to the growing number of lessons.
 
 Our opportunity here is to reimagine the infrastructure in a way that truly
 values all contributions: this includes the spectrum from everyday educators
-who do not feel "techy" to the tinkerers who need to understand what's going on
-behind the scenes.
+who want to share their knowledge, to the tinkerers who need to understand
+what's going on behind the scenes.
 
 ## Solution
 
