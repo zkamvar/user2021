@@ -169,7 +169,7 @@ well to the growing number of lessons.
 Our opportunity here is to reimagine the infrastructure in a way that truly
 values all contributions: this includes the spectrum from everyday educators
 who want to share their knowledge, to the tinkerers who need to understand
-what's going on behind the scenes.
+what is going on behind the scenes.
 
 ## Solution
 
@@ -177,44 +177,44 @@ what's going on behind the scenes.
 > timing 2021-06-09: ~4.5-5 minutes
 > timing 2021-06-10: ~5 minutes
 
-As I mentioned in the beginning of my talk, we are using R for our solution and
-here's how we got there.
+How and why did we choose R to create the next iteration of our lesson
+infrastructure?
 
 ### Challenge
 
 We wanted a general solution where you could take markdown or RMarkdown files,
 place them in a folder and generate a Carpentries-style lesson without having
 complicated paths or generated files lying around. The first thing we did was
-to look at prior art, or, what has been built before.
+to investigate the existing landscape.
 
-It was important that we choose something that was user friendly, easy to
-install, easily customizable, and had a welcoming community behind it. We tried
+It was important that we choose something that is user friendly, easy to
+install, easily customizable, and has a welcoming community behind it. We tried
 out several static site generators, but the largest barrier for many of these
 was that they were not easy to install and maintain.
 
-Eventually, we settled on the fact that R is the best place to go for our needs
-because of several reasons, but mostly:
+We settled on the fact that R is the best place to go for our needs
+because:
 
 1. First and foremost: R is chock-full of friendly communities!
   - RLadies
   - ROpenSci
   - RForwards
   - MiR
-2. R comes as a binary that can be installed on all major operating systems and
+2. R is easy to install on all major operating systems and
    is available online via RStudio Cloud
 3. R has a robust ecosystem for publishing thanks to {knitr} and RMarkdown
 
 Once we identified R as our solution, the natural place to go was one of the
-RMarkdown variants like blogdown or hugodown, but we found that while the tools
+RMarkdown variants like {blogdown} or {hugodown}, but we found that while the tools
 were indeed separated from the content and the documentation was rich and
-accessible, there were many aspects that would not fit our model including the
+accessible, there were many aspects that would not fit our needs including the
 presence of styling within the repository.
 
 We realized that an unlikely contender, {pkgdown}, a documentation site
 generator, used the same model that we were looking for: It meets people where
 they are, content is pure markdown with no extra templating required, the tools
-to build everything lived in a separate package, and it can be customized by
-making your own package to host your CSS, JS, and HTML templates.
+to build everything lived in a separate package, and you can customize its appearance
+by making your own package to supply your CSS, JS, and HTML templates.
 
 From this model, we created three packages to serve as the infrastructure tools,
 styling, and validation:
@@ -223,13 +223,13 @@ styling, and validation:
  - {varnish} to host the CSS, JS, and HTML templates
  - {pegboard} to serve as a validator (and converter!) for lesson content
 
-When thinking about the lesson structure itself, we thought about what would
-make sense for a maintainer or contributor when they saw the source files of
-a website. We created a a folder structure that is reflected in the website
+When thinking about how that compose the lessons should be organized,
+We created a folder structure that reflects the website
 dropdown menus, so our lessons consist of folders that we use commonly: one
 folder for lesson chapters, one for extra information for learners, one for
-extra information for instructors, and one to contain learner profiles. The
-final folder is one of the access panels that contains the rendered markdown
+extra information for instructors, and one to contain learner profiles.
+
+The final folder is one of the access panels that contains the rendered markdown
 files---so you can use them in another context---and static website so that you
 can put it on a USB stick and share it without needing to run a local server.
 
