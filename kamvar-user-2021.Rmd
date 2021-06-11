@@ -28,6 +28,14 @@ Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharin
 Note: the useR template modifies the css for the background image, so we need to adjust the size and position manually for every slide.
 
 ---
+background-image: url(lesson-growth.png)
+background-size: contain
+background-position: center
+
+
+---
+
+---
 class: center, middle
 
 # xaringan
