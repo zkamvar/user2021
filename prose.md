@@ -100,57 +100,57 @@ our current infrastructure.
 > timing 2021-06-09: 03:52.10
 > timing 2021-06-10: 03:08.87
 
-Our lessons are written in markdown and translated to HTML via GitHub pages and
+Our lessons are written in markdown and into a website via GitHub Pages and
 the Jekyll static site generator. The idea behind this choice was that it was
 the most straightforward way to create a static website without needing a server
-like wordpress or drupal sites. Ideally, it also provided a way for people to
+like Wordpress or Drupal sites. Ideally, it also provided a way for people to
 use this as an example of how they could build their own website.
 
-It's important to pause here and point out that the entire paradigm for this is
-for people to be able to write markdown lessons and get a functional website
-out of it. This is not a new concept, in fact, there are over 460 iterations of
+The paradigm of being able to write markdown lessons and get a functional website
+out of it is not a new concept. In fact, there are over 460 iterations of
 this concept according to https://staticsitegenerators.net. Jekyll happens to
-be the one that was used by GitHub early on and thus it stuck.
+be the one that GitHub implemented early on to provide documentation for the
+open-source project it hosted, and thus, it stuck.
 
-Of course, the default themes for Jekyll are focused on blog output, so we
-created an all-in-one bundle for lessons that provided styling templates in
+We created an all-in-one bundle for lessons that provided styling templates in
 HTML, CSS, and JavaScript along with validation scripts in Python and R scripts
 to build RMarkdown-based lessons. All of this was orchestrated by a Makefile.
-The purpose of these tools were two-fold:
+The purpose of this approach was two-fold:
 
-1. To maintain a consistent style that emphasize our principles of
-   evidence-based teaching such as learning objectives and formative assessment
-2. To demonstrate the how the skills we teach in our workshops can be applied
+1. To maintain a consistent style that emphasized our principles of
+   evidence-based teaching such as learning objectives and formative assessment;
+2. To demonstrate how the skills we teach in our workshops could be applied
    to real-life situations.
 
-While this was conceptually good in theory, this infrastructure design has two
+While this was conceptually good in theory, this infrastructure design has three
 significant drawbacks for contributors:
 
 1. Installation pains.
    <https://twitter.com/gvwilson/status/1380115181708189701?s=20> Having
    Jekyll, Python, and Make as dependencies means that people who want to build
-   these lessons need all three of these successfully installed and up-to-date on
-   their machines. This is especially frustrating for Windows users who have none
-   of these by default. Moreover, having all the tools living inside the
-   repository meant that lessons quickly become out of date as we improve our
-   infrastructure.
+   these lessons on their machines need all three of these successfully installed 
+   and up-to-date.
+   This is especially frustrating for Windows users who have none
+   of these by default.
+2. All the scripts live inside the repository. This means that lessons quickly
+   become out of date as they diverge from the improvements made upstream.
 2. Another drawback is that we have a lesson website wrapped around a static
    site generator (which in and of itself is a kind of desire path), this meant
    that it was easy to contribute to if you were familiar with how Jekyll
-   operated. Some would say Jekyll is well documented, but in my experience,
-   Jekyll is well, documented. There is often a moment of panic in a new
+   operated. There is often a moment of panic in a new
    contributor's eyes when you show them what the a lesson repository looks like.
    If you were not familiar with Jekyll, then it was unclear where to even start
-   if you were looking at the git repository because of all the exposed wiring
-   with no signs that clearly say "start here". This aspect has lead to several
-   lessons built in _slightly_ different ways.
+   if you were looking at the git repository because there were no clear sign
+   that marked the trail head. This lead several lessons to find their own
+   trail head that ended up built in different ways.
 
-This brings me back to the cowpaths. Over the last few years, we have
-begun finding them from all across the lesson infrastructure popping up in
-separate places that appear through issues, pull requests and general
-frustration from contributors and maintainers alike. The thing about cowpaths,
+Over the last few years, we have
+begun finding the trail head of these desire paths all across our lesson
+infrastructure.
+This manifested through our communication channels and frustration from contributors
+and maintainers alike. The thing about desire paths,
 though, is that they are not only challenges, but also opportunities, which we
-like to call "chopportunities."
+like to call at The Carpentries "chopportunities."
 
 ## Chopportunities
 
