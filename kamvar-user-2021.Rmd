@@ -25,6 +25,8 @@ options(htmltools.dir.version = FALSE)
 
 Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
 
+Note: the useR template modifies the css for the background image, so we need to adjust the size and position manually for every slide.
+
 ---
 class: center, middle
 
