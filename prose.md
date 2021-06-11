@@ -235,30 +235,30 @@ can put it on a USB stick and share it without needing to run a local server.
 
 ### Opportunity
 
-Of course, our solution ticks all the boxes that satisfy our design choices in
-that it's modular, but if we ended up designing something that R enthusiasts
+Our solution ticks all the boxes that satisfy our design choices,
+but if we ended up designing something that R enthusiasts
 love, but is unusable by newcomers, Python, or Matlab folks, then we are not
-valuing all contributions.
+in line with our value of being inclusive of all.
 
-Again, the whole point of this exercise is to get us back to a place where the
-authors can focus on the content over the tools. We want to get back to a place
-where people can place their markdown/RMarkdown/MyST notebooks in a folder and
-create a lesson directly from these sources. It shouldn't matter what language
-is used as long as it is usable. To do this, we needed to test the minimal
+Our goal is for authors to focus on the content over the tooling.
+We want lesson authors to create a lesson directly from the source
+they already work with: markdown/RMarkdown/MyST notebooks.
+To do this, we needed to test the minimal
 viable product on actual maintainers and we needed to make sure that they were
-spread across the spectrum of
+spread across the spectrum of familiarity with:
 
  - using R,
- - familiarity with the current infrastructure
- - familiarity with The Carpentries.
+ - the current infrastructure,
+ - the way The Carpentries operates.
 
-We recruited a total of 19 volunteers to run through the Alpha Test, which
-tested the participants ability to install the infrastructure, create a lesson,
-modify a lesson, and contribute to an existing lesson. After the tests, we
-asked for 20 minute open-ended interviews about their experience with the new
-tempalte to see what features people kept stumbling over. I want to take a
-moment to thank the folks who have helped with the Alpha testing, some of whom
-were part of The Carpentries core team. I don't have the time to go into detail
+We recruited a total of 19 volunteers to run through Alpha Testing, which
+tested the participants ability to install the required software and packages,
+create,
+modify, and contribute to lessons. After the tests, I
+interviewed for 20 minutes volunteers about their experience
+to identify the features people kept stumbling over. I want to take a
+moment to thank everyone who has participated, some of whom
+are part of The Carpentries core team. I don't have the time to go into detail
 about the results, but a big takeaway from this was that everyone was able to
 install the infrastructure and any problems that occured were from Git/GitHub,
 which is a big improvement over the current system.
@@ -289,18 +289,20 @@ which is a big improvement over the current system.
 > timing 2021-06-09: ~ 1 minute
 > timing 2021-06-10: ~ 1 minute
 
-We have just barely finished with the alpha testing and the next phase for us is
-to address all the questions and concerns that were brought up (for example: how
+We have just finished with this first testing phase and the next step for us is
+to address the questions and concerns that were brought up (for example: how
 do I use this without clobbering the current R installation on my system?),
-clean up documentation, and build it for the beta release, where we will try it
-on a few live lessons to make sure this works for the community. It's a slow
+improve the documentation, and get ready for the beta release, where we will try it
+on a few live lessons to identify painpoints for the community. It is a slow
 process, but this way we can avoid major unforseen issues (minor issues are a
 given), bring users in on the ground floor, get valuable feedback, and
 strengthen trust with our community.
 
+> if you want to go fast, go alone; if you want to go far, go together
+
 And I want to conclude by saying that we ended up choosing a solution that we
-believe aligns with our values and will work with our community. We don't have
-all the answers right now, but we go through this process because we want to
+believe aligns with our values and will not get in the way of the work from our community.
+We do not have all the answers right now, but we go through this process because we want to
 make sure we put people first and are always learning.
 
 Thank you to our fiscal sponsor, Community Initiatives and generous grants from
