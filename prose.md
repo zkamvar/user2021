@@ -16,30 +16,31 @@ more than 420 words per section.
 > timing 2021-06-10: 04:01.98
 
 
-The Carpentries is a global organization of volunteers who strive to teach
+The Carpentries is a global organization of volunteers who teach
 foundational data and coding skills to researchers worldwide. What makes us
 stand out is not the fact that we use evidence-based practices in teaching, it's
-that we align all of our decisions with our core values which puts people first
-and accepts all contributions.
+that we align all of our decisions with our core values: we put people first
+and we value all contributions.
 
-Our lessons are all open-license websites built on a consistent style that
+Our lessons are distributed as open-licensed websites built on a consistent style that
 adheres to active learning principals. We use these lessons as the source
-material for the hundreds of workshops we run each year and have three distinct
+material for the hundreds of workshops we run each year. So, these sites have three distinct
 audiences:
 
-1. The certified Carpentries instructor who uses it for reference material as
-   they teach.
-2. The learner in a Carpentries workshop who uses the lesson as a reference
-   later on as they practice the materials.
-3. The educator who wants to use these open-licensed materials for their own
+1. The Carpentries Instructors who refer to these materials as
+   they teach our workshops.
+2. The learners in a Carpentries workshop who rely on these lessons after a workshop
+   as they review and practice their newly aquired skills.
+3. The educators who adapt these open-licensed materials for their own
    lessons.
 
-The source for these lessons are hosted on GitHub were we have a core set of
-volunteer maintainers to make sure that the information on the lesson is
-accurate and up to date. It is in these repositories that we accept all
-contributions from the community, whether it be simple typo fix or a better
-explanation of an important lesson concept, anyone can go to the repository and
-make a suggestion... at least that was our intention.
+The source for these lessons are hosted on GitHub were
+volunteer Maintainers ensure that the lessons are
+accurate and up-to-date. We encourage a culture of open contribution,
+where members of our community can suggest a
+simple typo fix or a better
+explanation of an important lesson concept. We want **anyone** can go to the repository and
+make a suggestion to improve our lessons... at least that was our intention.
 
 I want to pause for a second here and highlight this tweet that came across my
 feed as I was preparing this talk.
@@ -51,46 +52,47 @@ grass, which leads to a crosswalk. There is a sign in front of the unpaved path
 that says "Please use the purpose made path provided." The tweet author points
 out that "the sign knows it has lost."
 
-This unofficial footpath is called a "cowpath" or a "desire path" and it's a
-very important concept in design because it shows the difference between what
-the designers intended vs how people actually use the space.
+This unofficial footpath is called a "cowpath" or a "desire path". It is an
+important concept in design because it shows the difference between what
+the designers intended and how people actually use the space.
 
-As our community has grown, we've been noticing more and more of these desire
-paths in our lesson infrastructure through issue comments, pull requests, and
-slack threads and we realize that these issues will not be fixed by writing
-better documentation, they can only be fixed by rethinking our infrastructure
-all together in a way that is more inclusive and welcoming for all people,
-including those who just want to write lessons and those who are interested in
-the machinery behind it all.
+As our community has grown, new desire paths were being created across our lesson
+infrastructure landscape. No signs (i.e., better documentation) would stop 
+contributors to our lessons from stepping outside the complex, and not always
+well-paved, path that makes up our lesson infrastructure.
+we have been noticing more and more of these desire
+We needed to rethink our infrastructure
+altogether in a way that is more inclusive and welcoming for everyone.
 
-We found that the R publishing ecosystem with pandoc is flexible enough to give
-us all the tools we need **to reduce barriers for publishing lessons and
-furthers our mission**. In this talk, I will introduce you to our current
-infrastructure, it's unique challenges, our solutions, and how we used past and
-present experiences from our community to iteratively refine our design.
+We found that the R publishing ecosystem is flexible enough to give
+us the tools we need **to reduce barriers for publishing lessons and
+further our mission**. I will introduce you to our current
+infrastructure, its unique challenges, our solutions, and how we used past and
+present feedback from our community to iteratively refine our design.
 
-And before I move on, I want to remind everyone of two things:
+Before continuing, I want to remind everyone of two things. First:
 
-> There is no right or wrong, only better or worse
+> There is no right or wrong, only better or worse.
 >
 > --- GW
 
-This quote by Greg Wilson was written after several iterations of the lesson
-infrastructure and I put it here as a reminder that the infrastructure we have
-right now was working for us at the time and what we come up with will have its
+Greg Wilson wrote this after several iterations of the lesson
+infrastructure. I am putting it here as a reminder that the infrastructure we have
+now was working for us at the time. What we come up with will have its
 own difficulties down the road, but what is important is that we build something
-that better addresses the needs of the community, which leads me to my second
+that better addresses the needs of our community, which leads me to my second
 reminder:
 
 > In The Carpentries: you belong
 
 As the community has grown, our infrastructure has been put to the test and we
-have continuously updated our workflows to lower barriers for people. The reason
-we do this is because our values are what drive us and in The Carpentries, you
+have continuously updated our workflows to make it easier for people to contribute.
+The reason we do this is because our values are what drive us. In The Carpentries, you
 belong, no matter if you have been working as a systems administrator for a
 university HPC cluster or if you have just learned to write your first R script.
-If you are unfamiliar with how we build our lessons, the next section is all
-about our infrastructure.
+
+To better understand the decisions we are making, let's start by reviewing
+our current infrastructure.
 
 ## Infrastructure
 
