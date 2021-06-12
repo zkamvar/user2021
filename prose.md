@@ -27,14 +27,14 @@ adheres to active learning principals. We use these lessons as the source
 material for the hundreds of workshops we run each year. So, these sites have three distinct
 audiences:
 
-1. The Carpentries Instructors who refer to these materials as
+1. The certified Carpentries Instructors who refer to these materials as
    they teach our workshops.
 2. The learners in a Carpentries workshop who rely on these lessons after a workshop
    as they review and practice their newly aquired skills.
 3. The educators who adapt these open-licensed materials for their own
    lessons.
 
-The source for these lessons are hosted on GitHub were
+The source for these lessons are hosted on GitHub where
 volunteer Maintainers ensure that the lessons are
 accurate and up-to-date. We encourage a culture of open contribution,
 where members of our community can suggest a
@@ -142,12 +142,11 @@ significant drawbacks for contributors:
    If you were not familiar with Jekyll, then it was unclear where to even start
    if you were looking at the git repository because there were no clear sign
    that marked the trail head. This lead several lessons to find their own
-   trail head that ended up built in different ways.
+   paths that ended up built in different ways.
 
 Over the last few years, we have
-begun finding the trail head of these desire paths all across our lesson
-infrastructure.
-This manifested through our communication channels and frustration from contributors
+begun finding these desire paths all across our lesson infrastructure.
+These manifested through our communication channels and frustration from contributors
 and maintainers alike. The thing about desire paths,
 though, is that they are not only challenges, but also opportunities, which we
 like to call at The Carpentries "chopportunities."
@@ -177,8 +176,9 @@ what is going on behind the scenes.
 > timing 2021-06-09: ~4.5-5 minutes
 > timing 2021-06-10: ~5 minutes
 
-How and why did we choose R to create the next iteration of our lesson
-infrastructure?
+The solution we came up with uses R and I simply do not have enough time to discuss all the features, but you can find out for yourself if you visit our blog posts and documentation on how to get started. 
+
+So, how and why did we choose R to create the next iteration of our lesson infrastructure?
 
 ### Challenge
 
@@ -223,8 +223,7 @@ styling, and validation:
  - {varnish} to host the CSS, JS, and HTML templates
  - {pegboard} to serve as a validator (and converter!) for lesson content
 
-When thinking about how that compose the lessons should be organized,
-We created a folder structure that reflects the website
+Of course, the first thing any contributor will see is the folder structure. We organized the folders of the lesson to reflect the layout of website
 dropdown menus, so our lessons consist of folders that we use commonly: one
 folder for lesson chapters, one for extra information for learners, one for
 extra information for instructors, and one to contain learner profiles.
@@ -255,8 +254,8 @@ We recruited a total of 19 volunteers to run through Alpha Testing, which
 tested the participants ability to install the required software and packages,
 create,
 modify, and contribute to lessons. After the tests, I
-interviewed for 20 minutes volunteers about their experience
-to identify the features people kept stumbling over. I want to take a
+asked for 20-minute open-ended interviews from the volunteers about their experience
+to identify common stumbling blocks, challenges, and bright points. I want to take a
 moment to thank everyone who has participated, some of whom
 are part of The Carpentries core team. I don't have the time to go into detail
 about the results, but a big takeaway from this was that everyone was able to
@@ -301,7 +300,7 @@ strengthen trust with our community.
 > if you want to go fast, go alone; if you want to go far, go together
 
 And I want to conclude by saying that we ended up choosing a solution that we
-believe aligns with our values and will not get in the way of the work from our community.
+believe aligns with our values and will work with our community.
 We do not have all the answers right now, but we go through this process because we want to
 make sure we put people first and are always learning.
 
