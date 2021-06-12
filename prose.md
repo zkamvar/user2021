@@ -52,16 +52,15 @@ grass, which leads to a crosswalk. There is a sign in front of the unpaved path
 that says "Please use the purpose made path provided." The tweet author points
 out that "the sign knows it has lost."
 
-This unofficial footpath is called a "cowpath" or a "desire path". It is an
+This unofficial footpath is called a "desire path". It is an
 important concept in design because it shows the difference between what
 the designers intended and how people actually use the space.
 
-As our community has grown, new desire paths were being created across our lesson
-infrastructure landscape. No signs (i.e., better documentation) would stop 
-contributors to our lessons from stepping outside the complex, and not always
-well-paved, path that makes up our lesson infrastructure.
-we have been noticing more and more of these desire
-We needed to rethink our infrastructure
+As our community has grown, new desire paths were being created across our
+lesson infrastructure landscape. No signs (i.e., better documentation) would
+stop contributors to our lessons from stepping outside the complex, and not
+always well-paved, path that makes up our lesson infrastructure. we have been
+noticing more and more of these desire We needed to rethink our infrastructure
 altogether in a way that is more inclusive and welcoming for everyone.
 
 We found that the R publishing ecosystem is flexible enough to give
@@ -134,28 +133,30 @@ significant drawbacks for contributors:
    of these by default.
 2. All the scripts live inside the repository. This means that lessons quickly
    become out of date as they diverge from the improvements made upstream.
-2. Another drawback is that we have a lesson website wrapped around a static
+3. Another drawback is that we have a lesson website wrapped around a static
    site generator (which in and of itself is a kind of desire path), this meant
    that it was easy to contribute to if you were familiar with how Jekyll
-   operated. There is often a moment of panic in a new
-   contributor's eyes when you show them what the a lesson repository looks like.
-   If you were not familiar with Jekyll, then it was unclear where to even start
-   if you were looking at the git repository because there were no clear sign
-   that marked the trail head. This lead several lessons to find their own
-   paths that ended up built in different ways.
+   operated. There is often a moment of panic in a new contributor's eyes when
+   you show them what the a lesson repository looks like. If you were not
+   familiar with Jekyll, then it was unclear where to even start if you were
+   looking at the git repository because there were no clear sign that marked
+   the trail head. This lead several lessons to find their own paths that ended
+   up built in different ways.
 
-Over the last few years, we have
-begun finding these desire paths all across our lesson infrastructure.
-These manifested through our communication channels and frustration from contributors
-and maintainers alike. The thing about desire paths,
-though, is that they are not only challenges, but also opportunities, which we
-like to call at The Carpentries "chopportunities."
+Over the last few years, we have begun finding these desire paths all across our
+lesson infrastructure. These manifested through our communication channels and
+frustration from contributors and maintainers alike. The thing about desire
+paths, though, is that they are not only challenges, but also opportunities.
+At The Carpentries, we like to call these "chopportunities."
 
 ## Chopportunities
 
 > timing 2021-06-09: 01:15.30
 > timing 2021-06-09: 01:18.37
 > timing 2021-06-10: 00:47.12
+
+![bar chart showing the growth of the number of carpentries lessons per quarter.
+There are currently over 140 lessons](lesson-growth.png)
 
 The growth that we have experienced in the past few years is a chopportunity.
 We have seen not only a growth in the number of community members, but also,
@@ -176,9 +177,12 @@ what is going on behind the scenes.
 > timing 2021-06-09: ~4.5-5 minutes
 > timing 2021-06-10: ~5 minutes
 
-The solution we came up with uses R and I simply do not have enough time to discuss all the features, but you can find out for yourself if you visit our blog posts and documentation on how to get started. 
+The solution we came up with uses R and I simply do not have enough time to
+discuss all the features, but you can find out for yourself if you visit our
+blog posts and documentation on how to get started.
 
-So, how and why did we choose R to create the next iteration of our lesson infrastructure?
+So, how and why did we choose R to create the next iteration of our lesson
+infrastructure?
 
 ### Challenge
 
@@ -205,28 +209,31 @@ because:
 3. R has a robust ecosystem for publishing thanks to {knitr} and RMarkdown
 
 Once we identified R as our solution, the natural place to go was one of the
-RMarkdown variants like {blogdown} or {hugodown}, but we found that while the tools
-were indeed separated from the content and the documentation was rich and
+RMarkdown variants like {blogdown} or {hugodown}, but we found that while the
+tools were indeed separated from the content and the documentation was rich and
 accessible, there were many aspects that would not fit our needs including the
 presence of styling within the repository.
 
 We realized that an unlikely contender, {pkgdown}, a documentation site
 generator, used the same model that we were looking for: It meets people where
 they are, content is pure markdown with no extra templating required, the tools
-to build everything lived in a separate package, and you can customize its appearance
-by making your own package to supply your CSS, JS, and HTML templates.
+to build everything lived in a separate package, and you can customize its
+appearance by making your own package to supply your CSS, JS, and HTML
+templates.
 
-From this model, we created three packages to serve as the infrastructure tools,
+From this model, we were able to pave over the desire paths in our
+infrastructure by creating three packages to serve as the lesson engine,
 styling, and validation:
 
  - {sandpaper} to orchestrate building and maintaining lessons
  - {varnish} to host the CSS, JS, and HTML templates
  - {pegboard} to serve as a validator (and converter!) for lesson content
 
-Of course, the first thing any contributor will see is the folder structure. We organized the folders of the lesson to reflect the layout of website
-dropdown menus, so our lessons consist of folders that we use commonly: one
-folder for lesson chapters, one for extra information for learners, one for
-extra information for instructors, and one to contain learner profiles.
+Of course, the first thing any contributor will see is the folder structure. We
+organized the folders of the lesson to reflect the layout of website dropdown
+menus, so our lessons consist of folders that we use commonly: one folder for
+lesson chapters, one for extra information for learners, one for extra
+information for instructors, and one to contain learner profiles.
 
 The final folder is one of the access panels that contains the rendered markdown
 files---so you can use them in another context---and static website so that you
@@ -250,17 +257,17 @@ spread across the spectrum of familiarity with:
  - the current infrastructure,
  - the way The Carpentries operates.
 
-We recruited a total of 19 volunteers to run through Alpha Testing, which
-tested the participants ability to install the required software and packages,
-create,
-modify, and contribute to lessons. After the tests, I
-asked for 20-minute open-ended interviews from the volunteers about their experience
-to identify common stumbling blocks, challenges, and bright points. I want to take a
-moment to thank everyone who has participated, some of whom
-are part of The Carpentries core team. I don't have the time to go into detail
-about the results, but a big takeaway from this was that everyone was able to
-install the infrastructure and any problems that occured were from Git/GitHub,
-which is a big improvement over the current system.
+We recruited a total of 19 volunteers to run through Alpha Testing, which tested
+the participants ability to install the required software and packages, create,
+modify, and contribute to lessons. After the tests, I asked for 20-minute
+open-ended interviews from the volunteers about their experience to identify
+common stumbling blocks, challenges, and bright points. 
+
+I want to take a moment to thank everyone who has participated, some of whom are
+part of The Carpentries core team. I don't have the time to go into detail about
+the results, but a big takeaway from this was that everyone was able to install
+the infrastructure and any problems that occured were from Git/GitHub, which is
+a big improvement over the current system.
 
  - Angelique Trusler
  - Christina Koch
@@ -289,19 +296,19 @@ which is a big improvement over the current system.
 > timing 2021-06-10: ~ 1 minute
 
 We have just finished with this first testing phase and the next step for us is
-to address the questions and concerns that were brought up (for example: how
-do I use this without clobbering the current R installation on my system?),
-improve the documentation, and get ready for the beta release, where we will try it
-on a few live lessons to identify painpoints for the community. It is a slow
-process, but this way we can avoid major unforseen issues (minor issues are a
-given), bring users in on the ground floor, get valuable feedback, and
-strengthen trust with our community.
+to address the questions and concerns that were brought up (for example: how do
+I use this without clobbering the current R installation on my system?), improve
+the documentation, and get ready for the beta release, where we will try it on a
+few live lessons to identify painpoints for the community. It is a slow process,
+but this way we can avoid major unforseen issues (minor issues are a given),
+bring users in on the ground floor, get valuable feedback, and strengthen trust
+with our community.
 
 > if you want to go fast, go alone; if you want to go far, go together
 
 And I want to conclude by saying that we ended up choosing a solution that we
-believe aligns with our values and will work with our community.
-We do not have all the answers right now, but we go through this process because we want to
+believe aligns with our values and will work with our community. We do not have
+all the answers right now, but we go through this process because we want to
 make sure we put people first and are always learning.
 
 Thank you to our fiscal sponsor, Community Initiatives and generous grants from
