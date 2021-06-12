@@ -2,7 +2,7 @@
 title: "Using R as a Community Workbench for The Carpentries Lesson Infrastructure"
 author: "Zhian N. Kamvar and François Michonneau"
 institute: "The Carpentries"
-date: "2021-07-06"
+date: "2021-07-05"
 output:
   xaringan::moon_reader:
     css: [default, useR, useR-fonts]
@@ -13,7 +13,7 @@ output:
       countIncrementalSlides: false
 ---
 
-background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
+background-image: url(https://carpentries.org/assets/img/TheCarpentries.svg)
 background-size: contain
 background-position: center
 
@@ -21,11 +21,44 @@ background-position: center
 options(htmltools.dir.version = FALSE)
 ```
 
+
 ???
 
-Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
+The Carpentries is a global organization of volunteers who teach
+foundational data and coding skills to researchers worldwide. 
 
-Note: the useR template modifies the css for the background image, so we need to adjust the size and position manually for every slide.
+---
+
+class: center,middle
+
+# Our Values
+
+.pull-left[
+**At The Carpentries, we..**  
+Act Openly     
+Empower One Another    
+_Value All Contributions_
+
+]
+.pull-right[
+**We are...**    
+_Always Learning_    
+Inclusive of All    
+]
+.center[
+**We champion...**   
+_People First_    
+Access for All    
+Community Collaboration    
+Strength Through Diversity
+]
+
+???
+
+What makes us stand out is not the fact that we use evidence-based practices in
+teaching, it's that we align all of our decisions with our core values: we put
+people first and we value all contributions.
+
 
 ---
 background-image: url(lesson-growth.png)
@@ -33,7 +66,9 @@ background-size: contain
 background-position: center
 
 
----
+<!--
+Note: the useR template modifies the css for the background image, so we need to adjust the size and position manually for every slide.
+-->
 
 ---
 class: center, middle
@@ -119,6 +154,7 @@ It is important to be familiar with remark.js before you can understand the opti
 ---
 background-image: url(`r xaringan:::karl`)
 background-size: cover
+background-position: center
 class: center, bottom, inverse
 
 # I was so happy to have discovered remark.js!
@@ -583,6 +619,7 @@ If you want to contribute a theme to **xaringan**, please read [this blog post](
 class: inverse, middle, center
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/39/Naruto_Shiki_Fujin.svg)
 background-size: contain
+background-position: center
 
 # Naruto
 

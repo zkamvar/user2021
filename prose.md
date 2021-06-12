@@ -22,10 +22,10 @@ stand out is not the fact that we use evidence-based practices in teaching, it's
 that we align all of our decisions with our core values: we put people first
 and we value all contributions.
 
-Our lessons are distributed as open-licensed websites built on a consistent style that
-adheres to active learning principals. We use these lessons as the source
-material for the hundreds of workshops we run each year. So, these sites have three distinct
-audiences:
+Our lessons are distributed as open-licensed websites built on a consistent
+style that adheres to active learning principals. We use these lessons as the
+source material for the hundreds of workshops we run each year. So, these sites
+have three distinct audiences:
 
 1. The certified Carpentries Instructors who refer to these materials as
    they teach our workshops.
