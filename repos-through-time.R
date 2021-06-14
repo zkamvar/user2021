@@ -67,7 +67,19 @@ p <- dat |>
       panel.grid.minor = element_blank(),
       legend.position = "top",
       legend.title = element_blank()
+    ) +
+    annotate("segment",
+      x = as.Date("2020-01-01"), xend = max(dat$dates),
+      y = 130, yend = dat$lessons |> tail(4) |> sum(),
+      color = "grey14", size = 2,
+      arrow = arrow()
+    ) +
+    annotate("label",
+      x = as.Date("2019-01-01"), y = 130,
+      label = paste(dat$lessons |> tail(4) |> sum(), "lessons"),
+      size = 7, family = "Droid Sans", label.padding = unit(0.5, "lines")
     )
+
 print(p)
 ggsave("lesson-growth.png", p)
 

@@ -11,7 +11,7 @@
 "datacarpentry","shell-genomics","2015-03-24T17:49:52Z",41,"gh-pages",20
 "datacarpentry","wrangling-genomics","2015-03-24T17:51:36Z",35,"gh-pages",46
 "datacarpentry","organization-genomics","2015-03-24T17:52:12Z",11,"gh-pages",4
-"datacarpentry","R-ecology-lesson","2015-04-02T22:11:48Z",225,"main",48
+"datacarpentry","R-ecology-lesson","2015-04-02T22:11:48Z",225,"main",49
 "datacarpentry","OpenRefine-ecology-lesson","2015-04-04T12:32:31Z",15,"gh-pages",41
 "datacarpentry","rr-version-control","2015-05-26T17:44:33Z",7,"gh-pages",3
 "datacarpentry","rr-literate-programming","2015-09-16T17:38:11Z",7,"gh-pages",5
@@ -20,7 +20,7 @@
 "datacarpentry","r-socialsci","2017-05-25T16:07:33Z",69,"main",4
 "datacarpentry","python-socialsci","2017-05-25T16:18:06Z",20,"gh-pages",16
 "datacarpentry","spreadsheets-socialsci","2017-05-25T16:27:16Z",11,"gh-pages",25
-"datacarpentry","openrefine-socialsci","2017-05-25T16:29:10Z",10,"gh-pages",29
+"datacarpentry","openrefine-socialsci","2017-05-25T16:29:10Z",10,"gh-pages",28
 "datacarpentry","sql-socialsci","2017-05-25T16:30:12Z",7,"gh-pages",21
 "datacarpentry","cloud-genomics","2017-07-25T15:18:42Z",11,"gh-pages",4
 "datacarpentry","genomics-r-intro","2018-03-12T15:40:04Z",11,"main",56
@@ -29,14 +29,14 @@
 "datacarpentry","python-ecology-lesson-es","2018-11-09T15:28:28Z",4,"gh-pages",5
 "datacarpentry","stata-economics","2019-03-01T10:27:26Z",14,"master",39
 "datacarpentry","shell-economics","2019-09-26T14:27:28Z",0,"gh-pages",21
-"swcarpentry","shell-novice","2014-10-22T16:46:45Z",244,"gh-pages",121
+"swcarpentry","shell-novice","2014-10-22T16:46:45Z",244,"gh-pages",107
 "swcarpentry","sql-novice-survey","2014-11-21T14:55:34Z",55,"gh-pages",39
 "swcarpentry","hg-novice","2014-11-25T21:19:06Z",2,"gh-pages",5
 "swcarpentry","python-novice-inflammation","2014-11-25T23:05:27Z",211,"gh-pages",160
-"swcarpentry","git-novice","2014-12-04T22:13:06Z",237,"gh-pages",124
+"swcarpentry","git-novice","2014-12-04T22:13:06Z",237,"gh-pages",125
 "swcarpentry","matlab-novice-inflammation","2014-12-12T11:40:11Z",23,"gh-pages",8
 "swcarpentry","r-novice-inflammation","2014-12-18T10:26:01Z",123,"main",40
-"swcarpentry","r-novice-gapminder","2015-04-18T22:58:07Z",130,"main",14
+"swcarpentry","r-novice-gapminder","2015-04-18T22:58:07Z",131,"main",14
 "swcarpentry","make-novice","2015-06-18T16:48:09Z",127,"gh-pages",3
 "swcarpentry","hpc-novice","2015-06-20T19:42:25Z",34,"gh-pages",16
 "swcarpentry","python-novice-gapminder","2016-01-07T16:30:26Z",115,"gh-pages",70
@@ -79,7 +79,7 @@
 "carpentries-incubator","SDC-BIDS-fMRI","2019-03-14T14:37:45Z",6,"gh-pages",11
 "carpentries-incubator","SDC-EEGLAB","2019-05-04T03:50:40Z",0,"gh-pages",0
 "carpentries-incubator","introduction-to-conda-for-data-scientists","2019-05-18T11:59:15Z",30,"gh-pages",21
-"carpentries-incubator","machine-learning-novice-sklearn","2019-06-27T14:15:12Z",18,"gh-pages",6
+"carpentries-incubator","machine-learning-novice-sklearn","2019-06-27T14:15:12Z",19,"gh-pages",6
 "carpentries-incubator","geospatial-python","2019-07-30T22:31:22Z",39,"gh-pages",4
 "carpentries-incubator","SDC-BIDS-dMRI","2019-08-06T17:26:40Z",3,"main",17
 "carpentries-incubator","docker-introduction","2019-08-07T14:04:23Z",21,"gh-pages",16
@@ -134,7 +134,7 @@
 "carpentries-incubator","scrna-seq-analysis","2021-02-23T11:42:56Z",0,"gh-pages",3
 "carpentries-incubator","relational-database-genealogy","2021-02-25T15:28:00Z",0,"gh-pages",0
 "carpentries-incubator","SDC-BIDS-sMRI","2021-03-04T09:31:23Z",1,"gh-pages",2
-"carpentries-incubator","good-enough-practices","2021-03-08T09:50:07Z",2,"gh-pages",20
+"carpentries-incubator","good-enough-practices","2021-03-08T09:50:07Z",2,"gh-pages",21
 "carpentries-incubator","ml-python-supervised-learning","2021-03-08T19:25:08Z",0,"gh-pages",0
 "carpentries-incubator","k8s-deployment-novice","2021-03-12T11:46:33Z",0,"gh-pages",0
 "carpentries-incubator","snakemake-novice-bioinformatics","2021-03-25T12:29:17Z",1,"gh-pages",0
