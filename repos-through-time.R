@@ -43,7 +43,7 @@ dat <- repos |>
     names_to = "carpentry",
     values_to = "lessons"
   ) |>
-  mutate(carpentry = factor(carpentry, levels = c("Incubator", "Software", "Data", "Library")))
+  mutate(carpentry = factor(carpentry, levels = c("Incubator", "Library", "Data", "Software")))
 
 p <- dat |>
   ggplot(aes(x = dates, y = lessons, group = carpentry)) +
