@@ -1,6 +1,7 @@
 library("ggplot2")
 library("readr")
 library("dplyr")
+library("tidyr")
 library("incidence")
 
 ##### Define Carpentries Colors ####
@@ -25,7 +26,7 @@ repos <- read_csv("repos.csv", col_types = cols(
 
 
 
-p <- repos |>
+dat <- repos |>
   filter(!carpentry %in% c("carpentries", "carpentrieslab")) |>
   mutate(carpentry = case_when(
     carpentry == "carpentries-incubator" ~ "Incubator",
@@ -33,17 +34,26 @@ p <- repos |>
     carpentry == "swcarpentry" ~ "Software",
     carpentry == "LibraryCarpentry" ~ "Library",
   )) |>
-  mutate(carpentry = factor(carpentry, levels = c("Software", "Data", "Library", "Incubator"))) |>
   mutate(created = as.Date(created)) |>
-  with(incidence(created, interval = "quarter", groups = carpentry)) |>
+  with(incidence(created, groups = carpentry)) |>
   cumulate() |>
-  plot(border = "black", alpha = 1) +
+  as.data.frame() |>
+  pivot_longer(
+    cols = c("Software", "Data", "Library", "Incubator"),
+    names_to = "carpentry",
+    values_to = "lessons"
+  ) |>
+  mutate(carpentry = factor(carpentry, levels = c("Incubator", "Software", "Data", "Library")))
+
+p <- dat |>
+  ggplot(aes(x = dates, y = lessons, group = carpentry)) +
+  geom_area(aes(fill = carpentry)) +
   scale_fill_manual(values = four_colors) +
-  scale_x_date(date_labels = "%Y-Q1") +
-  ylim(c(0, 150)) +
+  scale_x_date(expand = c(0, 0)) +
+  scale_y_continuous(limits = c(0, 150), expand = c(0, 0)) +
   labs(
     y = "Lessons",
-    x = "Quarter",
+    x = "Date",
     fill = "Carpentry"
   ) +
   theme_bw(base_size = 24, base_family = "Droid Sans") %+replace%
@@ -58,6 +68,6 @@ p <- repos |>
       legend.position = "top",
       legend.title = element_blank()
     )
-
+print(p)
 ggsave("lesson-growth.png", p)
 
