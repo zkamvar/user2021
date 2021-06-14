@@ -44,10 +44,10 @@ dat <- repos |>
     values_to = "lessons"
   ) |>
   mutate(carpentry = factor(carpentry, levels = c("Incubator", "Library", "Data", "Software")))
-
+{
 p <- dat |>
   ggplot(aes(x = dates, y = lessons, group = carpentry)) +
-  geom_area(aes(fill = carpentry)) +
+  geom_area(aes(fill = carpentry), color = "black") +
   scale_fill_manual(values = four_colors) +
   scale_x_date(expand = c(0, 0)) +
   scale_y_continuous(limits = c(0, 150), expand = c(0, 0)) +
@@ -65,7 +65,10 @@ p <- dat |>
       panel.grid.major.y = element_line(color = "grey30", size = .25),
       panel.grid.major.x = element_line(linetype = 2, size = 0.25),
       panel.grid.minor = element_blank(),
-      legend.position = "top",
+      legend.position = c(0.01, 0.99),
+      legend.justification = c("left", "top"),
+      legend.box.background = element_blank(),
+      legend.margin = margin(0, 0, 0, 10),
       legend.title = element_blank()
     ) +
     annotate("segment",
@@ -81,5 +84,6 @@ p <- dat |>
     )
 
 print(p)
+}
 ggsave("lesson-growth.png", p)
 
