@@ -59,629 +59,504 @@ What makes us stand out is not the fact that we use evidence-based practices in
 teaching, it's that we align all of our decisions with our core values: we put
 people first and we value all contributions.
 
+---
+
+## Our Lessons
+
+???
+
+Our lessons are distributed as open-licensed websites built on a consistent
+style that adheres to active learning principals. We use these lessons as the
+source material for the hundreds of workshops we run each year. So, these sites
+have three distinct audiences:
+
+1. The certified Carpentries Instructors who refer to these materials as
+   they teach our workshops.
+2. The learners in a Carpentries workshop who rely on these lessons after a workshop
+   as they review and practice their newly aquired skills.
+3. The educators who adapt these open-licensed materials for their own
+   lessons.
+
+---
+
+## We Act Openly
+
+???
+
+The source for these lessons are hosted on GitHub where
+volunteer Maintainers ensure that the lessons are
+accurate and up-to-date. We encourage a culture of open contribution,
+where members of our community can suggest a
+simple typo fix or a better
+explanation of an important lesson concept. We want **anyone** can go to the repository and
+make a suggestion to improve our lessons... at least that was our intention.
+
+---
+
+## Desire Paths
+
+???
+
+I want to pause for a second here and highlight this tweet that came across my
+feed as I was preparing this talk.
+
+<https://twitter.com/SarahNicholas/status/1401510907604353024?s=20>
+
+It shows a fork between a paved path and an unpaved footpath across a patch of
+grass, which leads to a crosswalk. There is a sign in front of the unpaved path
+that says "Please use the purpose made path provided." The tweet author points
+out that "the sign knows it has lost."
+
+This unofficial footpath is called a "desire path". It is an
+important concept in design because it shows the difference between what
+the designers intended and how people actually use the space.
+
+---
+
+## Desire Paths? In OUR community?
+
+???
+
+As our community has grown, new desire paths were being created across our
+lesson infrastructure landscape. No signs (i.e., better documentation) would
+stop contributors to our lessons from stepping outside the complex, and not
+always well-paved, path that makes up our lesson infrastructure. we have been
+noticing more and more of these desire We needed to rethink our infrastructure
+altogether in a way that is more inclusive and welcoming for everyone.
+
+---
+
+## R savior!
+
+???
+
+We found that the R publishing ecosystem is flexible enough to give
+us the tools we need **to reduce barriers for publishing lessons and
+further our mission**. I will introduce you to our current
+infrastructure, its unique challenges, our solutions, and how we used past and
+present feedback from our community to iteratively refine our design.
+
+Before continuing, I want to remind everyone of two things. First:
+
+---
+
+> There is no right or wrong, only better or worse.
+>
+> --- GW
+
+???
+
+Greg Wilson wrote this after several iterations of the lesson
+infrastructure. I am putting it here as a reminder that the infrastructure we have
+now was working for us at the time. What we come up with will have its
+own difficulties down the road, but what is important is that we build something
+that better addresses the needs of our community, which leads me to my second
+reminder:
+
+---
+background-image: url(you-belong.jpg)
+background-size: 65%
+background-repeat: no-repeat
+background-position: center
+
+???
+
+As the community has grown, our infrastructure has been put to the test and we
+have continuously updated our workflows to make it easier for people to contribute.
+The reason we do this is because our values are what drive us. In The Carpentries, you
+belong, no matter if you have been working as a systems administrator for a
+university HPC cluster or if you have just learned to write your first R script.
+
+To better understand the decisions we are making, let's start by reviewing
+our current infrastructure.
+
+---
+
+## Infrastructure
+
+???
+
+> timing 2021-06-09: 04:20.38
+> timing 2021-06-09: 03:52.10
+> timing 2021-06-10: 03:08.87
+
+Our lessons are written in markdown and into a website via GitHub Pages and
+the Jekyll static site generator. The idea behind this choice was that it was
+the most straightforward way to create a static website without needing a server
+like Wordpress or Drupal sites. Ideally, it also provided a way for people to
+use this as an example of how they could build their own website.
+
+The paradigm of being able to write markdown lessons and get a functional website
+out of it is not a new concept. In fact, there are over 460 iterations of
+this concept according to https://staticsitegenerators.net. Jekyll happens to
+be the one that GitHub implemented early on to provide documentation for the
+open-source project it hosted, and thus, it stuck.
+
+---
+
+## Our Infrastructure
+
+???
+
+
+We created an all-in-one bundle for lessons that provided styling templates in
+HTML, CSS, and JavaScript along with validation scripts in Python and R scripts
+to build RMarkdown-based lessons. All of this was orchestrated by a Makefile.
+The purpose of this approach was two-fold:
+
+1. To maintain a consistent style that emphasized our principles of
+   evidence-based teaching such as learning objectives and formative assessment;
+2. To demonstrate how the skills we teach in our workshops could be applied
+   to real-life situations.
+
+---
+
+## Drawbacks
+
+???
+
+While this was conceptually good in theory, this infrastructure design has three
+significant drawbacks for contributors:
+
+1. Installation pains.
+   <https://twitter.com/gvwilson/status/1380115181708189701?s=20> Having
+   Jekyll, Python, and Make as dependencies means that people who want to build
+   these lessons on their machines need all three of these successfully installed 
+   and up-to-date.
+   This is especially frustrating for Windows users who have none
+   of these by default.
+2. All the scripts live inside the repository. This means that lessons quickly
+   become out of date as they diverge from the improvements made upstream.
+3. Another drawback is that we have a lesson website wrapped around a static
+   site generator (which in and of itself is a kind of desire path), this meant
+   that it was easy to contribute to if you were familiar with how Jekyll
+   operated. There is often a moment of panic in a new contributor's eyes when
+   you show them what the a lesson repository looks like. If you were not
+   familiar with Jekyll, then it was unclear where to even start if you were
+   looking at the git repository because there were no clear sign that marked
+   the trail head. This lead several lessons to find their own paths that ended
+   up built in different ways.
+
+Over the last few years, we have begun finding these desire paths all across our
+lesson infrastructure. These manifested through our communication channels and
+frustration from contributors and maintainers alike. The thing about desire
+paths, though, is that they are not only challenges, but also opportunities.
+
+
+---
+
+## Chopportunities
+
+???
+
+At The Carpentries, we like to call these "chopportunities."
 
 ---
 background-image: url(lesson-growth.png)
-background-size: contain
+background-size: 85% 85%
 background-position: center
+
+
+???
+
+> timing 2021-06-09: 01:15.30
+> timing 2021-06-09: 01:18.37
+> timing 2021-06-10: 00:47.12
+
+
+The growth that we have experienced in the past few years is a chopportunity.
+We have seen not only a growth in the number of community members, but also,
+in the number community contributed lessons since we started
+The Carpentries Incubator.
+
+Our challenge is clear: the all-in-one lesson infrastructure does not scale
+well to the growing number of lessons.
+
+---
+background-image: url(jomo.jpeg)
+background-size: 45%
+background-repeat: no-repeat
+background-position: right
+
+## Chopportunity
+
+
+???
+
+Our opportunity here is to reimagine the infrastructure in a way that truly
+values all contributions: this includes the spectrum from everyday educators
+who want to share their knowledge, to the tinkerers who need to understand
+what is going on behind the scenes.
+
+---
+background-image: url(jomo.jpeg)
+background-size: 45%
+background-repeat: no-repeat
+background-position: right
+
+
+## Solution
+
+???
+
+
+The solution we came up with uses R and I simply do not have enough time to
+discuss all the features, but you can find out for yourself if you visit our
+blog posts and documentation on how to get started.
+
+So, how and why did we choose R to create the next iteration of our lesson
+infrastructure?
+
+---
+background-image: url(jomo.jpeg)
+background-size: 45%
+background-repeat: no-repeat
+background-position: right
+
+
+### Challenge
+
+???
+
+We wanted a general solution where you could take markdown or RMarkdown files,
+place them in a folder and generate a Carpentries-style lesson without having
+complicated paths or generated files lying around. The first thing we did was
+to investigate the existing landscape.
+
+It was important that we choose something that is user friendly, easy to
+install, easily customizable, and has a welcoming community behind it. We tried
+out several static site generators, but the largest barrier for many of these
+was that they were not easy to install and maintain.
+
+---
+background-image: url(jomo.jpeg)
+background-size: 45%
+background-repeat: no-repeat
+background-position: right
+
+## Why R?
+
+--
+
+1. fRiendly Communities!
+
+--
+
+2. Easy To Install
+
+--
+
+3. {knitr} + {RMarkdown} + _pandoc_
+
+???
+
+We settled on the fact that R is the best place to go for our needs
+because:
+
+1. First and foremost: R is chock-full of friendly communities!
+  - RLadies
+  - ROpenSci
+  - RForwards
+  - MiR
+2. R is easy to install on all major operating systems and
+   is available online via RStudio Cloud
+3. R has a robust ecosystem for publishing thanks to {knitr} and RMarkdown
+
+
+---
+background-image: url(https://bookdown.org/yihui/blogdown/images/logo.png)
+background-size: 45% 
+background-repeat: no-repeat
+background-position: right
+
+## Prior Art
+
+???
+Once we identified R as our solution, the natural place to go was one of the
+RMarkdown variants like {blogdown} or {hugodown}, but we found that while the
+tools were indeed separated from the content and the documentation was rich and
+accessible, there were many aspects that would not fit our needs including the
+presence of styling within the repository.
+
+
+---
+background-image: url(https://raw.githubusercontent.com/r-lib/pkgdown/master/man/figures/logo.png), url(https://raw.githubusercontent.com/r-lib/pkgdown/master/man/figures/logo.png)
+background-size: 45%
+background-repeat: no-repeat
+background-position: right 0%, right 100%
+
+
+## Distributed Style
+
+???
+
+We realized that an unlikely contender, {pkgdown}, a documentation site
+generator, used the same model that we were looking for: It meets people where
+they are, content is pure markdown with no extra templating required, the tools
+to build everything lived in a separate package, and you can customize its
+appearance by making your own package to supply your CSS, JS, and HTML
+templates.
+
+---
+background-image: url(jomo.jpeg)
+background-size: 45%
+background-repeat: no-repeat
+background-position: center 
+
+???
+
+From this model, we were able to pave over the desire paths in our
+infrastructure by creating three packages to serve as the lesson engine,
+styling, and validation:
+
+ - {sandpaper} to orchestrate building and maintaining lessons
+ - {varnish} to host the CSS, JS, and HTML templates
+ - {pegboard} to serve as a validator (and converter!) for lesson content
+
+---
+background-image: url(jomo.jpeg)
+background-size: 45%
+background-repeat: no-repeat
+background-position: right
+
+## Entrypoint
+
+???
+
+Of course, the first thing any contributor will see is the folder structure. We
+organized the folders of the lesson to reflect the layout of website dropdown
+menus, so our lessons consist of folders that we use commonly: one folder for
+lesson chapters, one for extra information for learners, one for extra
+information for instructors, and one to contain learner profiles.
+
+The final folder is one of the access panels that contains the rendered markdown
+files---so you can use them in another context---and static website so that you
+can put it on a USB stick and share it without needing to run a local server.
+
+---
+background-image: url(jomo.jpeg)
+background-size: 45%
+background-repeat: no-repeat
+background-position: right
+
+### Opportunity
+
+???
+
+Our solution ticks all the boxes that satisfy our design choices,
+but if we ended up designing something that R enthusiasts
+love, but is unusable by newcomers, Python, or Matlab folks, then we are not
+in line with our value of being inclusive of all.
+
+Our goal is for authors to focus on the content over the tooling.
+We want lesson authors to create a lesson directly from the source
+they already work with: markdown/RMarkdown/MyST notebooks.
+To do this, we needed to test the minimal
+viable product on actual maintainers and we needed to make sure that they were
+spread across the spectrum of familiarity with:
+
+ - using R,
+ - the current infrastructure,
+ - the way The Carpentries operates.
+ 
+
+---
+background-image: url(jomo.jpeg)
+background-size: 45%
+background-repeat: no-repeat
+background-position: right
+
+
+## Alpha Testing
+
+--
+
+ - Angelique Trusler
+ - Christina Koch
+ - David Pérez-Suárez
+ - Drake Asberry
+ - Eric Jankowski
+ - Erin Becker
+ - Ezra Herman
+ - Fan Du
+ - François Michonneau
+ - Jon Haitz Legarreta Gorroño
+ - Karen Word
+ - Kari Jordan
+ - Maneesha Sane
+ - Michael Culshaw-Maurer
+ - Sarah Brown
+ - Sarah Stevens
+ - Shaun C. Gaynor
+ - Toby Hodges
+ - anonymous
+
+
+???
+
+We recruited a total of 19 volunteers to run through Alpha Testing, which tested
+the participants ability to install the required software and packages, create,
+modify, and contribute to lessons. After the tests, I asked for 20-minute
+open-ended interviews from the volunteers about their experience to identify
+common stumbling blocks, challenges, and bright points. 
+
+I want to take a moment to thank everyone who has participated, some of whom are
+part of The Carpentries core team. I don't have the time to go into detail about
+the results, but a big takeaway from this was that everyone was able to install
+the infrastructure and any problems that occured were from Git/GitHub, which is
+a big improvement over the current system.
+
+
+---
+background-image: url(jomo.jpeg)
+background-size: 45%
+background-repeat: no-repeat
+background-position: right
+
+## Conclusion
+
+
+???
+
+We have just finished with this first testing phase and the next step for us is
+to address the questions and concerns that were brought up (for example: how do
+I use this without clobbering the current R installation on my system?), improve
+the documentation, and get ready for the beta release, where we will try it on a
+few live lessons to identify painpoints for the community. It is a slow process,
+but this way we can avoid major unforseen issues (minor issues are a given),
+bring users in on the ground floor, get valuable feedback, and strengthen trust
+with our community.
+
+
+---
+background-image: url(jomo.jpeg)
+background-size: 45%
+background-repeat: no-repeat
+background-position: right
+
+> if you want to go fast, go alone; if you want to go far, go together
+
+???
+
+And I want to conclude by saying that we ended up choosing a solution that we
+believe aligns with our values and will work with our community. We do not have
+all the answers right now, but we go through this process because we want to
+make sure we put people first and are always learning.
+
+---
+background-image: url(jomo.jpeg)
+background-size: 45%
+background-repeat: no-repeat
+background-position: right
+
+## Thank You!
+
+Thank you to our fiscal sponsor, Community Initiatives and generous grants from
+the Alfred P. Sloan Foundation, the Moore Foundation, the Chan-Zuckerberg foundation,
+and the R Consortium.
 
 
 <!--
 Note: the useR template modifies the css for the background image, so we need to adjust the size and position manually for every slide.
 -->
 
----
-class: center, middle
-
-# xaringan
-
-### /ʃaː.'riŋ.ɡan/
-
----
-class: inverse, center, middle
-
-# Get Started
-
----
-
-# Hello World
-
-Install the **xaringan** package from [Github](https://github.com/yihui/xaringan):
-
-```{r eval=FALSE, tidy=FALSE}
-remotes::install_github("yihui/xaringan")
-```
-
---
-
-You are recommended to use the [RStudio IDE](https://www.rstudio.com/products/rstudio/), but you do not have to.
-
-- Create a new R Markdown document from the menu `File -> New File -> R Markdown -> From Template -> Ninja Presentation`;<sup>1</sup>
-
---
-
-- Click the `Knit` button to compile it;
-
---
-
-- or use the [RStudio Addin](https://rstudio.github.io/rstudioaddins/)<sup>2</sup> "Infinite Moon Reader" to live preview the slides (every time you update and save the Rmd document, the slides will be automatically reloaded in RStudio Viewer.
-
-.footnote[
-[1] 中文用户请看[这份教程](https://slides.yihui.org/xaringan/zh-CN.html)
-
-[2] See [#2](https://github.com/yihui/xaringan/issues/2) if you do not see the template or addin in RStudio.
-]
-
----
-background-image: url(`r xaringan:::karl`)
-background-position: 50% 50%
-background-size: contain
-background-position: center
-class: center, bottom, inverse
-
-# You only live once!
-
----
-
-# Hello Ninja
-
-As a presentation ninja, you certainly should not be satisfied by the "Hello World" example. You need to understand more about two things:
-
-1. The [remark.js](https://remarkjs.com) library;
-
-1. The **xaringan** package;
-
-Basically **xaringan** injected the chakra of R Markdown (minus Pandoc) into **remark.js**. The slides are rendered by remark.js in the web browser, and the Markdown source needed by remark.js is generated from R Markdown (**knitr**).
-
----
-
-# remark.js
-
-You can see an introduction of remark.js from [its homepage](https://remarkjs.com). You should read the [remark.js Wiki](https://github.com/gnab/remark/wiki) at least once to know how to
-
-- create a new slide (Markdown syntax<sup>*</sup> and slide properties);
-
-- format a slide (e.g. text alignment);
-
-- configure the slideshow;
-
-- and use the presentation (keyboard shortcuts).
-
-It is important to be familiar with remark.js before you can understand the options in **xaringan**.
-
-.footnote[[*] It is different with Pandoc's Markdown! It is limited but should be enough for presentation purposes. Come on... You do not need a slide for the Table of Contents! Well, the Markdown support in remark.js [may be improved](https://github.com/gnab/remark/issues/142) in the future.]
-
----
-background-image: url(`r xaringan:::karl`)
-background-size: cover
-background-position: center
-class: center, bottom, inverse
-
-# I was so happy to have discovered remark.js!
-
----
-class: inverse, middle, center
-
-# Using xaringan
-
----
-
-# xaringan
-
-Provides an R Markdown output format `xaringan::moon_reader` as a wrapper for remark.js, and you can use it in the YAML metadata, e.g.
-
-```yaml
----
-title: "A Cool Presentation"
-output:
-  xaringan::moon_reader:
-    yolo: true
-    nature:
-      autoplay: 30000
----
-```
-
-See the help page `?xaringan::moon_reader` for all possible options that you can use.
-
----
-
-# remark.js vs xaringan
-
-Some differences between using remark.js (left) and using **xaringan** (right):
-
-.pull-left[
-1. Start with a boilerplate HTML file;
-
-1. Plain Markdown;
-
-1. Write JavaScript to autoplay slides;
-
-1. Manually configure MathJax;
-
-1. Highlight code with `*`;
-
-1. Edit Markdown source and refresh browser to see updated slides;
-]
-
-.pull-right[
-1. Start with an R Markdown document;
-
-1. R Markdown (can embed R/other code chunks);
-
-1. Provide an option `autoplay`;
-
-1. MathJax just works;<sup>*</sup>
-
-1. Highlight code with `{{}}`;
-
-1. The RStudio addin "Infinite Moon Reader" automatically refreshes slides on changes;
-]
-
-.footnote[[*] Not really. See next page.]
-
----
-
-# Math Expressions
-
-You can write LaTeX math expressions inside a pair of dollar signs, e.g. &#36;\alpha+\beta$ renders $\alpha+\beta$. You can use the display style with double dollar signs:
-
-```
-$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
-```
-
-$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
-
-Limitations:
-
-1. The source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting `$$` must appear in the very beginning of a line, followed immediately by a non-space character, and the ending `$$` must be at the end of a line, led by a non-space character;
-
-1. There should not be spaces after the opening `$` or before the closing `$`.
-
-1. Math does not work on the title slide (see [#61](https://github.com/yihui/xaringan/issues/61) for a workaround).
-
----
-
-# R Code
-
-```{r comment='#'}
-# a boring regression
-fit = lm(dist ~ 1 + speed, data = cars)
-coef(summary(fit))
-dojutsu = c('地爆天星', '天照', '加具土命', '神威', '須佐能乎', '無限月読')
-grep('天', dojutsu, value = TRUE)
-```
-
----
-
-# R Plots
-
-```{r cars, fig.height=4, dev='svg'}
-par(mar = c(4, 4, 1, .1))
-plot(cars, pch = 19, col = 'darkgray', las = 1)
-abline(fit, lwd = 2)
-```
-
----
-
-# Tables
-
-If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,
-
-```{r}
-knitr::kable(head(iris), format = 'html')
-```
-
----
-
-# HTML Widgets
-
-I have not thoroughly tested HTML widgets against **xaringan**. Some may work well, and some may not. It is a little tricky.
-
-Similarly, the Shiny mode (`runtime: shiny`) does not work. I might get these issues fixed in the future, but these are not of high priority to me. I never turn my presentation into a Shiny app. When I need to demonstrate more complicated examples, I just launch them separately. It is convenient to share slides with other people when they are plain HTML/JS applications.
-
-See the next page for two HTML widgets.
-
----
-
-```{r out.width='100%', fig.height=6, eval=require('leaflet')}
-library(leaflet)
-leaflet() %>% addTiles() %>% setView(-93.65, 42.0285, zoom = 17)
-```
-
----
-
-```{r eval=require('DT'), tidy=FALSE}
-DT::datatable(
-  head(iris, 10),
-  fillContainer = FALSE, options = list(pageLength = 8)
-)
-```
-
----
-
-# Some Tips
-
-- Do not forget to try the `yolo` option of `xaringan::moon_reader`.
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        yolo: true
-    ```
-
----
-
-# Some Tips
-
-- Slides can be automatically played if you set the `autoplay` option under `nature`, e.g. go to the next slide every 30 seconds in a lightning talk:
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          autoplay: 30000
-    ```
-
-- If you want to restart the play after it reaches the last slide, you may set the sub-option `loop` to TRUE, e.g.,
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          autoplay:
-            interval: 30000
-            loop: true
-    ```
-
----
-
-# Some Tips
-
-- A countdown timer can be added to every page of the slides using the `countdown` option under `nature`, e.g. if you want to spend one minute on every page when you give the talk, you can set:
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          countdown: 60000
-    ```
-
-    Then you will see a timer counting down from `01:00`, to `00:59`, `00:58`, ... When the time is out, the timer will continue but the time turns red.
-    
----
-
-# Some Tips
-
-- The title slide is created automatically by **xaringan**, but it is just another remark.js slide added before your other slides.
-
-    The title slide is set to `class: center, middle, inverse, title-slide` by default. You can change the classes applied to the title slide with the `titleSlideClass` option of `nature` (`title-slide` is always applied).
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          titleSlideClass: [top, left, inverse]
-    ```
-    
---
-
-- If you'd like to create your own title slide, disable **xaringan**'s title slide with the `seal = FALSE` option of `moon_reader`.
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        seal: false
-    ```
-
----
-
-# Some Tips
-
-- There are several ways to build incremental slides. See [this presentation](https://slides.yihui.org/xaringan/incremental.html) for examples.
-
-- The option `highlightLines: true` of `nature` will highlight code lines that start with `*`, or are wrapped in `{{ }}`, or have trailing comments `#<<`;
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          highlightLines: true
-    ```
-
-    See examples on the next page.
-
----
-
-# Some Tips
-
-
-.pull-left[
-An example using a leading `*`:
-
-    ```r
-    if (TRUE) {
-    ** message("Very important!")
-    }
-    ```
-Output:
-```r
-if (TRUE) {
-* message("Very important!")
-}
-```
-
-This is invalid R code, so it is a plain fenced code block that is not executed.
-]
-
-.pull-right[
-An example using `{{}}`:
-
-````
-`r ''````{r tidy=FALSE}
-if (TRUE) {
-*{{ message("Very important!") }}
-}
-```
-````
-Output:
-```{r tidy=FALSE}
-if (TRUE) {
-{{ message("Very important!") }}
-}
-```
-
-It is valid R code so you can run it. Note that `{{}}` can wrap an R expression of multiple lines.
-]
-
----
-
-# Some Tips
-
-An example of using the trailing comment `#<<` to highlight lines:
-
-````markdown
-`r ''````{r tidy=FALSE}
-library(ggplot2)
-ggplot(mtcars) + 
-  aes(mpg, disp) + 
-  geom_point() +   #<<
-  geom_smooth()    #<<
-```
-````
-
-Output:
-
-```{r tidy=FALSE, eval=FALSE}
-library(ggplot2)
-ggplot(mtcars) + 
-  aes(mpg, disp) + 
-  geom_point() +   #<<
-  geom_smooth()    #<<
-```
-
----
-
-# Some Tips
-
-When you enable line-highlighting, you can also use the chunk option `highlight.output` to highlight specific lines of the text output from a code chunk. For example, `highlight.output = TRUE` means highlighting all lines, and `highlight.output = c(1, 3)` means highlighting the first and third line.
-
-````md
-`r ''````{r, highlight.output=c(1, 3)}
-head(iris)
-```
-````
-
-```{r, highlight.output=c(1, 3), echo=FALSE}
-head(iris)
-```
-
-Question: what does `highlight.output = c(TRUE, FALSE)` mean? (Hint: think about R's recycling of vectors)
-
----
-
-# Some Tips
-
-- To make slides work offline, you need to download a copy of remark.js in advance, because **xaringan** uses the online version by default (see the help page `?xaringan::moon_reader`).
-
-- You can use `xaringan::summon_remark()` to download the latest or a specified version of remark.js. By default, it is downloaded to `libs/remark-latest.min.js`.
-
-- Then change the `chakra` option in YAML to point to this file, e.g.
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        chakra: libs/remark-latest.min.js
-    ```
-
-- If you used Google fonts in slides (the default theme uses _Yanone Kaffeesatz_, _Droid Serif_, and _Source Code Pro_), they won't work offline unless you download or install them locally. The Heroku app [google-webfonts-helper](https://google-webfonts-helper.herokuapp.com/fonts) can help you download fonts and generate the necessary CSS.
-
----
-
-# Macros
-
-- remark.js [allows users to define custom macros](https://github.com/yihui/xaringan/issues/80) (JS functions) that can be applied to Markdown text using the syntax `![:macroName arg1, arg2, ...]` or `![:macroName arg1, arg2, ...](this)`. For example, before remark.js initializes the slides, you can define a macro named `scale`:
-
-    ```js
-    remark.macros.scale = function (percentage) {
-      var url = this;
-      return '<img src="' + url + '" style="width: ' + percentage + '" />';
-    };
-    ```
-
-    Then the Markdown text
-
-    ```markdown
-    ![:scale 50%](image.jpg)
-    ```
-
-    will be translated to
-    
-    ```html
-    <img src="image.jpg" style="width: 50%" />
-    ```
-
----
-
-# Macros (continued)
-
-- To insert macros in **xaringan** slides, you can use the option `beforeInit` under the option `nature`, e.g.,
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          beforeInit: "macros.js"
-    ```
-
-    You save your remark.js macros in the file `macros.js`.
-
-- The `beforeInit` option can be used to insert arbitrary JS code before `remark.create()`. Inserting macros is just one of its possible applications.
-
----
-
-# CSS
-
-Among all options in `xaringan::moon_reader`, the most challenging but perhaps also the most rewarding one is `css`, because it allows you to customize the appearance of your slides using any CSS rules or hacks you know.
-
-You can see the default CSS file [here](https://github.com/yihui/xaringan/blob/master/inst/rmarkdown/templates/xaringan/resources/default.css). You can completely replace it with your own CSS files, or define new rules to override the default. See the help page `?xaringan::moon_reader` for more information.
-
----
-
-# CSS
-
-For example, suppose you want to change the font for code from the default "Source Code Pro" to "Ubuntu Mono". You can create a CSS file named, say, `ubuntu-mono.css`:
-
-```css
-@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-
-.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
-```
-
-Then set the `css` option in the YAML metadata:
-
-```yaml
-output:
-  xaringan::moon_reader:
-    css: ["default", "ubuntu-mono.css"]
-```
-
-Here I assume `ubuntu-mono.css` is under the same directory as your Rmd.
-
-See [yihui/xaringan#83](https://github.com/yihui/xaringan/issues/83) for an example of using the [Fira Code](https://github.com/tonsky/FiraCode) font, which supports ligatures in program code.
-
----
-
-# CSS (with Sass)
-
-**xaringan** also supports Sass support via **rmarkdown**. Suppose you want to use the same color for different elements, e.g., first heading and bold text. You can create a `.scss` file, say `mytheme.scss`, using the [sass](https://sass-lang.com/) syntax with variables:
-
-```scss
-$mycolor: #ff0000; 
-.remark-slide-content > h1 { color: $mycolor; }
-.remark-slide-content strong { color: $mycolor; }
-```
-
-Then set the `css` option in the YAML metadata using this file placed under the same directory as your Rmd:
-
-```yaml
-output:
-  xaringan::moon_reader:
-    css: ["default", "mytheme.scss"]
-```
-
-This requires **rmarkdown** >= 2.8 and the [**sass**](https://rstudio.github.io/sass/) package. You can learn more about **rmarkdown** and **sass** support in [this blog post](https://blog.rstudio.com/2021/04/15/2021-spring-rmd-news/#sass-and-scss-support-for-html-based-output) and in [**sass** overview vignette](https://rstudio.github.io/sass/articles/sass.html).
-
----
-
-# Themes
-
-Don't want to learn CSS? Okay, you can use some user-contributed themes. A theme typically consists of two CSS files `foo.css` and `foo-fonts.css`, where `foo` is the theme name. Below are some existing themes:
-
-```{r, R.options=list(width = 70)}
-names(xaringan:::list_css())
-```
-
----
-
-# Themes
-
-To use a theme, you can specify the `css` option as an array of CSS filenames (without the `.css` extensions), e.g.,
-
-```yaml
-output:
-  xaringan::moon_reader:
-    css: [default, metropolis, metropolis-fonts]
-```
-
-If you want to contribute a theme to **xaringan**, please read [this blog post](https://yihui.org/en/2017/10/xaringan-themes).
-
----
-class: inverse, middle, center
-background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/39/Naruto_Shiki_Fujin.svg)
-background-size: contain
-background-position: center
-
-# Naruto
-
----
-background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
-background-size: 100px
-background-position: 90% 8%
-
-# Sharingan
-
-The R package name **xaringan** was derived<sup>1</sup> from **Sharingan**, a dōjutsu in the Japanese anime _Naruto_ with two abilities:
-
-- the "Eye of Insight"
-
-- the "Eye of Hypnotism"
-
-I think a presentation is basically a way to communicate insights to the audience, and a great presentation may even "hypnotize" the audience.<sup>2,3</sup>
-
-.footnote[
-[1] In Chinese, the pronounciation of _X_ is _Sh_ /ʃ/ (as in _shrimp_). Now you should have a better idea of how to pronounce my last name _Xie_.
-
-[2] By comparison, bad presentations only put the audience to sleep.
-
-[3] Personally I find that setting background images for slides is a killer feature of remark.js. It is an effective way to bring visual impact into your presentations.
-]
-
----
-
-# Naruto terminology
-
-The **xaringan** package borrowed a few terms from Naruto, such as
-
-- [Sharingan](https://naruto.fandom.com/wiki/Sharingan) (写輪眼; the package name)
-
-- The [moon reader](https://naruto.fandom.com/wiki/Moon_Reader) (月読; an attractive R Markdown output format)
-
-- [Chakra](https://naruto.fandom.com/wiki/Chakra) (查克拉; the path to the remark.js library, which is the power to drive the presentation)
-
-- [Nature transformation](https://naruto.fandom.com/wiki/Nature_Transformation) (性質変化; transform the chakra by setting different options)
-
-- The [infinite moon reader](https://naruto.fandom.com/wiki/Infinite_Tsukuyomi) (無限月読; start a local web server to continuously serve your slides)
-
-- The [summoning technique](https://naruto.fandom.com/wiki/Summoning_Technique) (download remark.js from the web)
-
-You can click the links to know more about them if you want. The jutsu "Moon Reader" may seem a little evil, but that does not mean your slides are evil.
-
----
-
-class: center
-
-# Hand seals (印)
-
-Press `h` or `?` to see the possible ninjutsu you can use in remark.js.
-
-![](https://upload.wikimedia.org/wikipedia/commons/7/7e/Mudra-Naruto-KageBunshin.svg)
-
----
-
-class: center, middle
-
-# Thanks!
-
-Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
-
-The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](https://yihui.org/knitr/), and [R Markdown](https://rmarkdown.rstudio.com).
