@@ -398,8 +398,8 @@ appearance by making your own package to supply your CSS, JS, and HTML
 templates.
 
 ---
-background-image: url(jomo.jpeg)
-background-size: 45%
+background-image: url(rough-hex.png)
+background-size: contain 
 background-repeat: no-repeat
 background-position: center 
 
