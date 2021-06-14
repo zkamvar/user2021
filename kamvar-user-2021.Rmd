@@ -533,8 +533,13 @@ background-image: url(jomo.jpeg)
 background-size: 45%
 background-repeat: no-repeat
 background-position: right
+class: center, middle, inverse
 
-> if you want to go fast, go alone; if you want to go far, go together
+
+.pull-left[
+## if you want to GO FAST, go alone
+## if you want to _GO FAR_, go together
+]
 
 ???
 
@@ -549,11 +554,13 @@ background-size: 45%
 background-repeat: no-repeat
 background-position: right
 
+.pull-left[
 ## Thank You!
 
 Thank you to our fiscal sponsor, Community Initiatives and generous grants from
 the Alfred P. Sloan Foundation, the Moore Foundation, the Chan-Zuckerberg foundation,
 and the R Consortium.
+]
 
 
 <!--
