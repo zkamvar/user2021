@@ -5,7 +5,7 @@ institute: "The Carpentries"
 date: "2021-07-05"
 output:
   xaringan::moon_reader:
-    css: [default, useR, useR-fonts]
+    css: [znk.css, default, useR, useR-fonts]
     lib_dir: libs
     nature:
       highlightStyle: github
@@ -139,12 +139,17 @@ present feedback from our community to iteratively refine our design.
 Before continuing, I want to remind everyone of two things. First:
 
 ---
-class: center,middle,inverse
+class: center,middle
 
-## There is no right or wrong, only better or worse.
+.galaxy-brain[
+**There is no .c-light-blue[_right or wrong_]    
+  only .c-light-blue[_better or worse_]**
+]
 
 .pull-left[
-### &mdash;Greg Wilson
+.large-brain[
+*&mdash;Greg Wilson*
+]
 ]
 
 ???
@@ -180,7 +185,7 @@ background-repeat: no-repeat
 background-position: bottom
 class: center
 
-## Our Lessons
+## .c-blue[Our Lessons]
 
 ???
 
@@ -197,7 +202,7 @@ background-repeat: no-repeat
 background-position: bottom
 class: center
 
-## Our Lessons
+## .c-blue[Our Lessons]
 
 ???
 
@@ -306,10 +311,6 @@ background-position: center
 
 ???
 
-> timing 2021-06-09: 01:15.30
-> timing 2021-06-09: 01:18.37
-> timing 2021-06-10: 00:47.12
-
 
 The growth that we have experienced in the past few years is a chopportunity.
 We have seen not only a growth in the number of community members, but also,
@@ -384,16 +385,14 @@ background-position: right
 ## Why R?
 
 --
-
-1. fRiendly Communities!
-
---
-
-2. Easy To Install
+- .brain[fRiendly Communities!]
 
 --
 
-3. {knitr} + {RMarkdown} + _pandoc_
+- .brain[Easy To Install]
+--
+
+- .brain[{knitr} + {RMarkdown} + _pandoc_]
 
 ???
 

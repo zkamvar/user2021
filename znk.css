@@ -1,0 +1,31 @@
+.red {
+  color: crimson;
+}
+
+.c-blue {
+  color: #071159;
+}
+
+.c-red {
+  color: #D45214;
+}
+
+.c-orange {
+  color: #F0A202;
+}
+
+.c-light-blue {
+  color: #3D7BBA;
+}
+
+.brain {
+  font-size: 24px;
+}
+
+.large-brain {
+  font-size: 48px;
+}
+
+.galaxy-brain {
+  font-size: 64px;
+}
