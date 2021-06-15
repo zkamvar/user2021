@@ -98,7 +98,7 @@ make a suggestion to improve our lessons... at least that was our intention.
 background-image: url(path-tweet.png)
 background-size: 70%
 background-position: center
-class:center, inverse
+class:center
 
 ???
 
@@ -121,8 +121,11 @@ important concept in design because it shows the difference between what
 the designers intended and how people actually use the space.
 
 ---
+class: center,middle
 
-## Desire Paths? In OUR community?
+.galaxy-brain[**Desire Paths?**
+
+**In .c-light-blue[_our_] community?**]
 
 ???
 
@@ -134,8 +137,8 @@ noticing more and more of these desire We needed to rethink our infrastructure
 altogether in a way that is more inclusive and welcoming for everyone.
 
 ---
-
-## R savior!
+class: center,middle
+.galaxy-brain[**.c-light-blue[R] .c-blue[savior!]**]
 
 ???
 
@@ -191,10 +194,9 @@ our current infrastructure.
 background-image: url(git-window.png)
 background-size: 80%
 background-repeat: no-repeat
-background-position: bottom
+background-position: center
 class: center
 
-## .c-blue[Our Lessons]
 
 ???
 
@@ -208,10 +210,8 @@ the Jekyll static site generator.
 background-image: url(lesson-window.png)
 background-size: 80%
 background-repeat: no-repeat
-background-position: bottom
+background-position: center
 class: center
-
-## .c-blue[Our Lessons]
 
 ???
 
