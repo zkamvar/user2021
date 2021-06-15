@@ -8,6 +8,7 @@ output:
     css: [znk.css, default, useR, useR-fonts]
     lib_dir: libs
     nature:
+      ratio: '16:9'
       beforeInit: "https://platform.twitter.com/widgets.js"
       highlightStyle: github
       highlightLines: true
@@ -64,8 +65,8 @@ people first and we value all contributions.
 
 ---
 class: center
-![screenshot of the "Visualizing Tabular Data" episode of the "Programming with Python Lesson"](lesson.png)
 .large-brain[The **.c-blue[Lesson]**]
+![screenshot of the "Visualizing Tabular Data" episode of the "Programming with Python Lesson"](lesson.png)
 ???
 
 Our lessons are distributed as open-licensed websites built on a consistent
@@ -76,8 +77,8 @@ These sites have three distinct audiences.
 
 ---
 class: center
-![screenshot of the "Visualizing Tabular Data" episode of the "Programming with Python Lesson"](instructor-lesson.png)
 .large-brain[1.&nbsp;The **.c-blue[ Instructor]**]
+![screenshot of the "Visualizing Tabular Data" episode of the "Programming with Python Lesson"](instructor-lesson.png)
 
 ???
 
@@ -85,23 +86,23 @@ The certified Carpentries Instructors who refer to these materials as they teach
 
 ---
 class: center
-![screenshot of the "Visualizing Tabular Data" episode of the "Programming with Python Lesson"](instructor-learner-lesson.png)
 .large-brain[2.&nbsp;The **.c-blue[Learner]**]
+![screenshot of the "Visualizing Tabular Data" episode of the "Programming with Python Lesson"](instructor-learner-lesson.png)
 ???
 The learners in a Carpentries workshop who rely on these lessons after a workshop
    as they review and practice their newly aquired skills.
 ---
 class: center
-![screenshot of the "Visualizing Tabular Data" episode of the "Programming with Python Lesson"](instructor-learner-educator-lesson.png)
 .large-brain[3.&nbsp;The **.c-blue[Educator]**]
+![screenshot of the "Visualizing Tabular Data" episode of the "Programming with Python Lesson"](instructor-learner-educator-lesson.png)
 ???
 The educators who adapt these open-licensed materials for their own
    lessons.
 
 ---
 class: center
-![screenshot of the "Visualizing Tabular Data" episode of the "Programming with Python Lesson"](all-lesson.png)
 .large-brain[The **_.c-light-blue[Community]_**]
+![screenshot of the "Visualizing Tabular Data" episode of the "Programming with Python Lesson"](all-lesson.png)
 ???
 
 The source for these lessons are hosted on GitHub where
@@ -114,7 +115,7 @@ make a suggestion to improve our lessons... at least that was our intention.
 
 ---
 background-image: url(path-tweet.png)
-background-size: 70%
+background-size: contain
 background-position: center
 class:center
 
@@ -139,7 +140,8 @@ important concept in design because it shows the difference between what
 the designers intended and how people actually use the space.
 
 ---
-class: center,middle
+class:center,middle
+
 
 .galaxy-brain[**Desire Paths?**
 
@@ -149,15 +151,20 @@ class: center,middle
 
 As our community has grown, new desire paths were being created across our
 lesson infrastructure landscape. No signs (i.e., better documentation) would
-stop contributors to our lessons from stepping outside the complex, and not
-always well-paved, path that makes up our lesson infrastructure. we have been
-noticing more and more of these desire We needed to rethink our infrastructure
-altogether in a way that is more inclusive and welcoming for everyone.
+stop contributors to our lessons from stepping outside the complex, purpose
+made, paths in our lesson infrastructure. We needed to rethink our
+infrastructure altogether in a way that is more inclusive and welcoming for
+everyone.
 
 ---
-class: center,middle
-.galaxy-brain[**.c-light-blue[R] .c-blue[savior!]**]
+background-image: url(https://d33wubrfki0l68.cloudfront.net/aee91187a9c6811a802ddc524c3271302893a149/a7003/images/bandthree2.png)
+background-size: contain
+background-position: top
+class: bottom
 
+.grey[Image Credit: Xie, Allaire, and Grolemund.    
+["R Markdown The Definitve Guide"](https://bookdown.org/yihui/rmarkdown/)    
+CRC Press 2019]
 ???
 
 We found that the R publishing ecosystem is flexible enough to give
@@ -180,8 +187,10 @@ class: center,middle
 .large-brain[
 *&mdash;Greg Wilson*
 ]
+.smol-brain[
+[*"Templates: We Live, We Learn"*](https://software-carpentry.org/blog/2014/12/templates-we-live-we-learn.html)
 ]
-
+]
 ???
 
 Greg Wilson wrote this after several iterations of the lesson
@@ -193,7 +202,7 @@ reminder:
 
 ---
 background-image: url(you-belong.jpg)
-background-size: 65%
+background-size: contain
 background-repeat: no-repeat
 background-position: center
 
@@ -209,46 +218,21 @@ To better understand the decisions we are making, let's start by reviewing
 our current infrastructure.
 
 ---
-background-image: url(git-window.png)
-background-size: 80%
+background-image: url(lesson-box-1.png)
+background-size: 110%
 background-repeat: no-repeat
-background-position: center
-class: center
-
-
-???
-
-ALT: screen capture of visual studio code editor showing markdown from the
-"Visualizing Tabular Data" from the Programming with Python lesson.
-
-Our lessons are written in markdown and into a website via GitHub Pages and
-the Jekyll static site generator.
-
----
-background-image: url(lesson-window.png)
-background-size: 80%
-background-repeat: no-repeat
-background-position: center
+background-position: right 65% top -55%
 class: center
 
 ???
-
-ALT: screen capture of Programming with Python Lesson showing the "Visualizing
-Tabular Data" episode.
+Our lessons are written in markdown and transformed into a website via GitHub
+Pages and the Jekyll static site generator.
 
 The idea behind this choice was that it was the most straightforward way to
 create a static website without needing a server like Wordpress or Drupal sites.
 Ideally, it also provided a way for people to use this as an example of how they
 could build their own website.
 
----
-background-image: url(static-site-generators.png)
-background-size: 80%
-background-repeat: no-repeat
-background-position: center
-class: center
-
-???
 
 ALT: Graph of the top ten languages the 460 available static site generators
 were written in with Python, JavaScript, and Ruby being the top three. 
@@ -260,8 +244,8 @@ be the one that GitHub implemented early on to provide documentation for the
 open-source project it hosted, and thus, it stuck.
 
 ---
-background-image: url(all-in-one-box.png)
-background-size: 90%
+background-image: url(lesson-box-2.png)
+background-size: contain
 background-repeat: no-repeat
 background-position: center
 
@@ -321,8 +305,7 @@ class: center, middle
 ---
 class: center, middle
 
-![](file-structure.png)
-.galaxy-brain[Which Door?]
+![Screencapture of a file folder for a Carpentries lesson showing 11 folders and 12 files](file-structure.png)
 
 ???
 
