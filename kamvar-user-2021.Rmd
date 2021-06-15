@@ -65,17 +65,19 @@ people first and we value all contributions.
 ---
 class: center
 ![screenshot of the "Visualizing Tabular Data" episode of the "Programming with Python Lesson"](lesson.png)
+.large-brain[The **.c-blue[Lesson]**]
 ???
 
 Our lessons are distributed as open-licensed websites built on a consistent
 style that adheres to active learning principals. We use these lessons as the
-source material for the hundreds of workshops we run each year. So, these sites
-have three distinct audiences.
+source material for the hundreds of workshops we run each year. 
+
+These sites have three distinct audiences.
 
 ---
 class: center
 ![screenshot of the "Visualizing Tabular Data" episode of the "Programming with Python Lesson"](instructor-lesson.png)
-.large-brain[The **.c-blue[Instructor]**]
+.large-brain[1.&nbsp;The **.c-blue[ Instructor]**]
 
 ???
 
@@ -84,16 +86,14 @@ The certified Carpentries Instructors who refer to these materials as they teach
 ---
 class: center
 ![screenshot of the "Visualizing Tabular Data" episode of the "Programming with Python Lesson"](instructor-learner-lesson.png)
-.large-brain[The **.c-blue[Learner]**]
+.large-brain[2.&nbsp;The **.c-blue[Learner]**]
 ???
 The learners in a Carpentries workshop who rely on these lessons after a workshop
    as they review and practice their newly aquired skills.
 ---
 class: center
 ![screenshot of the "Visualizing Tabular Data" episode of the "Programming with Python Lesson"](instructor-learner-educator-lesson.png)
-
-
-.large-brain[The **.c-blue[Educator]**]
+.large-brain[3.&nbsp;The **.c-blue[Educator]**]
 ???
 The educators who adapt these open-licensed materials for their own
    lessons.
