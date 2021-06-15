@@ -338,7 +338,7 @@ At The Carpentries, we like to call these "chopportunities."
 
 ---
 background-image: url(lesson-growth.png)
-background-size: 85% 85%
+background-size: contain
 background-position: center
 
 

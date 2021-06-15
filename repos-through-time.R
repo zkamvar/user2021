@@ -85,5 +85,5 @@ p <- dat |>
 
 print(p)
 }
-ggsave("lesson-growth.png", p)
+ggsave("lesson-growth.png", p, width = 7, height = 3.9375)
 
