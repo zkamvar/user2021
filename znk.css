@@ -1,3 +1,11 @@
+/*
+.remark-slide-content.inverse {
+  background-image: url("https://www.dropbox.com/s/ff7nr4n2dcm59de/useR_logo.png?dl=1"), linear-gradient(to bottom, rgba(28, 28, 28) 85%, rgba(78, 78, 78) 95%) ;
+  background-position: 20px 590px , center;
+  background-size: 85px , 100% 100%, cover ;
+}
+*/
+
 .red {
   color: crimson;
 }
@@ -18,8 +26,12 @@
   color: #3D7BBA;
 }
 
-.brain {
+.smol-brain {
   font-size: 24px;
+}
+
+.brain {
+  font-size: 36px;
 }
 
 .large-brain {

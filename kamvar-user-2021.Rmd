@@ -8,6 +8,7 @@ output:
     css: [znk.css, default, useR, useR-fonts]
     lib_dir: libs
     nature:
+      beforeInit: "https://platform.twitter.com/widgets.js"
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
@@ -31,27 +32,29 @@ foundational data and coding skills to researchers worldwide.
 
 class: center,middle
 
-# Our Values
-
 .pull-left[
-**At The Carpentries, we..**  
+.large-brain[.c-blue[**We...**]]  
+.smol-brain[
 Act Openly     
 Empower One Another    
-_Value All Contributions_
+.c-red[**Value All Contributions**]
+]]
 
-]
 .pull-right[
-**We are...**    
-_Always Learning_    
-Inclusive of All    
-]
+.large-brain[.c-blue[**We are...**]]    
+.smol-brain[
+Always Learning    
+.c-red[**Inclusive of All**]    
+]]
+
 .center[
-**We champion...**   
-_People First_    
+.large-brain[.c-blue[**We champion...**]]   
+.smol-brain[
+.c-red[**People First**]    
 Access for All    
 Community Collaboration    
 Strength Through Diversity
-]
+]]
 
 ???
 
@@ -92,15 +95,21 @@ explanation of an important lesson concept. We want **anyone** can go to the rep
 make a suggestion to improve our lessons... at least that was our intention.
 
 ---
-
-## Desire Paths
+background-image: url(path-tweet.png)
+background-size: 70%
+background-position: center
+class:center, inverse
 
 ???
 
+ALT: Tweet by @SarahNicolas that says "This sign knows it has lost." With an
+image of a sign in front of a dirt path that extends from a paved path. The sign
+says 'Please use the purpose made path provided."
+
+source: <https://twitter.com/SarahNicholas/status/1401510907604353024?s=20>
+
 I want to pause for a second here and highlight this tweet that came across my
 feed as I was preparing this talk.
-
-<https://twitter.com/SarahNicholas/status/1401510907604353024?s=20>
 
 It shows a fork between a paved path and an unpaved footpath across a patch of
 grass, which leads to a crosswalk. There is a sign in front of the unpaved path
@@ -575,17 +584,16 @@ with our community.
 
 
 ---
-background-image: url(jomo.jpeg)
-background-size: 45%
-background-repeat: no-repeat
-background-position: right
-class: center, middle, inverse
+class: center, middle
+
+.large-brain[**if you want to go fast, go alone**]    
+<br/>
+
+--
 
 
-.pull-left[
-## if you want to GO FAST, go alone
-## if you want to _GO FAR_, go together
-]
+.galaxy-brain[**if you want to .c-light-blue[GO FAR],    
+.c-light-blue[GO TOGETHER]**]
 
 ???
 
