@@ -139,10 +139,13 @@ present feedback from our community to iteratively refine our design.
 Before continuing, I want to remind everyone of two things. First:
 
 ---
+class: center,middle,inverse
 
-> There is no right or wrong, only better or worse.
->
-> --- GW
+## There is no right or wrong, only better or worse.
+
+.pull-left[
+### &mdash;Greg Wilson
+]
 
 ???
 
@@ -171,20 +174,52 @@ To better understand the decisions we are making, let's start by reviewing
 our current infrastructure.
 
 ---
+background-image: url(git-window.png)
+background-size: 80%
+background-repeat: no-repeat
+background-position: bottom
+class: center
 
-## Infrastructure
+## Our Lessons
 
 ???
 
-> timing 2021-06-09: 04:20.38
-> timing 2021-06-09: 03:52.10
-> timing 2021-06-10: 03:08.87
+ALT: screen capture of visual studio code editor showing markdown from the
+"Visualizing Tabular Data" from the Programming with Python lesson.
 
 Our lessons are written in markdown and into a website via GitHub Pages and
-the Jekyll static site generator. The idea behind this choice was that it was
-the most straightforward way to create a static website without needing a server
-like Wordpress or Drupal sites. Ideally, it also provided a way for people to
-use this as an example of how they could build their own website.
+the Jekyll static site generator.
+
+---
+background-image: url(lesson-window.png)
+background-size: 80%
+background-repeat: no-repeat
+background-position: bottom
+class: center
+
+## Our Lessons
+
+???
+
+ALT: screen capture of Programming with Python Lesson showing the "Visualizing
+Tabular Data" episode.
+
+The idea behind this choice was that it was the most straightforward way to
+create a static website without needing a server like Wordpress or Drupal sites.
+Ideally, it also provided a way for people to use this as an example of how they
+could build their own website.
+
+---
+background-image: url(static-site-generators.png)
+background-size: 80%
+background-repeat: no-repeat
+background-position: center
+class: center
+
+???
+
+ALT: Graph of the top ten languages the 460 available static site generators
+were written in with Python, JavaScript, and Ruby being the top three. 
 
 The paradigm of being able to write markdown lessons and get a functional website
 out of it is not a new concept. In fact, there are over 460 iterations of
@@ -193,11 +228,14 @@ be the one that GitHub implemented early on to provide documentation for the
 open-source project it hosted, and thus, it stuck.
 
 ---
+background-image: url(jomo.jpeg)
+background-size: 45%
+background-repeat: no-repeat
+background-position: right
 
 ## Our Infrastructure
 
 ???
-
 
 We created an all-in-one bundle for lessons that provided styling templates in
 HTML, CSS, and JavaScript along with validation scripts in Python and R scripts
@@ -210,6 +248,10 @@ The purpose of this approach was two-fold:
    to real-life situations.
 
 ---
+background-image: url(jomo.jpeg)
+background-size: 45%
+background-repeat: no-repeat
+background-position: right
 
 ## Drawbacks
 
@@ -242,8 +284,11 @@ lesson infrastructure. These manifested through our communication channels and
 frustration from contributors and maintainers alike. The thing about desire
 paths, though, is that they are not only challenges, but also opportunities.
 
-
 ---
+background-image: url(jomo.jpeg)
+background-size: 45%
+background-repeat: no-repeat
+background-position: right
 
 ## Chopportunities
 
