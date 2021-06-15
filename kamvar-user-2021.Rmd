@@ -228,14 +228,16 @@ be the one that GitHub implemented early on to provide documentation for the
 open-source project it hosted, and thus, it stuck.
 
 ---
-background-image: url(jomo.jpeg)
-background-size: 45%
+background-image: url(all-in-one-box.png)
+background-size: 90%
 background-repeat: no-repeat
-background-position: right
+background-position: center
 
-## Our Infrastructure
 
 ???
+
+ALT: a drawing of a box that says "Lesson" with three folders labelled "scripts",
+"style" and "validation"
 
 We created an all-in-one bundle for lessons that provided styling templates in
 HTML, CSS, and JavaScript along with validation scripts in Python and R scripts
