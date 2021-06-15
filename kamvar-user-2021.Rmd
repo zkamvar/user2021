@@ -294,6 +294,12 @@ background-position: right
 While this was conceptually good in theory, this infrastructure design has three
 significant drawbacks for contributors:
 
+---
+class: center, middle
+.galaxy-brain[Installation Pain]
+
+???
+
 1. Installation pains.
    <https://twitter.com/gvwilson/status/1380115181708189701?s=20> Having
    Jekyll, Python, and Make as dependencies means that people who want to build
@@ -301,8 +307,25 @@ significant drawbacks for contributors:
    and up-to-date.
    This is especially frustrating for Windows users who have none
    of these by default.
+   
+---
+class: center, middle
+
+.galaxy-brain[Keeping Up]
+
+???
+
 2. All the scripts live inside the repository. This means that lessons quickly
    become out of date as they diverge from the improvements made upstream.
+   
+---
+class: center, middle
+
+![](file-structure.png)
+.galaxy-brain[Which Door?]
+
+???
+
 3. Another drawback is that we have a lesson website wrapped around a static
    site generator (which in and of itself is a kind of desire path), this meant
    that it was easy to contribute to if you were familiar with how Jekyll
