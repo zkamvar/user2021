@@ -229,11 +229,10 @@ styling, and validation:
  - {varnish} to host the CSS, JS, and HTML templates
  - {pegboard} to serve as a validator (and converter!) for lesson content
 
-Of course, the first thing any contributor will see is the folder structure. We
-organized the folders of the lesson to reflect the layout of website dropdown
-menus, so our lessons consist of folders that we use commonly: one folder for
-lesson chapters, one for extra information for learners, one for extra
-information for instructors, and one to contain learner profiles.
+ Of course, the first thing any contributor will see is the folder structure and it will help is this resembles the structure of the lesson website.
+ So our lessons consist of folders that correspond to the website dropdown menus: one folder for
+ lesson chapters, one for extra information for learners, one for extra
+ information for instructors, and one to contain learner profiles.
 
 The final folder is one of the access panels that contains the rendered markdown
 files---so you can use them in another context---and static website so that you
