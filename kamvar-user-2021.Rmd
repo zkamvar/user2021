@@ -286,8 +286,7 @@ While this was conceptually good in theory, this infrastructure design has three
 significant drawbacks for contributors:
 
 ---
-class: center
-.galaxy-brain[.c-red[**Installation Pains**]]
+class: center, middle
 ![Tweet from Greg Wilson that says "Me: tweets some grandiose thoughts about future directions for software engineering research. Also me: can't get Jekyll to run on an M1 MacBook Air.](gw-tweet.png)
 
 ???
@@ -436,15 +435,17 @@ background-position: right
 
 ## Why R?
 
---
-- .brain[fRiendly Communities!]
-
---
-
-- .brain[Easy To Install]
---
-
-- .brain[{knitr} + {RMarkdown} + _pandoc_]
+.brain[
+1. fRiendly Communities!
+   - R Ladies
+   - rOpenSci
+   - R Forwards
+2. Easy To Install
+3. Robust ecosystem
+  - {knitr}
+  - {RMarkdown}
+  - _pandoc_
+]
 
 ???
 
