@@ -252,9 +252,6 @@ background-position: center
 
 ???
 
-ALT: a drawing of a box that says "Lesson" with three folders labelled "scripts",
-"style" and "validation"
-
 We created an all-in-one bundle for lessons that provided styling templates in
 HTML, CSS, and JavaScript along with validation scripts in Python and R scripts
 to build RMarkdown-based lessons. All of this was orchestrated by a Makefile.
@@ -264,6 +261,12 @@ The purpose of this approach was two-fold:
    evidence-based teaching such as learning objectives and formative assessment;
 2. To demonstrate how the skills we teach in our workshops could be applied
    to real-life situations.
+
+ALT: A image showing a markdown page with an arrow pointing to an HTML website.
+Below these is a brown box labelled "Lesson" with four items inside representing
+the markdown document, the tools to build the lesson, the validator, and the
+HTML template. 
+
 
 ---
 background-image: url(jomo.jpeg)
@@ -354,36 +357,36 @@ Our challenge is clear: the all-in-one lesson infrastructure does not scale
 well to the growing number of lessons.
 
 ---
-background-image: url(jomo.jpeg)
-background-size: 45%
-background-repeat: no-repeat
-background-position: right
 
-## Chopportunity
+![screenshot of the "Visualizing Tabular Data" episode of the "Programming with Python Lesson" surrounded by friendly people](all-lesson.png)
 
 
 ???
 
-Our opportunity here is to reimagine the infrastructure in a way that truly
+Our opportunity here is to re-imagine the infrastructure in a way that truly
 values all contributions: this includes the spectrum from everyday educators
 who want to share their knowledge, to the tinkerers who need to understand
 what is going on behind the scenes.
 
 ---
-background-image: url(jomo.jpeg)
-background-size: 45%
-background-repeat: no-repeat
-background-position: right
+background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.90) 75%, rgba(227, 227, 227, 0.75) 85%), url(https://raw.githubusercontent.com/zkamvar/stunning-barnacle/27cdbe8d900cea8536c4a5f6ed798860c3867878/img/broad-flow.dot.svg)
+background-size: contain, contain
+background-repeat: no-repeat, no-repeat
+background-position: center
+class: middle
 
+.brain[<https://zkamvar.github.io/sandpaper-docs>]
 
-## Solution
+.brain[<https://carpentries.org/blog/2020/08/lesson-template-design/>]
+
+.brain[<https://carpentries.org/blog/2021-07/infrastructure-testing/>]
 
 ???
 
 
-The solution we came up with uses R and I simply do not have enough time to
-discuss all the features, but you can find out for yourself if you visit our
-blog posts and documentation on how to get started.
+The solution we came up with uses R and while I simply do not have enough time
+to discuss all the features, you can find out for yourself if you visit our blog
+posts and documentation on how to get started.
 
 So, how and why did we choose R to create the next iteration of our lesson
 infrastructure?
@@ -447,8 +450,12 @@ background-image: url(https://bookdown.org/yihui/blogdown/images/logo.png)
 background-size: 45% 
 background-repeat: no-repeat
 background-position: right
+class: middle, center
 
-## Prior Art
+.pull-left[
+.galaxy-brain[
+**Prior Art**
+]]
 
 ???
 Once we identified R as our solution, the natural place to go was one of the
@@ -460,7 +467,7 @@ presence of styling within the repository.
 
 ---
 background-image: url(https://raw.githubusercontent.com/r-lib/pkgdown/master/man/figures/logo.png), url(https://raw.githubusercontent.com/r-lib/pkgdown/master/man/figures/logo.png)
-background-size: 45%
+background-size: 35%
 background-repeat: no-repeat
 background-position: right 0%, right 100%
 

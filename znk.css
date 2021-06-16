@@ -31,9 +31,16 @@ a {
 .brain {
   font-size: 36px;
 }
+.brain > a{
+  color: black;
+}
 
 .large-brain {
   font-size: 48px;
+}
+
+.large-brain > a {
+  color: black;
 }
 
 .galaxy-brain {
