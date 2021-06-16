@@ -4,10 +4,10 @@ This will be the prose of the talk that I will use as the source for the
 transcript. Assuming an average 140 words per minute, this should contain no
 more than 420 words per section.
 
-> word count: ~2400 words; 160 wpm    
-> timing 2021-06-09: 14:48.61 :grimace:    
-> timing 2021-06-09: 15:05.77 :weary:    
-> timing 2021-06-10: 13:53.36    
+> word count: ~2400 words; 160 wpm
+> timing 2021-06-09: 14:48.61 :grimace:
+> timing 2021-06-09: 15:05.77 :weary:
+> timing 2021-06-10: 13:53.36
 
 ## Introduction
 
@@ -39,7 +39,7 @@ volunteer Maintainers ensure that the lessons are
 accurate and up-to-date. We encourage a culture of open contribution,
 where members of our community can suggest a
 simple typo fix or a better
-explanation of an important lesson concept. We want **anyone** can go to the repository and
+explanation of an important lesson concept. We want **anyone** to be able to go to the repository and
 make a suggestion to improve our lessons... at least that was our intention.
 
 I want to pause for a second here and highlight this tweet that came across my
@@ -86,7 +86,7 @@ reminder:
 
 As the community has grown, our infrastructure has been put to the test and we
 have continuously updated our workflows to make it easier for people to contribute.
-The reason we do this is because our values are what drive us. In The Carpentries, you
+The reason we do this is because we are driven by our values. In The Carpentries, you
 belong, no matter if you have been working as a systems administrator for a
 university HPC cluster or if you have just learned to write your first R script.
 
@@ -127,7 +127,7 @@ significant drawbacks for contributors:
 1. Installation pains.
    <https://twitter.com/gvwilson/status/1380115181708189701?s=20> Having
    Jekyll, Python, and Make as dependencies means that people who want to build
-   these lessons on their machines need all three of these successfully installed 
+   these lessons on their machines need all three of these successfully installed
    and up-to-date.
    This is especially frustrating for Windows users who have none
    of these by default.
@@ -229,11 +229,10 @@ styling, and validation:
  - {varnish} to host the CSS, JS, and HTML templates
  - {pegboard} to serve as a validator (and converter!) for lesson content
 
-Of course, the first thing any contributor will see is the folder structure. We
-organized the folders of the lesson to reflect the layout of website dropdown
-menus, so our lessons consist of folders that we use commonly: one folder for
-lesson chapters, one for extra information for learners, one for extra
-information for instructors, and one to contain learner profiles.
+ Of course, the first thing any contributor will see is the folder structure and it will help if this resembles the structure of the lesson website.
+ So our lessons consist of folders that correspond to the website dropdown menus: one folder for
+ lesson chapters, one for extra information for learners, one for extra
+ information for instructors, and one to contain learner profiles.
 
 The final folder is one of the access panels that contains the rendered markdown
 files---so you can use them in another context---and static website so that you
@@ -261,7 +260,7 @@ We recruited a total of 19 volunteers to run through Alpha Testing, which tested
 the participants ability to install the required software and packages, create,
 modify, and contribute to lessons. After the tests, I asked for 20-minute
 open-ended interviews from the volunteers about their experience to identify
-common stumbling blocks, challenges, and bright points. 
+common stumbling blocks, challenges, and bright points.
 
 I want to take a moment to thank everyone who has participated, some of whom are
 part of The Carpentries core team. I don't have the time to go into detail about
@@ -314,3 +313,5 @@ make sure we put people first and are always learning.
 Thank you to our fiscal sponsor, Community Initiatives and generous grants from
 the Alfred P. Sloan Foundation, the Moore Foundation, the Chan-Zuckerberg foundation,
 and the R Consortium.
+Thank you to every member of The Carpentries community,
+and thank you for listening.
