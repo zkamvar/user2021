@@ -9,7 +9,6 @@ output:
     lib_dir: libs
     nature:
       ratio: '16:9'
-      beforeInit: "https://platform.twitter.com/widgets.js"
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
@@ -143,7 +142,7 @@ the designers intended and how people actually use the space.
 class:center,middle
 
 
-.galaxy-brain[**Desire Paths?**
+.galaxy-brain[**Desire paths?**
 
 **In .c-light-blue[_our_] community?**]
 
@@ -221,8 +220,15 @@ our current infrastructure.
 background-image: url(lesson-box-1.png)
 background-size: 110%
 background-repeat: no-repeat
-background-position: right 65% top -55%
-class: center
+background-position: right 70% top -55%
+class: center, bottom
+
+.pull-left[
+# .galaxy-brain[Markdown&emsp;&emsp;&emsp;]
+]
+.pull-right[
+# .galaxy-brain[&emsp;Website]
+]
 
 ???
 Our lessons are written in markdown and transformed into a website via GitHub
@@ -233,15 +239,13 @@ create a static website without needing a server like Wordpress or Drupal sites.
 Ideally, it also provided a way for people to use this as an example of how they
 could build their own website.
 
-
-ALT: Graph of the top ten languages the 460 available static site generators
-were written in with Python, JavaScript, and Ruby being the top three. 
-
 The paradigm of being able to write markdown lessons and get a functional website
 out of it is not a new concept. In fact, there are over 460 iterations of
 this concept according to https://staticsitegenerators.net. Jekyll happens to
 be the one that GitHub implemented early on to provide documentation for the
 open-source project it hosted, and thus, it stuck.
+
+ALT: 
 
 ---
 background-image: url(lesson-box-2.png)
@@ -282,8 +286,9 @@ While this was conceptually good in theory, this infrastructure design has three
 significant drawbacks for contributors:
 
 ---
-class: center, middle
-.galaxy-brain[Installation Pain]
+class: center
+.galaxy-brain[.c-red[**Installation Pains**]]
+![Tweet from Greg Wilson that says "Me: tweets some grandiose thoughts about future directions for software engineering research. Also me: can't get Jekyll to run on an M1 MacBook Air.](gw-tweet.png)
 
 ???
 
@@ -296,14 +301,27 @@ class: center, middle
    of these by default.
    
 ---
+background-image: url(lesson-updates-1.png)
+background-size: contain
+background-repeat: no-repeat
+background-position: center
 class: center, middle
 
-.galaxy-brain[Keeping Up]
+???
+All the scripts live _inside_ the repository.
+
+---
+background-image: url(lesson-updates-2.png)
+background-size: contain
+background-repeat: no-repeat
+background-position: center
+class: center, middle
+
 
 ???
 
-2. All the scripts live inside the repository. This means that lessons quickly
-   become out of date as they diverge from the improvements made upstream.
+This means that lessons quickly become out of date as they diverge from the
+improvements made upstream.
    
 ---
 class: center, middle
@@ -375,7 +393,7 @@ background-repeat: no-repeat, no-repeat
 background-position: center
 class: middle
 
-.brain[<https://zkamvar.github.io/sandpaper-docs>]
+.brain[<https://carpentries.github.io/sandpaper-docs>]
 
 .brain[<https://carpentries.org/blog/2020/08/lesson-template-design/>]
 
