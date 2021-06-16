@@ -410,13 +410,11 @@ So, how and why did we choose R to create the next iteration of our lesson
 infrastructure?
 
 ---
-background-image: url(jomo.jpeg)
-background-size: 45%
+background-image: url(infrastructure-concept.png)
+background-size: contain
 background-repeat: no-repeat
-background-position: right
+background-position: center
 
-
-### Challenge
 
 ???
 
