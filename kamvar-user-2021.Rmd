@@ -2,7 +2,7 @@
 title: "Using R as a Community Workbench for The Carpentries Lesson Infrastructure"
 author: "Zhian N. Kamvar and François Michonneau"
 institute: "The Carpentries"
-date: "2021-07-05"
+date: "2021-07-08 02:05 UTC"
 output:
   xaringan::moon_reader:
     css: [znk.css, default, useR, useR-fonts]
