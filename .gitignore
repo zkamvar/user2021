@@ -2,7 +2,5 @@
 .Rhistory
 .RData
 .Ruserdata
-libs/
 *_files/
-*.html
 *big.png
