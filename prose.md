@@ -311,7 +311,7 @@ all the answers right now, but we go through this process because we want to
 make sure we put people first and are always learning.
 
 Thank you to our fiscal sponsor, Community Initiatives and generous grants from
-the Alfred P. Sloan Foundation, the Moore Foundation, the Chan-Zuckerberg foundation,
+the Alfred P. Sloan Foundation, the Moore Foundation, the Chan-Zuckerberg Initiative,
 and the R Consortium.
 Thank you to every member of The Carpentries community,
 and thank you for listening.
