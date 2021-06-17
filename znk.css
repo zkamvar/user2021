@@ -8,6 +8,15 @@ a {
   color: crimson;
 }
 
+.credit {
+  color: black;
+  display: inline-block;
+  background-color: GhostWhite;
+  padding: 7px;
+  border: 1px solid #000;
+  text-align: center;
+}
+
 .c-blue {
   color: #071159;
 }
@@ -31,7 +40,8 @@ a {
 .brain {
   font-size: 36px;
 }
-.brain > a{
+
+.brain a {
   color: black;
 }
 
@@ -39,7 +49,7 @@ a {
   font-size: 48px;
 }
 
-.large-brain > a {
+.large-brain a {
   color: black;
 }
 

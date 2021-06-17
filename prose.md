@@ -4,16 +4,16 @@ This will be the prose of the talk that I will use as the source for the
 transcript. Assuming an average 140 words per minute, this should contain no
 more than 420 words per section.
 
-> word count: ~2400 words; 160 wpm
-> timing 2021-06-09: 14:48.61 :grimace:
-> timing 2021-06-09: 15:05.77 :weary:
-> timing 2021-06-10: 13:53.36
+> word count: ~2400 words; 160 wpm    
+> timing 2021-06-09: 14:48.61 :grimace:    
+> timing 2021-06-09: 15:05.77 :weary:    
+> timing 2021-06-10: 13:53.36    
 
 ## Introduction
 
-> timing 2021-06-09: 03:37.11
-> timing 2021-06-09: 04:07.34
-> timing 2021-06-10: 04:01.98
+> timing 2021-06-09: 03:37.11    
+> timing 2021-06-09: 04:07.34    
+> timing 2021-06-10: 04:01.98    
 
 
 The Carpentries is a global organization of volunteers who teach
