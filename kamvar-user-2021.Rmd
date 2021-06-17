@@ -34,7 +34,7 @@ class: center,middle
 
 .pull-left[
 .large-brain[.c-blue[**We...**]]  
-.smol-brain[
+.brain[
 Act Openly     
 Empower One Another    
 .c-red[**Value All Contributions**]
@@ -42,14 +42,14 @@ Empower One Another
 
 .pull-right[
 .large-brain[.c-blue[**We are...**]]    
-.smol-brain[
+.brain[
 Always Learning    
 .c-red[**Inclusive of All**]    
 ]]
 
 .center[
 .large-brain[.c-blue[**We champion...**]]   
-.smol-brain[
+.brain[
 .c-red[**People First**]    
 Access for All    
 Community Collaboration    
@@ -63,7 +63,7 @@ teaching, it's that we align all of our decisions with our core values: we put
 people first and we value all contributions.
 
 ---
-class: center
+class:center 
 .large-brain[The **.c-blue[Lesson]**]
 ![screenshot of the "Visualizing Tabular Data" episode of the "Programming with Python Lesson"](lesson.png)
 ???
@@ -678,6 +678,16 @@ all the answers right now, but we go through this process because we want to
 make sure we put people first and are always learning.
 
 ---
+background-image: url(https://bit.ly/3iOWCbl), url(https://bit.ly/3gHRtyZ), url(https://bit.ly/3vtZY6k), url(https://bit.ly/35zweKN) 
+background-size: 50%, 35%, 45%, 35%
+background-position: left 10%, 90% 10%, 10% 80%, 90% 80%
+
+???
+
+None of this would have been possible without generous grants from
+the Alfred P. Sloan Foundation, the Moore Foundation, the Chan-Zuckerberg Initiative, and the R Consortium.
+
+---
 background-image: url(jomo.jpeg)
 background-size: 45%
 background-repeat: no-repeat
@@ -687,13 +697,19 @@ class: middle
 .pull-left[
 .galaxy-brain[Thank You!]
 
-.large-brain[Thank you to our .c-light-blue[Carpentries Community]]
+.brain[
 
-Funding from Community Initiatives and generous grants from
-the Alfred P. Sloan Foundation, the Moore Foundation, the Chan-Zuckerberg Initiative,
-and the R Consortium.
-]
+Thank you to our .c-light-blue[Alpha Testers] and .c-light-blue[Carpentries Community]    
 
+Additional thanks:   
+.c-blue[Maëlle Salmon&mdash;Allison Hill&mdash;Christophe Dervieux&mdash;Daniel Chen&mdash;Angela Li&mdash;Greg Wilson&mdash;Dhavide Aruliah&mdash;Nischal Shrestha&mdash;Scott Chamberlain
+]]]
+
+???
+
+And finally, thank you to all of our alpha testers, the carpentries community,
+and all the folks who have taken the time to sit down and talk with me about
+early drafts of the new infrastructure.
 
 <!--
 Note: the useR template modifies the css for the background image, so we need to adjust the size and position manually for every slide.
