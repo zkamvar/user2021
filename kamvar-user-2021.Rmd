@@ -530,7 +530,8 @@ background-position: top
 
 ???
 
-Of course, the first thing any contributor will see is the folder structure and it will help if this resembles the structure of the lesson website.
+Of course, the first thing any contributor will see is the folder structure and
+it will help if this resembles the structure of the lesson website.
 
 ---
 background-image: url(entrypoint-2.png)
