@@ -120,11 +120,6 @@ class:center
 
 ???
 
-ALT: Tweet by @SarahNicolas that says "This sign knows it has lost." With an
-image of a sign in front of a dirt path that extends from a paved path. The sign
-says 'Please use the purpose made path provided."
-
-source: <https://twitter.com/SarahNicholas/status/1401510907604353024?s=20>
 
 I want to pause for a second here and highlight this tweet that came across my
 feed as I was preparing this talk.
@@ -138,6 +133,11 @@ This unofficial footpath is called a "desire path". It is an
 important concept in design because it shows the difference between what
 the designers intended and how people actually use the space.
 
+ALT: Tweet by @SarahNicolas that says "This sign knows it has lost." With an
+image of a sign in front of a dirt path that extends from a paved path. The sign
+says 'Please use the purpose made path provided."
+
+source: <https://twitter.com/SarahNicholas/status/1401510907604353024?s=20>
 ---
 class:center,middle
 
@@ -184,7 +184,7 @@ class: center,middle
 
 .pull-left[
 .large-brain[
-*&mdash;Greg Wilson*
+*&mdash;Greg Wilson* (Software Carpentries Founder)
 ]
 .smol-brain[
 [*"Templates: We Live, We Learn"*](https://software-carpentry.org/blog/2014/12/templates-we-live-we-learn.html)
@@ -321,8 +321,8 @@ class: center, middle
 
 ???
 
-This means that lessons quickly become out of date as they diverge from the
-improvements made upstream.
+This leads to the unfortunate pattern where lessons quickly become out of date
+as they diverge from the improvements made upstream.
    
 ---
 class: center, middle
@@ -469,10 +469,10 @@ because:
 
 
 ---
-background-image: url(https://bookdown.org/yihui/blogdown/images/logo.png)
-background-size: 45% 
+background-image: url(https://bookdown.org/yihui/blogdown/images/logo.png), url(unique-brush.jpg)
+background-size: 25%, cover 
 background-repeat: no-repeat
-background-position: right
+background-position: right, center
 class: middle, center
 
 .pull-left[
