@@ -685,7 +685,8 @@ background-position: left 10%, 90% 10%, 10% 80%, 90% 80%
 ???
 
 None of this would have been possible without generous grants from
-the Alfred P. Sloan Foundation, the Moore Foundation, the Chan-Zuckerberg Initiative, and the R Consortium.
+the Alfred P. Sloan Foundation, the Moore Foundation, the Chan-Zuckerberg Initiative, and the R Consortium
+Infrastructure Steering Committee.
 
 ---
 background-image: url(jomo.jpeg)
