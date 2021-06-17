@@ -554,7 +554,7 @@ background-position: top
 
 The final folder is one of the access panels that contains the rendered markdown
 files---so you can use them in another context---and static website so that you
-can put it on a USB stick and share it without needing to run a local server.
+can put it on a USB stick to share it without additional software (like Hugo or Jekyll).
 
 ---
 background-image: url(https://carpentries.org/images/groupshot.jpg)
