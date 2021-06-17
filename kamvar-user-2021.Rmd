@@ -402,7 +402,7 @@ class: middle
 
 <https://carpentries.org/blog/2020/08/lesson-template-design/>
 
-<https://carpentries.org/blog/2021-07/infrastructure-testing/>]
+<https://carpentries.org/blog/2021/07/infrastructure-testing/>]
 
 ???
 
