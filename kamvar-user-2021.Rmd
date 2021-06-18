@@ -267,7 +267,7 @@ could build their own website.
 
 The paradigm of being able to write markdown lessons and get a functional website
 out of it is not a new concept. In fact, there are over 460 iterations of
-this concept according to https://staticsitegenerators.net. Jekyll happens to
+this concept (according to https://staticsitegenerators.net). Jekyll happens to
 be the one that GitHub implemented early on to provide documentation for the
 open-source project it hosted, and thus, it stuck.
 
@@ -544,6 +544,7 @@ class: center, bottom
 ]]
 
 ???
+
 Once we identified R as our solution, the natural place to go was one of the
 RMarkdown variants like {blogdown} or {hugodown}, but we found that while the
 tools were indeed separated from the content and the documentation was rich and
@@ -621,7 +622,7 @@ class: center, top
 ???
 
 The final folder is one of the access panels that contains the rendered markdown
-files---so you can use them in another context---and static website so that you
+files---so you can use them in another context---and static website---so that you
 can put it on a USB stick to share it without additional software (like Hugo or Jekyll).
 
 Our solution ticks all the boxes that satisfy our design choices,
