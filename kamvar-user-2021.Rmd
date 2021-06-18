@@ -15,7 +15,7 @@ output:
 ---
 
 background-image: url(https://carpentries.org/assets/img/TheCarpentries.svg)
-background-size: contain
+background-size: 75%
 background-position: center
 
 ```{r setup, include=FALSE}
@@ -81,22 +81,24 @@ class: center
 
 ???
 
-The certified Carpentries Instructors who refer to these materials as they teach our workshops.
+first: The certified Carpentries Instructors who refer to these materials as they teach our workshops.
 
 ---
 class: center
 .large-brain[2.&nbsp;The **.c-blue[Learner]**]
 ![screenshot of the "Visualizing Tabular Data" episode of the "Programming with Python Lesson"](instructor-learner-lesson.png)
 ???
-The learners in a Carpentries workshop who rely on these lessons after a workshop
-   as they review and practice their newly aquired skills.
+Next, there are the learners in a Carpentries workshop who rely on these lessons
+after a workshop as they review and practice their newly aquired skills.
+
 ---
 class: center
 .large-brain[3.&nbsp;The **.c-blue[Educator]**]
 ![screenshot of the "Visualizing Tabular Data" episode of the "Programming with Python Lesson"](instructor-learner-educator-lesson.png)
 ???
-The educators who adapt these open-licensed materials for their own
-   lessons.
+
+Last, but not least, there are the educators like yourselves, who adapt these
+open-licensed materials for their own lessons.
 
 ---
 class: center
@@ -104,13 +106,17 @@ class: center
 ![screenshot of the "Visualizing Tabular Data" episode of the "Programming with Python Lesson"](all-lesson.png)
 ???
 
-The source for these lessons are hosted on GitHub where
-volunteer Maintainers ensure that the lessons are
-accurate and up-to-date. We encourage a culture of open contribution,
-where members of our community can suggest a
-simple typo fix or a better
-explanation of an important lesson concept. We want **anyone** to be able to go to the repository and
-make a suggestion to improve our lessons... at least that was our intention.
+The source for these lessons are hosted on GitHub where volunteer Maintainers
+ensure that the lessons are accurate and up-to-date. 
+
+We encourage a culture of open contribution, where members of our community can
+suggest improvements like a simple typo fix or a better explanation of an
+important lesson concept.
+
+We want **anyone** to be able to go to the repository and make a suggestion to
+improve our lessons... 
+
+at least that was our intention.
 
 ---
 background-image: url(path-tweet.png)
@@ -119,7 +125,6 @@ background-position: center
 class:center
 
 ???
-
 
 I want to pause for a second here and highlight this tweet that came across my
 feed as I was preparing this talk.
@@ -133,11 +138,12 @@ This unofficial footpath is called a "desire path". It is an
 important concept in design because it shows the difference between what
 the designers intended and how people actually use the space.
 
-ALT: Tweet by @SarahNicolas that says "This sign knows it has lost." With an
+*ALT: Tweet by @SarahNicolas that says "This sign knows it has lost." With an
 image of a sign in front of a dirt path that extends from a paved path. The sign
-says 'Please use the purpose made path provided."
+says 'Please use the purpose made path provided."*
 
 source: <https://twitter.com/SarahNicholas/status/1401510907604353024?s=20>
+
 ---
 class:center,middle
 
@@ -149,11 +155,12 @@ class:center,middle
 ???
 
 As our community has grown, new desire paths were being created across our
-lesson infrastructure landscape. No signs (i.e., better documentation) would
-stop contributors to our lessons from stepping outside the complex, purpose
-made, paths in our lesson infrastructure. We needed to rethink our
-infrastructure altogether in a way that is more inclusive and welcoming for
-everyone.
+lesson infrastructure landscape. No signs or, in our case, documentation would
+stop contributors to our lessons from stepping outside these complex, purpose
+made, paths in our lesson infrastructure. 
+
+We needed to rethink our infrastructure altogether in a way that is more
+inclusive and welcoming for everyone.
 
 ---
 background-image: url(https://d33wubrfki0l68.cloudfront.net/aee91187a9c6811a802ddc524c3271302893a149/a7003/images/bandthree2.png)
@@ -182,22 +189,23 @@ class: center,middle
   only .c-light-blue[_better or worse_]**
 ]
 
-.pull-left[
+.left[
 .large-brain[
-*&mdash;Greg Wilson* (Software Carpentries Founder)
+*&mdash;Greg Wilson*    
+&ensp; .grey[*(Founder of Software Carpentry)*]
 ]
 .smol-brain[
-[*"Templates: We Live, We Learn"*](https://software-carpentry.org/blog/2014/12/templates-we-live-we-learn.html)
+[*source: "Templates: We Live, We Learn"*](https://software-carpentry.org/blog/2014/12/templates-we-live-we-learn.html)
 ]
 ]
 ???
 
-Greg Wilson wrote this after several iterations of the lesson
-infrastructure. I am putting it here as a reminder that the infrastructure we have
-now was working for us at the time. What we come up with will have its
-own difficulties down the road, but what is important is that we build something
-that better addresses the needs of our community, which leads me to my second
-reminder:
+Greg Wilson---the founder of Software Carpentry---wrote this after several
+iterations of the lesson infrastructure. I am putting it here as a reminder that
+the infrastructure we have now was working for us at the time. What we come up
+with will have its own difficulties down the road, but what is important is that
+we build something that better addresses the needs of our community, which leads
+me to my second reminder:
 
 ---
 background-image: url(you-belong.jpg)
@@ -207,11 +215,15 @@ background-position: center
 
 ???
 
+You belong in The Carpentries.
+
 As the community has grown, our infrastructure has been put to the test and we
 have continuously updated our workflows to make it easier for people to contribute.
-The reason we do this is because we are driven by our values. In The Carpentries, you
-belong, no matter if you have been working as a systems administrator for a
-university HPC cluster or if you have just learned to write your first R script.
+The reason we do this is because we are driven by our values. 
+
+In The Carpentries, you belong, no matter if you have been working as a systems
+administrator for a university HPC cluster or if you have just learned to write
+your first R script.
 
 To better understand the decisions we are making, let's start by reviewing
 our current infrastructure.
@@ -245,7 +257,7 @@ this concept according to https://staticsitegenerators.net. Jekyll happens to
 be the one that GitHub implemented early on to provide documentation for the
 open-source project it hosted, and thus, it stuck.
 
-ALT: 
+*ALT: A image showing a markdown page with an arrow pointing to an HTML website.*
 
 ---
 background-image: url(lesson-box-2.png)
@@ -257,7 +269,7 @@ background-position: center
 ???
 
 We created an all-in-one bundle for lessons that provided styling templates in
-HTML, CSS, and JavaScript along with validation scripts in Python and R scripts
+HTML, CSS, and JavaScript along with validation scripts in Python, and R scripts
 to build RMarkdown-based lessons. All of this was orchestrated by a Makefile.
 The purpose of this approach was two-fold:
 
@@ -266,11 +278,10 @@ The purpose of this approach was two-fold:
 2. To demonstrate how the skills we teach in our workshops could be applied
    to real-life situations.
 
-ALT: A image showing a markdown page with an arrow pointing to an HTML website.
+*ALT: A image showing a markdown page with an arrow pointing to an HTML website.
 Below these is a brown box labelled "Lesson" with four items inside representing
 the markdown document, the tools to build the lesson, the validator, and the
-HTML template. 
-
+HTML template.* 
 
 ---
 background-image: url(expect-delays.jpg)
@@ -287,19 +298,20 @@ https://unsplash.com/photos/7lyRKyKIdJY
 While this was conceptually good in theory, this infrastructure design has three
 significant drawbacks for contributors:
 
+*ALT: Orange electric road sign at night that says "EXPECT DELAYS"*
+
 ---
 class: center, middle
-![Tweet from Greg Wilson that says "Me: tweets some grandiose thoughts about future directions for software engineering research. Also me: can't get Jekyll to run on an M1 MacBook Air.](gw-tweet.png)
+[![Tweet from Greg Wilson that says "Me: tweets some grandiose thoughts about future directions for software engineering research. Also me: can't get Jekyll to run on an M1 MacBook Air.](gw-tweet.png)](https://twitter.com/gvwilson/status/1380115181708189701?s=20)
 
 ???
 
-1. Installation pains.
-   <https://twitter.com/gvwilson/status/1380115181708189701?s=20> Having
-   Jekyll, Python, and Make as dependencies means that people who want to build
-   these lessons on their machines need all three of these successfully installed 
-   and up-to-date.
-   This is especially frustrating for Windows users who have none
-   of these by default.
+The first is installation pains.
+
+Having Jekyll, Python, and Make as dependencies means that people who want to
+build these lessons on their machines need all three of these successfully
+installed and up-to-date. This is especially frustrating for Windows users who
+have none of these by default.
    
 ---
 background-image: url(lesson-updates-1.png)
@@ -309,7 +321,13 @@ background-position: center
 class: center, middle
 
 ???
-All the scripts live _inside_ the repository.
+
+Secondly, with this design, all the scripts live _inside_ the repository.
+
+*ALT: Two boxes on a white field, both labelled lesson with the word "LESSON",
+but the box above has a sign that says "TEMPLATE" written over the word "LESSON"
+Both boxes have three round discs representing the tools, validator, and 
+styling. The bottom box has three markdown documents in addition.*
 
 ---
 background-image: url(lesson-updates-2.png)
@@ -324,6 +342,13 @@ class: center, middle
 This leads to the unfortunate pattern where lessons quickly become out of date
 as they diverge from the improvements made upstream.
    
+*ALT: Four boxes on a white field, all labelled with the word "LESSON",
+but the two boxes on top have signs that say "TEMPLATE" written over the word
+"LESSON". There is an arrow in the middle running from left to right representing
+time. All boxes have three round discs representing the tools, validator, and 
+styling. The components in the box on the top right have different hues than the
+box on the bottom.*
+
 ---
 class: center, middle
 
@@ -331,20 +356,29 @@ class: center, middle
 
 ???
 
-3. Another drawback is that we have a lesson website wrapped around a static
-   site generator (which in and of itself is a kind of desire path), this meant
-   that it was easy to contribute to if you were familiar with how Jekyll
-   operated. There is often a moment of panic in a new contributor's eyes when
-   you show them what the a lesson repository looks like. If you were not
-   familiar with Jekyll, then it was unclear where to even start if you were
-   looking at the git repository because there were no clear sign that marked
-   the trail head. This lead several lessons to find their own paths that ended
-   up built in different ways.
+Another drawback is that we have a lesson website wrapped around a static site
+generator (which in and of itself is a kind of desire path), this meant that it
+was easy to contribute _if you were familiar with how Jekyll operated._ 
+
+There is often a moment of panic in a new contributor's eyes when you show them
+what the a lesson repository looks like. If you were not familiar with Jekyll,
+then it was unclear where to even start if you were looking at the git
+repository because there were no clear sign that marked the trail head. This
+lead several lessons to find their own paths that ended up built in different
+ways.
 
 Over the last few years, we have begun finding these desire paths all across our
 lesson infrastructure. These manifested through our communication channels and
-frustration from contributors and maintainers alike. The thing about desire
-paths, though, is that they are not only challenges, but also opportunities.
+frustration from contributors and maintainers alike. 
+
+The thing about desire paths, though, is that they are not only challenges, but
+also opportunities.
+
+*ALT: screencapture displaying the contents of a file folder representing the
+swcarpentry/python-novice-gapminder repository. It contains 11 folders and 12
+files. There are annotations to this image: five of these folders are circled,
+while four folders and two three files are crossed out to inidcate entry points
+and danger zones, respectively.*
 
 ---
 background-image: url(chopportunity-kitty.jpg)
@@ -362,11 +396,13 @@ photo credit: Tran Mau Tri Tam
 
 At The Carpentries, we like to call these "chopportunities."
 
+*ALT: picture of a kitten sitting up on a couch with one paw on the back cushion
+and one paw on a pillow. It looks worried/scared*
+
 ---
 background-image: url(lesson-growth.png)
 background-size: contain
 background-position: bottom
-
 
 ???
 
@@ -378,6 +414,13 @@ The Carpentries Incubator.
 
 Our challenge is clear: the all-in-one lesson infrastructure does not scale
 well to the growing number of lessons.
+
+
+*ALT: bar graph showing the growth in the number of lessons from 2015 to present
+day. There is an arrow pointing to the top of the data that says "139 lessons".
+The data are stratified by our four programs: Software Carpentry on bottom,
+followed by Data Carpentry, Library Carpentry, and Incubator. The incubator 
+comprises of more than one half of all lessons in the current day.*
 
 ---
 
@@ -433,6 +476,10 @@ install, easily customizable, and has a welcoming community behind it. We tried
 out several static site generators, but the largest barrier for many of these
 was that they were not easy to install and maintain.
 
+*ALT: A box labeled "LESSON" on a field of poorly-drawn grass with five markdown
+documents inside of it. There are three discs representing rendering tools, 
+validation, and sytling elements hovering in the clouds above.*
+
 ---
 background-image: url(jomo.jpeg)
 background-size: 45%
@@ -467,6 +514,8 @@ because:
    is available online via RStudio Cloud
 3. R has a robust ecosystem for publishing thanks to {knitr} and RMarkdown
 
+*ALT: picture of my russian blue cat, Jomo, stting on a chair and looking up,
+directly into the camera.*
 
 ---
 background-image: url(https://bookdown.org/yihui/blogdown/images/logo.png), url(unique-brush.jpg)
@@ -484,15 +533,18 @@ class: middle, center
 Once we identified R as our solution, the natural place to go was one of the
 RMarkdown variants like {blogdown} or {hugodown}, but we found that while the
 tools were indeed separated from the content and the documentation was rich and
-accessible, there were many aspects that would not fit our needs including the
-presence of styling within the repository.
+accessible, there were many aspects that would not fit our needs, in particular
+the presence of styling inside the repository, meaning that the user was 
+ultimately responsible for maintaining the visual presence.
 
+*ALT: background picture of a close-up paint brush on a colorful abstract
+watercolor with the blogdown hex in the foreground to the right.*
 
 ---
 background-image:  url(https://raw.githubusercontent.com/r-lib/pkgdown/master/man/figures/logo.png), url(https://raw.githubusercontent.com/r-lib/pkgdown/master/man/figures/logo.png), url(pkgdown-datasaurus.png), url(pkgdown-nmf.png), url(pkgdown-bayesplot.png), url(pkgdown-tinkr.png)
-background-size: 35%
+background-size: 32%
 background-repeat: no-repeat
-background-position: right 0%, right 100%, left 5%, 55% 5%, left 95%, 55% 95%
+background-position: 96% 0%, 98% 100%, 2% 5%, 55% 5%, 2% 95%, 55% 95%
 class: middle
 
 .galaxy-brain[**Distributed Style**]
@@ -506,27 +558,28 @@ to build everything lived in a separate package, and you can customize its
 appearance by making your own package to supply your CSS, JS, and HTML
 templates, which has been done many times. 
 
+*ALT: a background collage of screencaptures for four pkgdown sites with two
+stacked pkgdown boxes to the right.*
+
 ---
-background-image: url(rough-hex.png)
-background-size: cover
-background-repeat: no-repeat
-background-position: center 
+class: center
+
+![Three hexagons radially adjacent to each other. They say, "sandpaper",
+"varnish", and "pegboard"](rough-hex.png)
 
 ???
 
 From this model, we were able to pave over the desire paths in our
-infrastructure by creating three packages to serve as the lesson engine,
-styling, and validation:
+infrastructure by creating three R packages: 
 
- - {sandpaper} to orchestrate building and maintaining lessons
- - {varnish} to host the CSS, JS, and HTML templates
- - {pegboard} to serve as a validator (and converter!) for lesson content
+ - {sandpaper} is the engine that orchestrate building and maintaining lessons
+ - {varnish} is the styling that hosts the CSS, JS, and HTML templates
+ - {pegboard} serves as a validator (and converter!) for lesson content
 
 ---
-background-image: url(entrypoint.png)
-background-size: cover
-background-repeat: no-repeat
-background-position: top
+class: center, top
+
+![screenshot of folder contents showing five folders and seven files](entrypoint.png)
 
 ???
 
@@ -534,22 +587,21 @@ Of course, the first thing any contributor will see is the folder structure and
 it will help if this resembles the structure of the lesson website.
 
 ---
-background-image: url(entrypoint-2.png)
-background-size: cover
-background-repeat: no-repeat
-background-position: top
+class: center, top
+
+![screenshot of folder contents showing five folders and seven files. The first four folders are highlighted](entrypoint-2.png)
 
 ???
 
-So our lessons consist of folders that correspond to the website dropdown menus: one folder for
-lesson chapters, one for extra information for learners, one for extra
- information for instructors, and one to contain learner profiles.
+So our lessons consist of folders that correspond to the website dropdown menus:
+one folder for lesson chapters, one for extra information for learners, one for
+extra information for instructors, and one to contain learner profiles.
 
 ---
-background-image: url(entrypoint-3.png)
-background-size: cover
-background-repeat: no-repeat
-background-position: top
+class: center, top
+
+![screenshot of folder contents showing five folders and seven files. The last folder is highlighted](entrypoint-3.png)
+
 
 ???
 
