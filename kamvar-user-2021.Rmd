@@ -28,12 +28,14 @@ options(htmltools.dir.version = FALSE)
 The Carpentries is a global organization of volunteers who teach
 foundational data and coding skills to researchers worldwide. 
 
+*ALT: The Carpentries Logo*
+
 ---
 
 class: center,middle
 
 .pull-left[
-.large-brain[.c-blue[**We...**]]  
+.large-brain[.c-blue[&emsp;**We...**]]  
 .brain[
 Act Openly     
 Empower One Another    
@@ -41,14 +43,14 @@ Empower One Another
 ]]
 
 .pull-right[
-.large-brain[.c-blue[**We are...**]]    
+.large-brain[.c-blue[&emsp;**We are...**]]    
 .brain[
 Always Learning    
 .c-red[**Inclusive of All**]    
 ]]
 
 .center[
-.large-brain[.c-blue[**We champion...**]]   
+.large-brain[.c-blue[&emsp;**We champion...**]]   
 .brain[
 .c-red[**People First**]    
 Access for All    
@@ -77,7 +79,7 @@ These sites have three distinct audiences.
 ---
 class: center
 .large-brain[1.&nbsp;The **.c-blue[ Instructor]**]
-![screenshot of the "Visualizing Tabular Data" episode of the "Programming with Python Lesson"](instructor-lesson.png)
+![screenshot of the "Visualizing Tabular Data" episode of the "Programming with Python Lesson" with an instructor to the bottom left.](instructor-lesson.png)
 
 ???
 
@@ -86,7 +88,7 @@ first: The certified Carpentries Instructors who refer to these materials as the
 ---
 class: center
 .large-brain[2.&nbsp;The **.c-blue[Learner]**]
-![screenshot of the "Visualizing Tabular Data" episode of the "Programming with Python Lesson"](instructor-learner-lesson.png)
+![screenshot of the "Visualizing Tabular Data" episode of the "Programming with Python Lesson" with an instructor to the bottom left and a learner holding a pink sticky note to the bottom right.](instructor-learner-lesson.png)
 ???
 Next, there are the learners in a Carpentries workshop who rely on these lessons
 after a workshop as they review and practice their newly aquired skills.
@@ -94,7 +96,7 @@ after a workshop as they review and practice their newly aquired skills.
 ---
 class: center
 .large-brain[3.&nbsp;The **.c-blue[Educator]**]
-![screenshot of the "Visualizing Tabular Data" episode of the "Programming with Python Lesson"](instructor-learner-educator-lesson.png)
+![screenshot of the "visualizing tabular data" episode of the "programming with python lesson" with an instructor to the bottom left, a learner holding a pink sticky note to the bottom right, and an educator wearing a mask to the top right.](instructor-learner-educator-lesson.png)
 ???
 
 Last, but not least, there are the educators like yourselves, who adapt these
@@ -103,7 +105,7 @@ open-licensed materials for their own lessons.
 ---
 class: center
 .large-brain[The **_.c-light-blue[Community]_**]
-![screenshot of the "Visualizing Tabular Data" episode of the "Programming with Python Lesson"](all-lesson.png)
+![screenshot of the "visualizing tabular data" episode of the "programming with python lesson" with an instructor to the bottom left, a learner holding a pink sticky note to the bottom right, and an educator wearing a mask to the top right. A maintainer appears in the top left holding a laptop.](all-lesson.png)
 ???
 
 The source for these lessons are hosted on GitHub where volunteer Maintainers
@@ -175,11 +177,17 @@ CRC Press 2019]
 
 We found that the R publishing ecosystem is flexible enough to give
 us the tools we need **to reduce barriers for publishing lessons and
-further our mission**. I will introduce you to our current
-infrastructure, its unique challenges, our solutions, and how we used past and
-present feedback from our community to iteratively refine our design.
+further our mission**. 
+
+I will introduce you to our current infrastructure, its unique challenges, our
+solutions, and how we used past and present feedback from our community to
+iteratively refine our design.
 
 Before continuing, I want to remind everyone of two things. First:
+
+
+*ALT: Cover of the R Markdown The Definitive Guide, which is a large letter "R"
+surrounded by output document logos like LaTeX, epub, HTML5, PDF, Word, etc.*
 
 ---
 class: center,middle
@@ -199,6 +207,8 @@ class: center,middle
 ]
 ]
 ???
+
+There is no right or wrong, only better or worse.
 
 Greg Wilson---the founder of Software Carpentry---wrote this after several
 iterations of the lesson infrastructure. I am putting it here as a reminder that
@@ -227,6 +237,10 @@ your first R script.
 
 To better understand the decisions we are making, let's start by reviewing
 our current infrastructure.
+
+*ALT: hexagonal logos of Library Carpentry, Data Carpentry, and Software
+Carpentries joined raidially and circumscribed in an orange circle. Below the
+circle is a message that says "You Belong in The Carpentries"*
 
 ---
 background-image: url(lesson-box-1.png)
@@ -416,11 +430,11 @@ Our challenge is clear: the all-in-one lesson infrastructure does not scale
 well to the growing number of lessons.
 
 
-*ALT: bar graph showing the growth in the number of lessons from 2015 to present
-day. There is an arrow pointing to the top of the data that says "139 lessons".
-The data are stratified by our four programs: Software Carpentry on bottom,
-followed by Data Carpentry, Library Carpentry, and Incubator. The incubator 
-comprises of more than one half of all lessons in the current day.*
+*ALT: stacked area showing the growth in the number of lessons from 2015 to
+present day. There is an arrow pointing to the top of the data that says "139
+lessons". The data are stratified by our four programs: Software Carpentry on
+bottom, followed by Data Carpentry, Library Carpentry, and Incubator. The
+incubator comprises of more than one half of all lessons in the current day.*
 
 ---
 
@@ -431,8 +445,8 @@ comprises of more than one half of all lessons in the current day.*
 
 Our opportunity here is to re-imagine the infrastructure in a way that truly
 values all contributions: this includes the spectrum from everyday educators
-who want to share their knowledge, to the tinkerers who need to understand
-what is going on behind the scenes.
+who want to share their knowledge, to the tinkerers who access panels to
+understand what is going on behind the scenes.
 
 ---
 background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.90) 75%, rgba(227, 227, 227, 0.75) 85%), url(https://raw.githubusercontent.com/zkamvar/stunning-barnacle/27cdbe8d900cea8536c4a5f6ed798860c3867878/img/broad-flow.dot.svg)
@@ -555,8 +569,9 @@ We realized that an unlikely contender, {pkgdown}, a documentation site
 generator, used the same model that we were looking for: It meets people where
 they are, content is pure markdown with no extra templating required, the tools
 to build everything lived in a separate package, and you can customize its
-appearance by making your own package to supply your CSS, JS, and HTML
-templates, which has been done many times. 
+appearance by making your own package to supply your CSS, JavaScript, and HTML
+templates, which has been done many times for individual and organization-wide
+documentation. 
 
 *ALT: a background collage of screencaptures for four pkgdown sites with two
 stacked pkgdown boxes to the right.*
@@ -572,8 +587,8 @@ class: center
 From this model, we were able to pave over the desire paths in our
 infrastructure by creating three R packages: 
 
- - {sandpaper} is the engine that orchestrate building and maintaining lessons
- - {varnish} is the styling that hosts the CSS, JS, and HTML templates
+ - {sandpaper} is the engine that orchestrates building and maintaining lessons
+ - {varnish} is the styling that hosts the CSS, JavaScript, and HTML templates
  - {pegboard} serves as a validator (and converter!) for lesson content
 
 ---
@@ -617,6 +632,9 @@ background-position: center
 class: bottom
 
 .credit[**photo credit: Bérénice Batut**]
+
+   *ALT: Carpentries group shot of > 50 people modelling the carpentries logo
+by raising their arms and tilting 45 degrees to the left.*
 
 ???
 
@@ -685,8 +703,8 @@ the results, but a big takeaway from this was that everyone was able to install
 the infrastructure and any problems that occurred were from Git/GitHub, which is
 a big improvement over the current system.
 
-ALT: A hand holding a pink sticky note that says "run a usability test" in front
-of other sticky notes.
+*ALT: A hand holding a pink sticky note that says "run a usability test" in front
+of other sticky notes.*
 
 ---
 background-image: url(community.jpg)
@@ -714,7 +732,7 @@ but this way we can avoid major unforseen issues (minor issues are a given),
 bring users in on the ground floor, get valuable feedback, and strengthen trust
 with our community.
 
-
+*ALT: several hands in line on a log in the forest.*
 ---
 class: center, middle
 
@@ -738,8 +756,10 @@ background-position: left 10%, 90% 10%, 10% 80%, 90% 80%
 ???
 
 None of this would have been possible without generous grants from
-the Alfred P. Sloan Foundation, the Moore Foundation, the Chan-Zuckerberg Initiative, and the R Consortium
-Infrastructure Steering Committee.
+the Alfred P. Sloan Foundation, the Moore Foundation, the Chan-Zuckerberg Initiative, and the R Consortium Infrastructure Steering Committee.
+
+*ALT: logos of the Chan Zuckerberg Initiative, Alfred P. Sloan Foundation, 
+R Consortium, and Gordon and Betty Moore Foundation, respectively.*
 
 ---
 background-image: url(jomo.jpeg)
@@ -764,6 +784,9 @@ Additional thanks:
 And finally, thank you to all of our alpha testers, the carpentries community,
 and all the folks who have taken the time to sit down and talk with me about
 early drafts of the new infrastructure.
+
+*ALT: picture of my russian blue cat, Jomo, stting on a chair and looking up,
+directly into the camera.*
 
 <!--
 Note: the useR template modifies the css for the background image, so we need to adjust the size and position manually for every slide.
