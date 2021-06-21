@@ -5,6 +5,7 @@ institute: "The Carpentries"
 date: "2021-07-08 02:05 UTC"
 output:
   xaringan::moon_reader:
+    self_contained: true
     css: [znk.css, default, useR, useR-fonts]
     lib_dir: libs
     nature:
