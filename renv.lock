@@ -515,8 +515,8 @@
       "RemoteUsername": "yihui",
       "RemoteRepo": "xaringan",
       "RemoteRef": "master",
-      "RemoteSha": "1630c9d74ec3f4ff1e8230f0ca759be74c5a3d4e",
-      "Hash": "eb80e77df4d9f5c87b274d9402ad4f38"
+      "RemoteSha": "db43e71816f2cba39952cf3aaeef18370128b212",
+      "Hash": "d231c8f60953926855e1b9f80d1b1595"
     },
     "xfun": {
       "Package": "xfun",
