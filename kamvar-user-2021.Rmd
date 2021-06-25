@@ -432,10 +432,10 @@ Our challenge is clear: the all-in-one lesson infrastructure does not scale
 well to the growing number of lessons.
 
 
-*ALT: stacked area showing the growth in the number of lessons from 2015 to
-present day. There is an arrow pointing to the top of the data that says "139
-lessons". The data are stratified by our four programs: Software Carpentry on
-bottom, followed by Data Carpentry, Library Carpentry, and Incubator. The
+*ALT: A stacked area chart showing the growth in the number of lessons from 2015
+to present day. There is an arrow pointing to the top of the data that says
+"139 lessons". The data are stratified by our four programs: Software Carpentry
+on bottom, followed by Data Carpentry, Library Carpentry, and Incubator. The
 incubator comprises of more than one half of all lessons in the current day.*
 
 ---
