@@ -508,15 +508,10 @@
     },
     "xaringan": {
       "Package": "xaringan",
-      "Version": "0.21.1",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "yihui",
-      "RemoteRepo": "xaringan",
-      "RemoteRef": "master",
-      "RemoteSha": "db43e71816f2cba39952cf3aaeef18370128b212",
-      "Hash": "d231c8f60953926855e1b9f80d1b1595"
+      "Version": "0.22",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "c0ed5b878f24730ed7f4afbb95af84ae"
     },
     "xfun": {
       "Package": "xfun",
