@@ -1,6 +1,8 @@
 on:
   push:
     paths:
+      - 'renv.lock'
+      - '.github/workflows/*'
       - '**.Rmd'
 
 jobs:
