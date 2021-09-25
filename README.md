@@ -2,7 +2,9 @@
 
 This repository contains the presentation materials for the UseR! 2021 talk
 "Using R as a Community Workbench for The Carpentries Lesson Infrastructure"
-in July 2021. This is currently a work in progress.
+in July 2021. 
+
+This talk is best viewed as it was given, as a [video recording with closed captions, hosted on YouTube](https://youtu.be/vd8XZSuY_Rs?t=1259).
 
 The abstract can be found in [ABSTRACT.md](ABSTRACT.md)
 
