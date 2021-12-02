@@ -679,13 +679,13 @@ class: middle
 - Jon Haitz Legarreta Gorroño
 - Karen Word
 - Kari Jordan
+- Liane Newton
 - Maneesha Sane
 - Michael Culshaw-Maurer
 - Sarah Brown
 - Sarah Stevens
 - Shaun C. Gaynor
 - Toby Hodges
-- anonymous
 
 .right[
 photo credit: David Travis    
