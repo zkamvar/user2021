@@ -5,10 +5,10 @@ library("tidyr")
 library("incidence")
 
 ##### Define Carpentries Colors ####
-carpentries_blue <- "#071159"
-carpentries_red <- "#D45214"
-carpentries_orange <- "#F0A202"
-carpentries_light_blue <- "#3D7BBA"
+carpentries_blue <- "#E3E6FC"
+carpentries_red <- "#F99697"
+carpentries_orange <- "#40AEAD"
+carpentries_light_blue <- "#D2BDF2"
 two_colors <- c(carpentries_blue, carpentries_red)
 three_colors <- c(carpentries_blue, carpentries_red, carpentries_orange)
 four_colors <- c(carpentries_blue, carpentries_red, carpentries_orange, carpentries_light_blue)
