@@ -27,7 +27,7 @@ repos <- read_csv("repos.csv", col_types = cols(
 
 
 dat <- repos |>
-  filter(!carpentry %in% c("carpentries", "carpentrieslab")) |>
+  filter(!carpentry %in% c("carpentries", "carpentries-lab")) |>
   mutate(carpentry = case_when(
     carpentry == "carpentries-incubator" ~ "Incubator",
     carpentry == "datacarpentry" ~ "Data",
@@ -50,7 +50,7 @@ p <- dat |>
   geom_area(aes(fill = carpentry), color = "black") +
   scale_fill_manual(values = four_colors) +
   scale_x_date(expand = c(0, 0)) +
-  scale_y_continuous(limits = c(0, 150), expand = c(0, 0)) +
+  scale_y_continuous(limits = c(0, 10*ceiling(nrow(repos)/10)), expand = c(0, 0)) +
   labs(
     y = "Lessons",
     x = "Date",

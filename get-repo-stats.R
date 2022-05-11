@@ -10,7 +10,7 @@ lesson_urls <- c(lessons, community_lessons) |> purrr::map_chr(~.x$repo_url)
 
 less_repos <- purrr::map_chr(lessons, ~.x$carpentries_org) |>
   unique() |>
-  c("carpentries-incubator", "carpentrieslab") |>
+  c("carpentries-incubator", "carpentries-lab") |>
   purrr::map(~gh::gh("/orgs/{org}/repos", org = .x, .limit = Inf, per_page = 300)) |>
   purrr::flatten()
 
