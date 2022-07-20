@@ -9,6 +9,7 @@ carpentries_blue <- "#E3E6FC"
 carpentries_red <- "#F99697"
 carpentries_orange <- "#40AEAD"
 carpentries_light_blue <- "#D2BDF2"
+buttercup <- "#FFF7F1"
 two_colors <- c(carpentries_blue, carpentries_red)
 three_colors <- c(carpentries_blue, carpentries_red, carpentries_orange)
 four_colors <- c(carpentries_blue, carpentries_red, carpentries_orange, carpentries_light_blue)
@@ -65,9 +66,12 @@ p <- dat |>
       panel.grid.major.y = element_line(color = "grey30", size = .25),
       panel.grid.major.x = element_line(linetype = 2, size = 0.25),
       panel.grid.minor = element_blank(),
+      panel.background = element_rect(fill = buttercup),
+      plot.background = element_blank(),
       legend.position = c(0.01, 0.99),
       legend.justification = c("left", "top"),
       legend.box.background = element_blank(),
+      legend.background = element_blank(),
       legend.margin = margin(0, 0, 0, 10),
       legend.title = element_blank()
     ) +
